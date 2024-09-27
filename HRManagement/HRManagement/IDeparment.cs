@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace HRManagement
+{
+    public interface IDeparment
+    {
+        string Id { get; }
+        string Name { get; }
+        Employee Leader { get; }
+        List<Employee> Employees { get; }
+        bool AddEmployee(Employee employee);
+        bool RemoveEmployee(Employee employee);
+        Employee Find(string key);
+        List<Employee> GetALL();
+    }
+}
