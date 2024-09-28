@@ -46,20 +46,21 @@
     <Compile Include="Accounting.cs" />
     <Compile Include="BA.cs" />
     <Compile Include="Cybersecurity.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Design.cs" />
     <Compile Include="HR.cs" />
     <Compile Include="IDeparment.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="ITSupport.cs" />
     <Compile Include="Management.cs" />
-    <Compile Include="ProductManagement.cs" />
+    <Compile Include="ProjectManagement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoftwareDevelopment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram.cd" />
+    <None Include="SoDoLop.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

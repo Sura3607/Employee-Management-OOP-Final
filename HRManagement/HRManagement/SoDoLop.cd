@@ -1,21 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="HRManagement.Management" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="1.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>CAIAAAAAAAAAiQAAAAAQRAAAAAFAQAAAAAAQAgAAAAA=</HashCode>
       <FileName>Management.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HRManagement.Employee" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACACAAAIACAAAACAAIAAIAQAQIgIAAAiAIAAIAgAAAQ=</HashCode>
-      <FileName>Employee.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="HRManagement.Accounting" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="1.25" Width="1.5" />
+    <Position X="5.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Accounting.cs</FileName>
@@ -23,7 +16,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="HRManagement.HR" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="2" Width="1.5" />
+    <Position X="5.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>HR.cs</FileName>
@@ -31,7 +24,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="HRManagement.Cybersecurity" Collapsed="true">
-    <Position X="2.25" Y="2.75" Width="1.5" />
+    <Position X="5.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cybersecurity.cs</FileName>
@@ -39,7 +32,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="HRManagement.ITSupport" Collapsed="true">
-    <Position X="2.25" Y="3.5" Width="1.5" />
+    <Position X="5.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ITSupport.cs</FileName>
@@ -47,7 +40,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="HRManagement.SoftwareDevelopment" Collapsed="true">
-    <Position X="4" Y="2" Width="1.5" />
+    <Position X="7" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SoftwareDevelopment.cs</FileName>
@@ -55,7 +48,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="HRManagement.Design" Collapsed="true">
-    <Position X="4" Y="2.75" Width="1.5" />
+    <Position X="7" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Design.cs</FileName>
@@ -63,23 +56,40 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="HRManagement.ProductManagement" Collapsed="true">
-    <Position X="4" Y="3.5" Width="1.5" />
+    <Position X="7" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ProductManagement.cs</FileName>
+      <FileName>ProjectManagement.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="HRManagement.BA" Collapsed="true">
-    <Position X="4" Y="1.25" Width="1.5" />
+    <Position X="7" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BA.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
+  <Class Name="HRManagement.Database" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HRManagement.Employee">
+    <Position X="9" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACACAAAIACAAAACAAIAAIQQAQIgIAAAiAIAAIAgAABQ=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="HRManagement.IDeparment">
-    <Position X="0.5" Y="1.25" Width="1.5" />
+    <Position X="3.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IDeparment.cs</FileName>

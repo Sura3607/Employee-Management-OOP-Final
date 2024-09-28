@@ -13,7 +13,7 @@ namespace HRManagement
         List<Employee> Employees { get; }
         bool AddEmployee(Employee employee);
         bool RemoveEmployee(Employee employee);
-        Employee Find(string key);
+        bool Find(string keywork);
         List<Employee> GetALL();
     }
 }

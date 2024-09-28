@@ -20,7 +20,7 @@ namespace HRManagement
             throw new NotImplementedException();
         }
 
-        public Employee Find(string key)
+        public bool Find(string key)
         {
             throw new NotImplementedException();
         }
