@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\HRManagement",
-    "\\HRManagement\\HRManagement"
+    "\\HRManagement\\ManagementLogic"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\HRManagement\\HRManagement.sln",
   "PreviewInSolutionExplorer": false
 }
