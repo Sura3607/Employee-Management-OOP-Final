@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
-    internal class Database
+    internal class Data
     {
         static public void LoadData()
         {
