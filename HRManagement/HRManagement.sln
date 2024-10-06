@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement", "HRManagement\HRManagement.csproj", "{C18BB555-D10D-49C9-B8A7-CCB103CC31B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Managenment_Windows", "Managenment_Windows\Managenment_Windows.csproj", "{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementLogic", "ManagementLogic\ManagementLogic.csproj", "{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C18BB555-D10D-49C9-B8A7-CCB103CC31B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C18BB555-D10D-49C9-B8A7-CCB103CC31B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C18BB555-D10D-49C9-B8A7-CCB103CC31B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C18BB555-D10D-49C9-B8A7-CCB103CC31B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

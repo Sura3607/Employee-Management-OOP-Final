@@ -1,4 +1,9 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\HRManagement",
+    "\\HRManagement\\ManagementLogic"
+  ],
+  "SelectedNode": "\\HRManagement\\HRManagement.sln",
   "PreviewInSolutionExplorer": false
 }
