@@ -103,5 +103,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManagementLogic\ManagementLogic.csproj">
+      <Project>{cf6642d7-1eac-45db-992b-ad2589f6d2bb}</Project>
+      <Name>ManagementLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
