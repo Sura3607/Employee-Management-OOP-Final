@@ -10,11 +10,10 @@ namespace ManagementLogic
         private string password;
         List<Employee> employeesList= new List<Employee>();
         List<IDeparment> departmentList = new List<IDeparment>();
-        Database data;
+        Data data;
         public Management()
         {
-            password = "@Admin123";
-            
+            password = "@Admin123";          
         }
 
         private bool IsValidPasswordCreate(string password)

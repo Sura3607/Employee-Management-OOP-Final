@@ -11,3 +11,4 @@ D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\M
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenm.91DEFA3C.Up2Date
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Form1.resources
