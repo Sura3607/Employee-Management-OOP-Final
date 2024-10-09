@@ -1,0 +1,7 @@
+D:\Project_Management\HR_Management\HRManagement\HRManagement\bin\Debug\HRManagement.exe.config
+D:\Project_Management\HR_Management\HRManagement\HRManagement\bin\Debug\HRManagement.exe
+D:\Project_Management\HR_Management\HRManagement\HRManagement\bin\Debug\HRManagement.pdb
+D:\Project_Management\HR_Management\HRManagement\HRManagement\obj\Debug\HRManagement.csproj.AssemblyReference.cache
+D:\Project_Management\HR_Management\HRManagement\HRManagement\obj\Debug\HRManagement.csproj.CoreCompileInputs.cache
+D:\Project_Management\HR_Management\HRManagement\HRManagement\obj\Debug\HRManagement.exe
+D:\Project_Management\HR_Management\HRManagement\HRManagement\obj\Debug\HRManagement.pdb
