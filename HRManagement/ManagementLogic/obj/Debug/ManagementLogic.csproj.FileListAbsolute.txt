@@ -1,7 +1,0 @@
-D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll.config
-D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll
-D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.pdb
-D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.AssemblyReference.cache
-D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CoreCompileInputs.cache
-D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.dll
-D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.pdb
