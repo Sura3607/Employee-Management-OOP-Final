@@ -9,7 +9,7 @@ namespace ManagementLogic
     {
         private string password;
         List<Employee> employeesList= new List<Employee>();
-        List<IDeparment> departmentList = new List<IDeparment>();
+        List<Deparment> departmentList = new List<Deparment>();
         Data data;
         public Management()
         {
@@ -49,10 +49,10 @@ namespace ManagementLogic
             }
             return l;
         }
-        public List<IDeparment> FindIDeparment(string keyword)
+        public List<Deparment> FindIDeparment(string keyword)
         {
-            List<IDeparment> l = new List<IDeparment>();
-            foreach (IDeparment d in departmentList)
+            List<Deparment> l = new List<Deparment>();
+            foreach (Deparment d in departmentList)
             {
                 if (d.Find(keyword))
                 {
@@ -66,7 +66,7 @@ namespace ManagementLogic
         {
 
         }
-        public void Add(IDeparment d)
+        public void Add(Deparment d)
         {
 
         }
@@ -74,7 +74,7 @@ namespace ManagementLogic
         {
 
         }
-        public void Remove(IDeparment d)
+        public void Remove(Deparment d)
         {
 
         }
