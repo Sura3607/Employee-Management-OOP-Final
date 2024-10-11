@@ -2,22 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
-    public class FulltimeEmployee : Employee, ICalSalary
+    [Serializable]
+    public class FulltimeEmployee : Employee, ICalSalary,ISerializable
     {
-        int senority;
-        public FulltimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Deparment deparment, uint salary) 
+        private int senority;
+        public int Senority { get => senority; }
+        public FulltimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department deparment, uint salary) 
             : base(id, name, phone, email, address, gender, birthday, beginWork, deparment, salary)
         {
-            int seniority = (DateTime.Now.Year - BeginWork1.Year);
-            if (DateTime.Now.DayOfYear < BeginWork1.DayOfYear)
+            senority = (DateTime.Now.Year - BeginWork.Year);
+            if (DateTime.Now.DayOfYear < BeginWork.DayOfYear)
             {
-                seniority--;
+                senority--;
             }
+        }
+        public FulltimeEmployee(SerializationInfo info, StreamingContext context) : base(info, context) 
+        {
+            senority = info.GetInt32("Senority");
+        }
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            base.GetObjectData(info, context);
+            info.AddValue("Senority",senority);
         }
         public double CalculateSalary()
         {

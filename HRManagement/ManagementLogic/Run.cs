@@ -9,14 +9,42 @@ namespace ManagementLogic
     public class Run // main thuc thi hanh dong ow day, tien xu li
     {
         private Management management = null;
-        Data data = new Data();
         public Run() { }
         public void Login(string username, string password)
         {
-            Dictionary<string, string> dic;
-            //neu user ko cos thif bao la chua co tai khoan
-            //tra vef pass wordsai neu da cos tai khoan
+            List<Account> accounts = Data.LoadAccounts();
+
+            Account account = accounts.Find(a => a.IsValidUsername(username));
+            if (account == null)
+            {
+                throw new Exception("Username does not exist.");
+            }
+            if (!account.IsValidPassword(password))
+            {
+                throw new Exception("Login failed: Incorrect password.");
+            }
+
+            management = Data.LoadData(account.GetFilePath());
+            management.SetFilePath(account.GetFilePath());
+            
         }
-        //bat ki hanh dong nao cos ton tai ham run deu tiền xử li
+        public void SignUp(string username, string password)
+        {
+            try
+            {
+                List<Account> accounts = Data.LoadAccounts();
+                if (accounts.Exists(a => a.IsValidUsername(username)))
+                {
+                    throw new Exception("Username already exists.");
+                }
+                accounts.Add(new Account(username, password));
+                Data.SaveAccounts(accounts);
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+        
     }
 }

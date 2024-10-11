@@ -1,42 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace ManagementLogic
 {
-    public class Management
+    [Serializable]
+    public class Management : ISerializable
     {
-        private string password;
-        List<Employee> employeesList= new List<Employee>();
-        List<Deparment> departmentList = new List<Deparment>();
-        Data data;
-        public Management()
-        {
-            password = "@Admin123";          
-        }
+        private List<Employee> employeesList= new List<Employee>();
+        private List<Department> departmentList = new List<Department>();
+        private List<Project> projectList = new List<Project>();
+        Data data = new Data();
+        private string filePath;
 
-        private bool IsValidPasswordCreate(string password)
+        public Management() { }
+        public Management(SerializationInfo info, StreamingContext context)
         {
-            return !string.IsNullOrEmpty(password) &&
-                   password.Any(char.IsUpper) &&
-                   password.Any(ch => !char.IsLetterOrDigit(ch));
+            employeesList = (List<Employee>)info.GetValue("Employees",typeof(List<Employee>));
+            departmentList = (List<Department>)info.GetValue("Departments",typeof (List<Department>));
+            projectList = (List<Project>)info.GetValue("Projects",typeof(List<Project>));
         }
-        private bool IsValidPassword(string password)
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            return this.password == password;
-        }
-
-        public bool ChangePassword(string currentPassword, string newPassword)
+            info.AddValue("Employees", employeesList);
+            info.AddValue("Departmants", departmentList);
+            info.AddValue("Projects",projectList);
+        } 
+        public void SetFilePath(string filePath)
         {
-            if (IsValidPasswordCreate(newPassword) && IsValidPassword(currentPassword))
-            {
-                this.password = newPassword;
-                return true;
-            }
-            return false;
+            this.filePath = filePath;
         }
-
+        public void SaveData()
+        {
+            data.SaveData(this,this.filePath);
+        }
         public List<Employee> FindEmployee(string keyword,List<Employee> employlist)
         {
             List<Employee> l = new List<Employee>();
@@ -49,10 +49,10 @@ namespace ManagementLogic
             }
             return l;
         }
-        public List<Deparment> FindIDeparment(string keyword)
+        public List<Department> FindIDeparment(string keyword)
         {
-            List<Deparment> l = new List<Deparment>();
-            foreach (Deparment d in departmentList)
+            List<Department> l = new List<Department>();
+            foreach (Department d in departmentList)
             {
                 if (d.Find(keyword))
                 {
@@ -66,7 +66,7 @@ namespace ManagementLogic
         {
 
         }
-        public void Add(Deparment d)
+        public void Add(Department d)
         {
 
         }
@@ -74,7 +74,7 @@ namespace ManagementLogic
         {
 
         }
-        public void Remove(Deparment d)
+        public void Remove(Department d)
         {
 
         }
@@ -82,11 +82,5 @@ namespace ManagementLogic
         {
 
         }
-
-        public bool AcceptOff(Employee e)
-        {
-            return false;
-        }
-
     }
 }
