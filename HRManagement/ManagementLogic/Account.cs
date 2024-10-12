@@ -50,16 +50,17 @@ namespace ManagementLogic
         {
             return this.password == password;
         }
-        public bool ChangePassword(string currentPassword, string newPassword)
+        public void ChangePassword(string currentPassword, string newPassword)
         {
-            if (IsValidPasswordCreate(newPassword) && IsValidPassword(currentPassword))
+            if (!IsValidPassword(currentPassword))
             {
-                this.password = newPassword;
-                return true;
+                throw new Exception();
             }
-            return false;
+            if (!IsValidPasswordCreate(newPassword))
+            {
+                throw new Exception();
+            }
+            this.password = newPassword;
         }
-
-        
     }
 }

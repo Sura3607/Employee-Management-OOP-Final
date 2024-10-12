@@ -23,27 +23,34 @@ namespace ManagementLogic
             {
                 throw new Exception("Login failed: Incorrect password.");
             }
-
+            
             management = Data.LoadData(account.GetFilePath());
             management.SetFilePath(account.GetFilePath());
-            
+            management.SetCurrentAccount(account);
         }
-        public void SignUp(string username, string password)
+        public void addADMIN(string username, string password)
         {
             try
             {
-                List<Account> accounts = Data.LoadAccounts();
-                if (accounts.Exists(a => a.IsValidUsername(username)))
-                {
-                    throw new Exception("Username already exists.");
-                }
-                accounts.Add(new Account(username, password));
-                Data.SaveAccounts(accounts);
+                management.AddADMIN(username, password);
             }
-            catch(Exception ex)
+            catch (Exception e) { }
+        }
+        public void ChangePass(string password, string newPassword)
+        {
+            try
             {
-
+                management.ChangePasssword(password, newPassword);
             }
+            catch (Exception e) { }
+        }
+        public List<Employee> FindEmployees(string keyword = "")
+        {
+            return new List<Employee>();
+        }
+        public List<Department> FindIDeparment(string keyword = "")
+        {
+            return new List<Department>();
         }
         
     }

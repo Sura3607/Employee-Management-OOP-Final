@@ -13,7 +13,7 @@ namespace ManagementLogic
         private string name;
         private Employee leader ;
         private List<Employee> employees ;
-
+        //Thêm điều kiện khi set cho các thuộc tính -Leader ko phải parttime-
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public Employee Leader { get => leader; set => leader = value; }
@@ -47,20 +47,23 @@ namespace ManagementLogic
             info.AddValue("Leader",Leader);
             info.AddValue("Employees", Employees);
         }
-
-        public bool AddEmployee(Employee employee)
+        //Sử bắt ngoiaj lệ nếu ko thnhf cocng
+        public void AddEmployee(Employee employee)
         {
-            return true;
+        
         }
-        public bool RemoveEmployee(Employee employee)
+        public void RemoveEmployee(Employee employee)
         {
-            return true;
+            
         }
         public bool Find(string keywork)
         {
             return true;
         }
-
+        public string GetInfo()
+        {
+            return "";
+        }
 
     }
 }

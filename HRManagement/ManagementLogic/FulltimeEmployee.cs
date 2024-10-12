@@ -31,17 +31,24 @@ namespace ManagementLogic
             base.GetObjectData(info, context);
             info.AddValue("Senority",senority);
         }
+        //Tính lương dựa theo thâm niên tự tạo hợp lí là được
         public double CalculateSalary()
         {
             throw new NotImplementedException();
         }
-
+        //Tìm theo tên, email, phone,id
         public override bool Find(string keyword)
         {
             throw new NotImplementedException();
         }
-
+        //Trả về một chuỗi, lầm sao đẹp nhất có thể 
         public override string GetInfo()
+        {
+            throw new NotImplementedException();
+        }
+
+        //Thêm vào listProject một project mới
+        public override void AddProject(Project project)
         {
             throw new NotImplementedException();
         }

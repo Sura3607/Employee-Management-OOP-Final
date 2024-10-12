@@ -15,6 +15,11 @@ namespace ManagementLogic
         private List<Project> projectList = new List<Project>();
         Data data = new Data();
         private string filePath;
+        private Account account;
+
+        public List<Employee> EmployeesList { get => employeesList;}
+        public List<Department> DepartmentList { get => departmentList;}
+        public List<Project> ProjectList { get => projectList;}
 
         public Management() { }
         public Management(SerializationInfo info, StreamingContext context)
@@ -25,22 +30,27 @@ namespace ManagementLogic
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            info.AddValue("Employees", employeesList);
-            info.AddValue("Departmants", departmentList);
-            info.AddValue("Projects",projectList);
+            info.AddValue("Employees", EmployeesList);
+            info.AddValue("Departmants", DepartmentList);
+            info.AddValue("Projects",ProjectList);
         } 
         public void SetFilePath(string filePath)
         {
             this.filePath = filePath;
         }
+        public void SetCurrentAccount(Account account)
+        {
+            this.account = account;
+        }
         public void SaveData()
         {
             data.SaveData(this,this.filePath);
         }
-        public List<Employee> FindEmployee(string keyword,List<Employee> employlist)
+        //Xử lí lại việc tìm Nhân viên vì bây giờ có 2 kiểu nhân viên, ko bk trước đối tượng đó là loại nào
+        public List<Employee> FindEmployee(string keyword)
         {
             List<Employee> l = new List<Employee>();
-            foreach(Employee e in employlist)
+            foreach(Employee e in EmployeesList)
             {
                 if (e.Find(keyword))
                 {
@@ -52,7 +62,7 @@ namespace ManagementLogic
         public List<Department> FindIDeparment(string keyword)
         {
             List<Department> l = new List<Department>();
-            foreach (Department d in departmentList)
+            foreach (Department d in DepartmentList)
             {
                 if (d.Find(keyword))
                 {
@@ -61,7 +71,23 @@ namespace ManagementLogic
             }
             return l;
         }
-
+        public List<Project> FindPoject(string keyword)
+        {
+            List<Project> l = new List<Project>();
+            foreach (Project p in ProjectList)
+            {
+                if (p.Find(keyword))
+                {
+                    l.Add(p);
+                }
+            }
+            return l;
+        }
+        //Sau khi add/remove sẽ gọi savedata ngay lập tức
+        //Các phương thức sau sẽ gọi tới các đói tượng
+        //Add cái gì thì thêm vào list đó.
+        //Remove trong list 
+        //Lưu ý nên kiểm tra đối tượng lại một nữa xem đã hợp lệ chưa và add. ví dụ 
         public void Add(Employee e)
         {
 
@@ -69,6 +95,18 @@ namespace ManagementLogic
         public void Add(Department d)
         {
 
+        }
+        //Khi thêm một prọect mới thì cunngx phải thêm, leader và employees có thể bỏ trống
+        //ếu có leaader hoặc một list emplyees thì phải đảm bảo Project đó đã được thêm cho các nhân viên đó .
+        //Ví dụ bên duói 
+        public void Add(Project d, Employee leader = null, List<Employee> employees = default)
+        {
+            //giả sử đã tạo project thành comg
+            leader.AddProject(d);
+            foreach (Employee e in employees)
+            {
+                e.AddProject(d);
+            }
         }
         public void Remove(Employee e)
         {
@@ -78,9 +116,48 @@ namespace ManagementLogic
         {
 
         }
-        public void UpdateSalary(Employee e)
+        //Nếu xóa thì dodongf thời cũng phải xóa trong các employees như trên 
+        public void Remove(Project d)
         {
 
+        }
+        public string GetInfo(Employee e)
+        {
+            return "";
+        }
+        public string GetInfo(Department d)
+        {
+            return "";
+        }
+        public string GetInfo(Project p)
+        {
+            return "";
+        }
+        //sau khi cập nhật lương cũng sẽ được save, cập nhật lương thì cũng phả kiểm tra điều kiện ,
+        //Kt đầu tiên đó là nhân viên gì part hay full
+        //kt việc tăng lương ddungs với đối tượng ko. Lương full ko thấp hơn lương cơ bản, lương parttime ko ít hơn 25k
+        //Và parttime thì đủ giơpf làm mới được tính tăng lương, Nhân viên full time thì phải đủ 3 dự án trở lên.
+        public void SalaryIncrease(Employee e)
+        {
+
+        }
+        public void AddADMIN(string username, string password)
+        {
+            CreateAdmin(username, password);
+        }
+        private void CreateAdmin(string username, string password)
+        {
+            List<Account> accounts = Data.LoadAccounts();
+            if (accounts.Exists(a => a.IsValidUsername(username)))
+            {
+                throw new Exception("Username already exists.");
+            }
+            accounts.Add(new Account(username, password));
+            Data.SaveAccounts(accounts);
+        }
+        public void ChangePasssword(string password, string newPassword)
+        {
+            account.ChangePassword(password, newPassword);
         }
     }
 }
