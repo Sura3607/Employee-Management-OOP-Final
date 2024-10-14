@@ -46,7 +46,7 @@ namespace ManagementLogic
         {
             data.SaveData(this,this.filePath);
         }
-        //Xử lí lại việc tìm Nhân viên vì bây giờ có 2 kiểu nhân viên, ko bk trước đối tượng đó là loại
+        //Xử lí lại việc tìm Nhân viên vì bây giờ có 2 kiểu nhân viên, ko bk trước đối tượng đó là loại gì
         public List<Employee> FindEmployee(string keyword)
         {
             List<Employee> l = new List<Employee>();
