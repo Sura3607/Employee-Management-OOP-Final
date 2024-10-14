@@ -1,82 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ManagementLogic.Management" Collapsed="true">
-    <Position X="1.5" Y="1" Width="1.5" />
+    <Position X="3.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAIAAAAAAAAAiQAAAAAQRAAAAAFAQAAAAAAQAgAAAAA=</HashCode>
+      <HashCode>AAIAIAAIAAAACQAAEAAABAAwQABAQUAAAAARQAACAAA=</HashCode>
       <FileName>Management.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="ManagementLogic.Accounting" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Accounting.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.HR" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>HR.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.Cybersecurity" Collapsed="true">
-    <Position X="5.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Cybersecurity.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.ITSupport" Collapsed="true">
-    <Position X="5.25" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ITSupport.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.SoftwareDevelopment" Collapsed="true">
-    <Position X="7" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SoftwareDevelopment.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.Design" Collapsed="true">
-    <Position X="7" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Design.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.ProductManagement" Collapsed="true">
-    <Position X="7" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ProjectManagement.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.BA" Collapsed="true">
-    <Position X="7" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BA.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.Database" Collapsed="true">
-    <Position X="7" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Database.cs</FileName>
-    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ManagementLogic.Employee">
     <Position X="9" Y="1.25" Width="1.5" />
@@ -84,15 +14,70 @@
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ACACAAAIACAAAACAAIAAIQQAQIgIAAAiAIAAIAgAABQ=</HashCode>
+      <HashCode>ACACACAAACAgAACgAAAAgAwwEAIMAEAiAAABIAAhAwA=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="ManagementLogic.IDeparment">
-    <Position X="3.5" Y="1.5" Width="1.5" />
+  <Class Name="ManagementLogic.Account" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IDeparment.cs</FileName>
+      <HashCode>AAAAAAgAAAAAhAAAAAAQAAEgAAEAAAAAAABAAgAAAAA=</HashCode>
+      <FileName>Account.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ManagementLogic.Data" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAQAAAAAAAAAAAQAAAAAAAAAAAABAAAEAA=</HashCode>
+      <FileName>Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManagementLogic.Department" Collapsed="true">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAACIAEQgCABMAEAAAAAAAAAAAgA=</HashCode>
+      <FileName>Department.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ManagementLogic.FulltimeEmployee" Collapsed="true">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAgABAIAEAQAAAAAAABAAA=</HashCode>
+      <FileName>FulltimeEmployee.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ManagementLogic.ParttimeEmployee" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAABAAAAAAAAAAAAAgAABIAEAAAAAAAAABAAA=</HashCode>
+      <FileName>ParttimeEmployee.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ManagementLogic.Project" Collapsed="true">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAgAAAAKICIAAggAABIAEAAAAAAAAAAAgA=</HashCode>
+      <FileName>Project.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ManagementLogic.Run" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQAAAAAAAAAAAAAAAAAAAAABAAAAgAAAQAAgAAAA=</HashCode>
+      <FileName>Run.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ManagementLogic.ICalSalary" Collapsed="true">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICalSalary.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
