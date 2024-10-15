@@ -3,80 +3,10 @@
   <Class Name="ManagementLogic.Management" Collapsed="true">
     <Position X="1.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAIAAAAAAAAAiQAAAAAQRAAAAAFAQAAAAAAQAgAAAAA=</HashCode>
+      <HashCode>AAIAIAAIAAAACQAAEAAABAAwQABAQUAAAAARQAACAAA=</HashCode>
       <FileName>Management.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="ManagementLogic.Accounting" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Accounting.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.HR" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>HR.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.Cybersecurity" Collapsed="true">
-    <Position X="5.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Cybersecurity.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.ITSupport" Collapsed="true">
-    <Position X="5.25" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ITSupport.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.SoftwareDevelopment" Collapsed="true">
-    <Position X="7" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SoftwareDevelopment.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.Design" Collapsed="true">
-    <Position X="7" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Design.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.ProductManagement" Collapsed="true">
-    <Position X="7" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ProjectManagement.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.BA" Collapsed="true">
-    <Position X="7" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BA.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ManagementLogic.Database" Collapsed="true">
-    <Position X="7" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Database.cs</FileName>
-    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ManagementLogic.Employee">
     <Position X="9" Y="1.25" Width="1.5" />
@@ -84,16 +14,10 @@
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ACACAAAIACAAAACAAIAAIQQAQIgIAAAiAIAAIAgAABQ=</HashCode>
+      <HashCode>ACACACAAACAgAACgAAAAgAwwEAIMAEAiAAABIAAhAwA=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="ManagementLogic.IDeparment">
-    <Position X="3.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAEAAAAAAAAAAAACAAEQACIAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IDeparment.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
