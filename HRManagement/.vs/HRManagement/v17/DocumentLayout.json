@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|d:\\project_management\\hr_management\\hrmanagement\\managementlogic\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|D:\\Project_Management\\HR_Management\\HRManagement\\managementlogic\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -59,7 +59,7 @@
               "RelativeDocumentMoniker": "ManagementLogic\\Project.cs",
               "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Project.cs",
               "RelativeToolTip": "ManagementLogic\\Project.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T16:59:16.23Z",
               "EditorCaption": ""
@@ -74,8 +74,7 @@
               "RelativeToolTip": "ManagementLogic\\Run.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwBoAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T11:51:27.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T11:51:27.438Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "ManagementLogic\\Account.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAkwD0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T11:50:45.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T11:50:45.541Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "ManagementLogic\\Management.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T04:54:19.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-06T04:54:19.572Z"
             },
             {
               "$type": "Document",
@@ -113,8 +110,7 @@
               "RelativeToolTip": "ManagementLogic\\Department.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAwwDQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T12:28:42.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T12:28:42.733Z"
             },
             {
               "$type": "Document",
@@ -126,8 +122,7 @@
               "RelativeToolTip": "ManagementLogic\\Employee.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAUwBoAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T12:02:19.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T12:02:19.321Z"
             },
             {
               "$type": "Document",
@@ -139,8 +134,7 @@
               "RelativeToolTip": "ManagementLogic\\FulltimeEmployee.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAgwDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T20:54:05.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T20:54:05.882Z"
             },
             {
               "$type": "Document",
@@ -152,8 +146,7 @@
               "RelativeToolTip": "ManagementLogic\\ParttimeEmployee.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAkwA0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T21:02:06.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T21:02:06.183Z"
             },
             {
               "$type": "Document",
