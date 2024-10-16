@@ -189,7 +189,50 @@ namespace ManagementLogic
         //Và parttime thì đủ giơpf làm mới được tính tăng lương, Nhân viên full time thì phải đủ 3 dự án trở lên.
         public void SalaryIncrease(Employee e)
         {
-            
+            if (e is FulltimeEmployee fulltimeEmployee)
+            {
+                if (fulltimeEmployee.Projects.Count >= 3)
+                {
+                    
+                    uint baseSalary = e.Salary; 
+                    uint newSalary = (uint)(e.Salary * 1.1); // tăng 10%
+
+                    if (newSalary >= baseSalary)
+                    {
+                        fulltimeEmployee.Salary = newSalary;
+                        SaveData();
+                    }
+                    else
+                    {
+                        throw new Exception("Lương không được thấp hơn lương cơ bản.");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Nhân viên fulltime phải tham gia ít nhất 3 dự án để được tăng lương.");
+                }
+            }
+            else if (e is ParttimeEmployee parttimeEmployee)
+            {
+                if (parttimeEmployee.Worltime >= 100) 
+                {
+                    uint newSalary = (uint)(parttimeEmployee.Salary * 1.05); // Tăng 5% lương
+
+                    if (newSalary >= 25000)
+                    {
+                        parttimeEmployee.Salary = newSalary;
+                        SaveData();
+                    }
+                    else
+                    {
+                        throw new Exception("Lương part-time không được thấp hơn 25.000 đ");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Nhân viên parttime phải làm đủ số giờ yêu cầu để được tăng lương.");
+                }
+            }
         }
         public void AddADMIN(string username, string password)
         {
