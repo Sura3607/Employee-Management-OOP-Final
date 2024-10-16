@@ -14,7 +14,7 @@ namespace ManagementLogic
         private int senority;
         public int Senority { get => senority; }
         public FulltimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department deparment, uint salary) 
-            : base(id, name, phone, email, address, gender, birthday, beginWork, deparment, salary)
+            : base(id, name, phone, email, address, gender, birthday, beginWork, deparment, 5000000)
         {
             senority = (DateTime.Now.Year - BeginWork.Year);
             if (DateTime.Now.DayOfYear < BeginWork.DayOfYear)
@@ -34,23 +34,28 @@ namespace ManagementLogic
         //Tính lương dựa theo thâm niên tự tạo hợp lí là được
         public double CalculateSalary()
         {
-            throw new NotImplementedException();
+            return Salary * (senority / 5) * 1.1;
         }
-        //Tìm theo tên, email, phone,id
+        //Tìm theo id, tên, email, phone
         public override bool Find(string keyword)
         {
-            throw new NotImplementedException();
+            return Id.IndexOf(keyword) >= 0 ||
+                   Name.IndexOf(keyword) >= 0 ||
+                   Email.IndexOf(keyword) >= 0 ||
+                   Phone.IndexOf(keyword) == 10;
         }
         //Trả về một chuỗi, lầm sao đẹp nhất có thể 
         public override string GetInfo()
         {
-            throw new NotImplementedException();
+            return $"ID:{Id}] \n Tên nhân viên:{Name} \n Email: {Email} \n Số điện thoại: {Phone}";
         }
 
         //Thêm vào listProject một project mới
         public override void AddProject(Project project)
         {
-            throw new NotImplementedException();
+            if (Projects.Any(p => p.Id == project.Id)) // Giả sử mỗi project có một thuộc tính Id duy nhất để phân biệt
+                throw new Exception("Project đã tồn tại trong danh sách.");
+            Projects.Add(project);
         }
     }
 }
