@@ -157,7 +157,15 @@ namespace ManagementLogic
         }
         public void ChangePasssword(string password, string newPassword)
         {
-            account.ChangePassword(password, newPassword);
+            List<Account> accounts = Data.LoadAccounts();
+            foreach (Account a in accounts)
+            {
+                if (a.IsValidUsername(account.UserName))
+                {
+                    a.ChangePassword(password, newPassword);
+                }
+            }
+            Data.SaveAccounts(accounts);
         }
     }
 }
