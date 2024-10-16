@@ -13,6 +13,7 @@ namespace ManagementLogic
         private string username;
         private string password;
         private const string FilePath = "Data.json";
+        public string UserName { get; }
         public Account(string username, string password)
         {
             if (!IsValidPasswordCreate(password))
