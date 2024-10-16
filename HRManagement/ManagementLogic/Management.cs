@@ -59,7 +59,7 @@ namespace ManagementLogic
             }
             return l;
         }
-        public List<Department> FindIDeparment(string keyword)
+        public List<Department> FindDeparment(string keyword)
         {
             List<Department> l = new List<Department>();
             foreach (Department d in DepartmentList)
@@ -90,48 +90,98 @@ namespace ManagementLogic
         //Lưu ý nên kiểm tra đối tượng lại một nữa xem đã hợp lệ chưa và add. ví dụ 
         public void Add(Employee e)
         {
-
+            if (!employeesList.Contains(e))
+            {
+                employeesList.Add(e);
+                SaveData();
+            }
         }
         public void Add(Department d)
         {
-
+            if (!departmentList.Contains(d))
+            {
+                departmentList.Add(d);
+                SaveData();
+            }
         }
         //Khi thêm một prọect mới thì cunngx phải thêm, leader và employees có thể bỏ trống
         //ếu có leaader hoặc một list emplyees thì phải đảm bảo Project đó đã được thêm cho các nhân viên đó .
         //Ví dụ bên duói 
         public void Add(Project d, Employee leader = null, List<Employee> employees = default)
         {
-            //giả sử đã tạo project thành comg
-            leader.AddProject(d);
-            foreach (Employee e in employees)
+            if (!projectList.Contains(d))
             {
-                e.AddProject(d);
+                projectList.Add(d);
+
+                if (leader != null)
+                {
+                    leader.AddProject(d); 
+                }
+
+                if (employees.Count > 0)
+                {
+                    foreach (Employee e in employees)
+                    {
+                        e.AddProject(d); 
+                    }
+                }
+
+                SaveData(); 
             }
         }
         public void Remove(Employee e)
         {
-
+            if (employeesList.Contains(e))
+            {
+                foreach (Project p in projectList)
+                {
+                    p.RemoveEmployee(e);
+                }
+                employeesList.Remove(e);
+                SaveData();
+            }
         }
         public void Remove(Department d)
         {
-
+            if (departmentList.Contains(d))
+            {
+                
+                foreach (Employee e in employeesList)
+                {
+                    if (e.Department == d)
+                    {
+                        e.Department = null; 
+                    }
+                }
+                departmentList.Remove(d);
+                SaveData(); 
+            }
         }
         //Nếu xóa thì dodongf thời cũng phải xóa trong các employees như trên 
-        public void Remove(Project d)
+        public void Remove(Project p)
         {
-
+            if (projectList.Contains(p))
+            {
+                
+                foreach (Employee e in employeesList)
+                {
+                    e.Projects.Remove(p);
+                }
+                projectList.Remove(p);
+                SaveData(); 
+            }
         }
         public string GetInfo(Employee e)
         {
-            return "";
+            return e.GetInfo();
         }
         public string GetInfo(Department d)
         {
-            return "";
+            return d.GetInfo();
         }
         public string GetInfo(Project p)
         {
-            return "";
+            return p.GetInfo();
         }
         //sau khi cập nhật lương cũng sẽ được save, cập nhật lương thì cũng phả kiểm tra điều kiện ,
         //Kt đầu tiên đó là nhân viên gì part hay full
@@ -139,7 +189,7 @@ namespace ManagementLogic
         //Và parttime thì đủ giơpf làm mới được tính tăng lương, Nhân viên full time thì phải đủ 3 dự án trở lên.
         public void SalaryIncrease(Employee e)
         {
-
+            
         }
         public void AddADMIN(string username, string password)
         {
