@@ -91,8 +91,13 @@ namespace ManagementLogic
             set
             {
                 //Kiểm tra xem có đủ tuỏi lao động hay không?
-                if (value.Year <= DateTime.Now.Year - Birthday.Year)
+                if (DateTime.Now.Year - value.Year < 18)
                     throw new ArgumentException("Chưa đủ tuỏi lao động");
+                else if (DateTime.Now.Year - value.Year==18 && DateTime.Now.Month <value.Month)
+                    throw new ArgumentException("Chưa đủ tuỏi lao động");
+                else if (DateTime.Now.Year - value.Year == 18 && DateTime.Now.Month == value.Month && DateTime.Now.Day<value.Day)
+                    throw new ArgumentException("Chưa đủ tuỏi lao động");
+                birthday = value;
             }
         }
         public DateTime BeginWork { get => beginWork; set => beginWork = value; }
