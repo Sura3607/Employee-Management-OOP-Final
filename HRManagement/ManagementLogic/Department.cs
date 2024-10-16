@@ -14,16 +14,44 @@ namespace ManagementLogic
         private Employee leader ;
         private List<Employee> employees ;
         //Thêm điều kiện khi set cho các thuộc tính -Leader ko phải parttime-
-        public string Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
-        public Employee Leader { get => leader; set => leader = value; }
+        public string Id 
+        {
+            get => id;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value)) // Ktra xem Id co null ko
+                    throw new ArgumentException("Id khong duoc de trong");
+                id = value;
+            }
+        }
+        public string Name 
+        {
+            get => name;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Ten phong ban khong duoc de trong");
+                name = value;
+            }
+        }
+        public Employee Leader
+        {
+            get => leader;
+            set
+            {
+                if (value is ParttimeEmployee)
+                    throw new ArgumentException("Leader khong duoc la nhan vien part time");
+                leader = value;
+            }
+        }
         public List<Employee> Employees
         {
             get => employees;
             set
             {
                 if (value == null)
-                    throw new ArgumentNullException();
+                    throw new ArgumentNullException("Danh sach nv khong duoc de trong");
+                employees = value;
             }
         }
         public Department(string id, string name, Employee leader, List<Employee> employees = default)
@@ -50,19 +78,28 @@ namespace ManagementLogic
         //Sử bắt ngoiaj lệ nếu ko thnhf cocng
         public void AddEmployee(Employee employee)
         {
-        
+            if (employees == null)
+                employees = new List<Employee>();
+            employees.Add(employee);
         }
         public void RemoveEmployee(Employee employee)
         {
+            if (employees.Contains(employee))
+                employees.Remove(employee);
+            throw new ArgumentException("Khong tim thay nhan vien nay");
             
         }
-        public bool Find(string keywork)
+        public bool Find(string keyword)
         {
-            return true;
+            if (Name.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+                return true;
+            throw new ArgumentException($"Khong tim thay {keyword}");
         }
         public string GetInfo()
         {
-            return "";
+            string employeeNames = employees.Count > 0 ? string.Join(", ", employees.Select(e => e.Name)) : "Khong co nv";
+            //                                           nối chuỗi         chọn thuộc tính name trong danh sách 
+            return $"\n Ten phong bam: {Name} \n Id: {id} \n Leader: {leader} \n Thanh vien: {employeeNames} ";
         }
 
     }
