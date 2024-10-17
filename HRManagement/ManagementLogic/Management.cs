@@ -95,6 +95,10 @@ namespace ManagementLogic
                 employeesList.Add(e);
                 SaveData();
             }
+            else
+            {
+                throw new Exception($"Nhân viên {e.Name} đã tồn tại");
+            }
         }
         public void Add(Department d)
         {
@@ -103,30 +107,38 @@ namespace ManagementLogic
                 departmentList.Add(d);
                 SaveData();
             }
+            else
+            {
+                throw new Exception($"Phòng ban {d.Name} đã tồn tại");
+            }
         }
         //Khi thêm một prọect mới thì cunngx phải thêm, leader và employees có thể bỏ trống
         //ếu có leaader hoặc một list emplyees thì phải đảm bảo Project đó đã được thêm cho các nhân viên đó .
         //Ví dụ bên duói 
-        public void Add(Project d, Employee leader = null, List<Employee> employees = default)
+        public void Add(Project p, Employee leader = null, List<Employee> employees = default)
         {
-            if (!projectList.Contains(d))
+            if (!projectList.Contains(p))
             {
-                projectList.Add(d);
+                projectList.Add(p);
 
                 if (leader != null)
                 {
-                    leader.AddProject(d); 
+                    leader.AddProject(p); 
                 }
 
                 if (employees.Count > 0)
                 {
                     foreach (Employee e in employees)
                     {
-                        e.AddProject(d); 
+                        e.AddProject(p); 
                     }
                 }
 
                 SaveData(); 
+            }
+            else
+            {
+                throw new Exception("Project đã tồn tại"); 
             }
         }
         public void Remove(Employee e)
@@ -137,8 +149,16 @@ namespace ManagementLogic
                 {
                     p.RemoveEmployee(e);
                 }
+                foreach(Department d in departmentList)
+                {
+                    d.RemoveEmployee(e);
+                }
                 employeesList.Remove(e);
                 SaveData();
+            }
+            else
+            {
+                throw new Exception("Không tồn tại nhân viên cần xóa");
             }
         }
         public void Remove(Department d)
@@ -156,19 +176,26 @@ namespace ManagementLogic
                 departmentList.Remove(d);
                 SaveData(); 
             }
+            else
+            {
+                throw new Exception("Không tồn tại phòng ban cần xóa");
+            }
         }
         //Nếu xóa thì dodongf thời cũng phải xóa trong các employees như trên 
         public void Remove(Project p)
         {
             if (projectList.Contains(p))
             {
-                
                 foreach (Employee e in employeesList)
                 {
                     e.Projects.Remove(p);
                 }
                 projectList.Remove(p);
                 SaveData(); 
+            }
+            else
+            {
+                throw new Exception("Không tồn tại dự án cần xóa");
             }
         }
         public string GetInfo(Employee e)
@@ -225,7 +252,7 @@ namespace ManagementLogic
                     }
                     else
                     {
-                        throw new Exception("Lương part-time không được thấp hơn 25.000 đ");
+                        throw new Exception("Lương parttime không được thấp hơn 25.000 đ");
                     }
                 }
                 else
