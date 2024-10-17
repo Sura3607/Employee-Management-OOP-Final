@@ -25,16 +25,93 @@ namespace ManagementLogic
         private uint salary;
 
         //Them điều kiện cho việc set, của các thuộc tính -Email-Phone-Năm sinh phải đủ tuổi lao động-Salary ko được thấp hơn lương cơ bản.
-        public string Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
-        public string Phone { get => phone; set => phone = value; }
-        public string Email { get => email; set => email = value; }
+        public string Id
+        {
+            get => id;
+            set
+            {
+                //Kiểm tra xem có rỗng hoặc null không?
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Id không được để trống");
+                id = value; 
+            } 
+        }
+        public string Name
+        {
+            get => name;
+            set
+            {
+                //Kiểm tra xem có rỗng hoặc null không?
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Ten khong duoc de trong");
+                name = value;
+            }
+        }
+        public string Phone 
+        {
+            get => phone;
+            set
+            {
+                // Kiểm tra chuỗi rỗng hoặc null
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Số điện thoại không hợp lệ: không được để trống.");
+
+                // Kiểm tra độ dài của chuỗi phải là 10
+                if (value.Length != 10)
+                    throw new ArgumentException("Số điện thoại phải có đúng 10 chữ số.");
+
+                // Kiểm tra tất cả các ký tự phải là số
+                if (!value.All(char.IsDigit))
+                    throw new ArgumentException("Số điện thoại chỉ được chứa các chữ số.");
+
+                phone = value;
+            }
+        }
+        public string Email
+        {
+            get => email;
+            set
+            {
+                // Kiểm tra chuỗi không rỗng hoặc không chứa chỉ khoảng trắng
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Email không được để trống.");
+
+                // Kiểm tra email có định dạng @gmail.com
+                if (!value.EndsWith("@gmail.com"))
+                    throw new ArgumentException("Email phải có dạng @gmail.com.");
+
+                email = value;
+            }
+        }
         public string Address { get => address; set => address = value; }
         public bool Gender { get => gender; set => gender = value; }
-        public DateTime Birthday { get => birthday; set => birthday = value; }
+        public DateTime Birthday
+        {
+            get => birthday;
+            set
+            {
+                //Kiểm tra xem có đủ tuỏi lao động hay không?
+                if (DateTime.Now.Year - value.Year < 18)
+                    throw new ArgumentException("Chưa đủ tuỏi lao động");
+                else if (DateTime.Now.Year - value.Year==18 && DateTime.Now.Month <value.Month)
+                    throw new ArgumentException("Chưa đủ tuỏi lao động");
+                else if (DateTime.Now.Year - value.Year == 18 && DateTime.Now.Month == value.Month && DateTime.Now.Day<value.Day)
+                    throw new ArgumentException("Chưa đủ tuỏi lao động");
+                birthday = value;
+            }
+        }
         public DateTime BeginWork { get => beginWork; set => beginWork = value; }
         public Department Department { get => department; set => department = value; }
-        public uint Salary { get => salary; set => salary = value; }
+        public uint Salary
+        {
+            get => salary;
+            set
+            {
+                if (value <= 2340000)
+                    throw new ArgumentException($"Lương không được thấp hơn mức lương cơ bản là 2340000 VND.");
+                salary = value;
+            } 
+        }
         public List<Project> Projects { get => projects; set => projects = value; }
 
         //Khi tạoh đối tượng mới sẽ mặch định projects của đối tượng là rỗng 
