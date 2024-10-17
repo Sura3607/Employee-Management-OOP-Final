@@ -85,7 +85,7 @@ namespace ManagementLogic
         public void AddEmployee(Employee employee)
         {
             if (employees == null)
-                employees = new List<Employee>();
+                throw new ArgumentException("Them nhan vien that bai");
             employees.Add(employee);
         }
         public void RemoveEmployee(Employee employee)
