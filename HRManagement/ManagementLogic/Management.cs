@@ -13,7 +13,7 @@ namespace ManagementLogic
         private List<Employee> employeesList= new List<Employee>();
         private List<Department> departmentList = new List<Department>();
         private List<Project> projectList = new List<Project>();
-        Data data = new Data();
+        private Data data = new Data();
         private string filePath;
         private Account account;
 
@@ -59,7 +59,7 @@ namespace ManagementLogic
             }
             return l;
         }
-        public List<Department> FindDeparment(string keyword)
+        public List<Department> FindDepartment(string keyword)
         {
             List<Department> l = new List<Department>();
             foreach (Department d in DepartmentList)
@@ -71,7 +71,7 @@ namespace ManagementLogic
             }
             return l;
         }
-        public List<Project> FindPoject(string keyword)
+        public List<Project> FindProject(string keyword)
         {
             List<Project> l = new List<Project>();
             foreach (Project p in ProjectList)
@@ -90,113 +90,106 @@ namespace ManagementLogic
         //Lưu ý nên kiểm tra đối tượng lại một nữa xem đã hợp lệ chưa và add. ví dụ 
         public void Add(Employee e)
         {
-            if (!employeesList.Contains(e))
-            {
-                employeesList.Add(e);
-                SaveData();
-            }
-            else
+            if (employeesList.Contains(e))
             {
                 throw new Exception($"Nhân viên {e.Name} đã tồn tại");
             }
-        }
-        public void Add(Department d)
-        {
-            if (!departmentList.Contains(d))
-            {
-                departmentList.Add(d);
-                SaveData();
+            employeesList.Add(e);
+            SaveData();
             }
-            else
+        public void Add(Department d, Employee leader = null, List<Employee> employees = default)
+        {
+            if (departmentList.Contains(d))
             {
                 throw new Exception($"Phòng ban {d.Name} đã tồn tại");
             }
+            if (leader != null)
+            {
+                leader.Department = d;
+                d.Leader = leader;
+            }
+            if (employees.Count > 0)
+            {
+                foreach (Employee e in employees)
+                {
+                    e.Department = d;
+                    d.AddEmployee(e);
+                }
+            }
+            departmentList.Add(d);
+            SaveData();
         }
         //Khi thêm một prọect mới thì cunngx phải thêm, leader và employees có thể bỏ trống
         //ếu có leaader hoặc một list emplyees thì phải đảm bảo Project đó đã được thêm cho các nhân viên đó .
         //Ví dụ bên duói 
         public void Add(Project p, Employee leader = null, List<Employee> employees = default)
         {
-            if (!projectList.Contains(p))
+            if (projectList.Contains(p))
             {
-                projectList.Add(p);
-
-                if (leader != null)
-                {
-                    leader.AddProject(p); 
-                }
-
-                if (employees.Count > 0)
-                {
-                    foreach (Employee e in employees)
-                    {
-                        e.AddProject(p); 
-                    }
-                }
-
-                SaveData(); 
+                throw new Exception("Project đã tồn tại");
             }
-            else
+            if (leader != null)
             {
-                throw new Exception("Project đã tồn tại"); 
+                leader.AddProject(p);
+                p.AddLeader(leader);
             }
+
+            if (employees.Count > 0)
+            {
+                foreach (Employee e in employees)
+                {
+                    e.AddProject(p);
+                    p.AddEmployee(e);
+                }
+            }
+            projectList.Add(p);
+            SaveData();
         }
         public void Remove(Employee e)
         {
-            if (employeesList.Contains(e))
-            {
-                foreach (Project p in projectList)
-                {
-                    p.RemoveEmployee(e);
-                }
-                foreach(Department d in departmentList)
-                {
-                    d.RemoveEmployee(e);
-                }
-                employeesList.Remove(e);
-                SaveData();
-            }
-            else
+            if (!employeesList.Contains(e))
             {
                 throw new Exception("Không tồn tại nhân viên cần xóa");
             }
+            foreach (Project p in e.Projects)
+            {
+                p.RemoveEmployee(e);
+            }
+            Department d = e.Department;
+            d.RemoveEmployee(e);
+
+            employeesList.Remove(e);
+            SaveData();
         }
         public void Remove(Department d)
         {
-            if (departmentList.Contains(d))
+            if (!departmentList.Contains(d))
             {
-                
-                foreach (Employee e in employeesList)
-                {
-                    if (e.Department == d)
-                    {
-                        e.Department = null; 
-                    }
-                }
-                departmentList.Remove(d);
-                SaveData(); 
+                throw new Exception("Không tồn tại phòng ban cần xóa");             
             }
-            else
+            Employee leader = d.Leader;
+            leader.Department = null;
+            foreach (Employee e in d.Employees)
             {
-                throw new Exception("Không tồn tại phòng ban cần xóa");
+                e.Department = null;
             }
+            departmentList.Remove(d);
+            SaveData();
         }
-        //Nếu xóa thì dodongf thời cũng phải xóa trong các employees như trên 
         public void Remove(Project p)
         {
-            if (projectList.Contains(p))
-            {
-                foreach (Employee e in employeesList)
-                {
-                    e.Projects.Remove(p);
-                }
-                projectList.Remove(p);
-                SaveData(); 
-            }
-            else
+            if (!projectList.Contains(p))
             {
                 throw new Exception("Không tồn tại dự án cần xóa");
             }
+            Employee leader = p.Leader;
+            leader.Projects.Remove(p);
+            foreach (Employee e in p.Employees)
+            {
+                e.Projects.Remove(p);
+            }
+            projectList.Remove(p);
+            SaveData();
         }
         public string GetInfo(Employee e)
         {

@@ -84,10 +84,11 @@ namespace ManagementLogic
         }
         public void RemoveEmployee(Employee employee)
         {
+            if (leader == employee) 
+                leader = null;
             if (employees.Contains(employee))
                 employees.Remove(employee);
             throw new ArgumentException("Khong tim thay nhan vien nay");
-            
         }
         public bool Find(string keyword)
         {

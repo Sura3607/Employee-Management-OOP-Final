@@ -14,7 +14,7 @@ namespace ManagementLogic
         private int senority;
         public int Senority { get => senority; }
         public FulltimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department deparment, uint salary) 
-            : base(id, name, phone, email, address, gender, birthday, beginWork, deparment, 5000000)
+            : base(id, name, phone, email, address, gender, birthday, DateTime.Now, deparment, 5000000)
         {
             senority = (DateTime.Now.Year - BeginWork.Year);
             if (DateTime.Now.DayOfYear < BeginWork.DayOfYear)

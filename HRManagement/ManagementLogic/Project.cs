@@ -47,7 +47,8 @@ namespace ManagementLogic
                 description = value;
             }
         }
-
+        public List<Employee> Employees { get; }
+        public Employee Leader { get; }
 
         //Khi khởi tạo ko bắt buộc phải có desciption 
         public Project(string id, string projectName, Employee leader = null, List<Employee> employees= default, string description = "")
@@ -84,6 +85,8 @@ namespace ManagementLogic
 
         public void AddEmployee(Employee employee)
         {
+            if (leader == employee)
+                leader = null;
             if (employees == null)
                 throw new ArgumentException("Them nhan vien that bai");
             employees.Add(employee);

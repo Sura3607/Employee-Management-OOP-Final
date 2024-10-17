@@ -101,7 +101,16 @@ namespace ManagementLogic
             }
         }
         public DateTime BeginWork { get => beginWork; set => beginWork = value; }
-        public Department Department { get => department; set => department = value; }
+        public Department Department 
+        { 
+            get => department; 
+            set
+            {
+                if (department != null)
+                    throw new ArgumentException("Nhân viên này đang ở trong một phòng ban khác");
+                department = value;
+            } 
+        }
         public uint Salary
         {
             get => salary;
