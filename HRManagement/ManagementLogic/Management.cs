@@ -46,7 +46,7 @@ namespace ManagementLogic
         {
             data.SaveData(this,this.filePath);
         }
-        //Xử lí lại việc tìm Nhân viên vì bây giờ có 2 kiểu nhân viên, ko bk trước đối tượng đó là loại nào
+        //Xử lí lại việc tìm Nhân viên vì bây giờ có 2 kiểu nhân viên, ko bk trước đối tượng đó là loại gì
         public List<Employee> FindEmployee(string keyword)
         {
             List<Employee> l = new List<Employee>();
@@ -59,7 +59,7 @@ namespace ManagementLogic
             }
             return l;
         }
-        public List<Department> FindIDeparment(string keyword)
+        public List<Department> FindDeparment(string keyword)
         {
             List<Department> l = new List<Department>();
             foreach (Department d in DepartmentList)
@@ -90,48 +90,125 @@ namespace ManagementLogic
         //Lưu ý nên kiểm tra đối tượng lại một nữa xem đã hợp lệ chưa và add. ví dụ 
         public void Add(Employee e)
         {
-
+            if (!employeesList.Contains(e))
+            {
+                employeesList.Add(e);
+                SaveData();
+            }
+            else
+            {
+                throw new Exception($"Nhân viên {e.Name} đã tồn tại");
+            }
         }
         public void Add(Department d)
         {
-
+            if (!departmentList.Contains(d))
+            {
+                departmentList.Add(d);
+                SaveData();
+            }
+            else
+            {
+                throw new Exception($"Phòng ban {d.Name} đã tồn tại");
+            }
         }
         //Khi thêm một prọect mới thì cunngx phải thêm, leader và employees có thể bỏ trống
         //ếu có leaader hoặc một list emplyees thì phải đảm bảo Project đó đã được thêm cho các nhân viên đó .
         //Ví dụ bên duói 
-        public void Add(Project d, Employee leader = null, List<Employee> employees = default)
+        public void Add(Project p, Employee leader = null, List<Employee> employees = default)
         {
-            //giả sử đã tạo project thành comg
-            leader.AddProject(d);
-            foreach (Employee e in employees)
+            if (!projectList.Contains(p))
             {
-                e.AddProject(d);
+                projectList.Add(p);
+
+                if (leader != null)
+                {
+                    leader.AddProject(p); 
+                }
+
+                if (employees.Count > 0)
+                {
+                    foreach (Employee e in employees)
+                    {
+                        e.AddProject(p); 
+                    }
+                }
+
+                SaveData(); 
+            }
+            else
+            {
+                throw new Exception("Project đã tồn tại"); 
             }
         }
         public void Remove(Employee e)
         {
-
+            if (employeesList.Contains(e))
+            {
+                foreach (Project p in projectList)
+                {
+                    p.RemoveEmployee(e);
+                }
+                foreach(Department d in departmentList)
+                {
+                    d.RemoveEmployee(e);
+                }
+                employeesList.Remove(e);
+                SaveData();
+            }
+            else
+            {
+                throw new Exception("Không tồn tại nhân viên cần xóa");
+            }
         }
         public void Remove(Department d)
         {
-
+            if (departmentList.Contains(d))
+            {
+                
+                foreach (Employee e in employeesList)
+                {
+                    if (e.Department == d)
+                    {
+                        e.Department = null; 
+                    }
+                }
+                departmentList.Remove(d);
+                SaveData(); 
+            }
+            else
+            {
+                throw new Exception("Không tồn tại phòng ban cần xóa");
+            }
         }
         //Nếu xóa thì dodongf thời cũng phải xóa trong các employees như trên 
-        public void Remove(Project d)
+        public void Remove(Project p)
         {
-
+            if (projectList.Contains(p))
+            {
+                foreach (Employee e in employeesList)
+                {
+                    e.Projects.Remove(p);
+                }
+                projectList.Remove(p);
+                SaveData(); 
+            }
+            else
+            {
+                throw new Exception("Không tồn tại dự án cần xóa");
+            }
         }
         public string GetInfo(Employee e)
         {
-            return "";
+            return e.GetInfo();
         }
         public string GetInfo(Department d)
         {
-            return "";
+            return d.GetInfo();
         }
         public string GetInfo(Project p)
         {
-            return "";
+            return p.GetInfo();
         }
         //sau khi cập nhật lương cũng sẽ được save, cập nhật lương thì cũng phả kiểm tra điều kiện ,
         //Kt đầu tiên đó là nhân viên gì part hay full
@@ -139,7 +216,50 @@ namespace ManagementLogic
         //Và parttime thì đủ giơpf làm mới được tính tăng lương, Nhân viên full time thì phải đủ 3 dự án trở lên.
         public void SalaryIncrease(Employee e)
         {
+            if (e is FulltimeEmployee fulltimeEmployee)
+            {
+                if (fulltimeEmployee.Projects.Count >= 3)
+                {
+                    
+                    uint baseSalary = e.Salary; 
+                    uint newSalary = (uint)(e.Salary * 1.1); // tăng 10%
 
+                    if (newSalary >= baseSalary)
+                    {
+                        fulltimeEmployee.Salary = newSalary;
+                        SaveData();
+                    }
+                    else
+                    {
+                        throw new Exception("Lương không được thấp hơn lương cơ bản.");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Nhân viên fulltime phải tham gia ít nhất 3 dự án để được tăng lương.");
+                }
+            }
+            else if (e is ParttimeEmployee parttimeEmployee)
+            {
+                if (parttimeEmployee.Worltime >= 100) 
+                {
+                    uint newSalary = (uint)(parttimeEmployee.Salary * 1.05); // Tăng 5% lương
+
+                    if (newSalary >= 25000)
+                    {
+                        parttimeEmployee.Salary = newSalary;
+                        SaveData();
+                    }
+                    else
+                    {
+                        throw new Exception("Lương parttime không được thấp hơn 25.000 đ");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Nhân viên parttime phải làm đủ số giờ yêu cầu để được tăng lương.");
+                }
+            }
         }
         public void AddADMIN(string username, string password)
         {
