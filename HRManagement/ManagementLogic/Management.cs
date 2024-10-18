@@ -234,7 +234,7 @@ namespace ManagementLogic
             }
             else if (e is ParttimeEmployee parttimeEmployee)
             {
-                if (parttimeEmployee.Worltime >= 100) 
+                if (parttimeEmployee.Worktime >= 100) 
                 {
                     uint newSalary = (uint)(parttimeEmployee.Salary * 1.05); // Tăng 5% lương
 

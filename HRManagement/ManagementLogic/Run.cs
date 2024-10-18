@@ -28,7 +28,7 @@ namespace ManagementLogic
             management.SetFilePath(account.GetFilePath());
             management.SetCurrentAccount(account);
         }
-        public void addADMIN(string username, string password)
+        public void AddADMIN(string username, string password)
         {
             try
             {
