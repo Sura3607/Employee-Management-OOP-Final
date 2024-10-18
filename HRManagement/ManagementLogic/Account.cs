@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ManagementLogic
@@ -13,7 +14,7 @@ namespace ManagementLogic
         private string username;
         private string password;
         private const string FilePath = "Data.json";
-        public string UserName { get; }
+        public string UserName { get => username; }
         public Account(string username, string password)
         {
             if (!IsValidPasswordCreate(password))
@@ -23,11 +24,13 @@ namespace ManagementLogic
             this.username = username;
             this.password = password;
         }
+        public Account() { }
         public Account(SerializationInfo info, StreamingContext context)
         {
             username = info.GetString("username");
             password = info.GetString("password");
         }
+        
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("username", username);

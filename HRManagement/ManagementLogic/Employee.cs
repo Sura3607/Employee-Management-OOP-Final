@@ -123,7 +123,7 @@ namespace ManagementLogic
         }
         public List<Project> Projects { get => projects; set => projects = value; }
 
-        //Khi tạoh đối tượng mới sẽ mặch định projects của đối tượng là rỗng 
+        protected Employee() { }
         protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary)
         {
             this.id = id;

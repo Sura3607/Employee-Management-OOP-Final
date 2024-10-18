@@ -1,20 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
 namespace ManagementLogic
 {
+    [Serializable]
     public class Data
     {
         static private string accountFilePath = "accounts.json";
 
-        //Luu data cần có một đối tượng management đg tồn tại
+        //D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug
         public void SaveData(Management management,string FilePath)
         {
             string json = JsonSerializer.Serialize(management, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(FilePath, json);
         }
-        //LoadData từ hệ thống
+        //LoadData from D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug
         static public Management LoadData(string FilePath)
         {
             if (File.Exists(FilePath))
@@ -25,7 +27,7 @@ namespace ManagementLogic
             return new Management();
         }
 
-        //Save và Load dữ liệu các đối tượng Account từ một file riêng
+        //D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug
         static public void SaveAccounts(List<Account> accounts)
         {
             string json = JsonSerializer.Serialize(accounts, new JsonSerializerOptions { WriteIndented = true });

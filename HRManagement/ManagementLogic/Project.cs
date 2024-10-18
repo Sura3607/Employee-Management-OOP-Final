@@ -50,7 +50,7 @@ namespace ManagementLogic
         public List<Employee> Employees { get; }
         public Employee Leader { get; }
 
-        //Khi khởi tạo ko bắt buộc phải có desciption 
+        public Project() { }
         public Project(string id, string projectName, Employee leader = null, List<Employee> employees= default, string description = "")
         {
             Id = id;

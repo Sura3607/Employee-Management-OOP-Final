@@ -54,6 +54,7 @@ namespace ManagementLogic
                 employees = value;
             }
         }
+        public Department() { }
         public Department(string id, string name, Employee leader, List<Employee> employees = default)
         {
             Id = id;

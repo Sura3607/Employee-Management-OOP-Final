@@ -14,8 +14,7 @@ namespace Managenment_Windows
         /// </summary>
         [STAThread]
         static void Main()
-        {
-            Employee a = new Employee("a", "123", "@123", "Abc", true, default, default, new HR(), default(int), "");
+        {           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
