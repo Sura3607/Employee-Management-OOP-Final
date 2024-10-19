@@ -30,3 +30,35 @@ D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\S
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.xml
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Form1.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe.config
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.pdb
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\ManagementLogic.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Json.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Memory.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.ValueTuple.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\ManagementLogic.pdb
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\ManagementLogic.dll.config
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Json.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Memory.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.ValueTuple.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CopyComplete
