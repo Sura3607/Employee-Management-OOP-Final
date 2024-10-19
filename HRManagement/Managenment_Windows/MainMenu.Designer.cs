@@ -82,7 +82,7 @@
             this.thêmTkToolStripMenuItem.Name = "thêmTkToolStripMenuItem";
             this.thêmTkToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thêmTkToolStripMenuItem.Text = "Xem hồ sơ nhân sự";
-            this.thêmTkToolStripMenuItem.Click += new System.EventHandler(this.thêmTkToolStripMenuItem_Click);
+            this.thêmTkToolStripMenuItem.Click += new System.EventHandler(this.ThemTKToolStripMenuItem_Click);
             // 
             // tàiKhoảnToolStripMenuItem
             // 
