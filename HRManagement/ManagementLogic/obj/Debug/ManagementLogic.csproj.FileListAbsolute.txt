@@ -24,3 +24,29 @@ D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\Syste
 D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.xml
 D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\Manageme.E116C90F.Up2Date
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll.config
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.pdb
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CopyComplete
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.pdb

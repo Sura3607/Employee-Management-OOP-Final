@@ -33,13 +33,9 @@ namespace ManagementLogic
                     break;
                 }
             }
-            if (account == null)
+            if (account == null || !account.IsValidPassword(password))
             {
-                throw new Exception("Username does not exist.");
-            }
-            if (!account.IsValidPassword(password))
-            {
-                throw new Exception("Login failed: Incorrect password.");
+                throw new Exception("Tài khoản hoặc mật khẩu sai");
             }
             
             management = Data.LoadData(account.GetFilePath());

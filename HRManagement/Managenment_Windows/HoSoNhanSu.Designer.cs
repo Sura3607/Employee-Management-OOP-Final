@@ -70,7 +70,7 @@
             this.lblTongSo.ForeColor = System.Drawing.Color.Blue;
             this.lblTongSo.Location = new System.Drawing.Point(14, 73);
             this.lblTongSo.Name = "lblTongSo";
-            this.lblTongSo.Size = new System.Drawing.Size(186, 26);
+            this.lblTongSo.Size = new System.Drawing.Size(150, 21);
             this.lblTongSo.TabIndex = 1;
             this.lblTongSo.Text = "Tổng số: 0 bản ghi";
             // 
@@ -80,7 +80,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(14, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 26);
+            this.label1.Size = new System.Drawing.Size(77, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Từ khóa:";
             // 
@@ -88,7 +88,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(116, 19);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(378, 34);
+            this.textBox1.Size = new System.Drawing.Size(378, 29);
             this.textBox1.TabIndex = 3;
             // 
             // button1
@@ -106,7 +106,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(449, 374);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 26);
+            this.label2.Size = new System.Drawing.Size(78, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "Chức vụ:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -117,7 +117,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(449, 418);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 26);
+            this.label3.Size = new System.Drawing.Size(96, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Phòng Ban:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -128,7 +128,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(14, 322);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 26);
+            this.label4.Size = new System.Drawing.Size(104, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "ID_ChucVu:";
             // 
@@ -138,7 +138,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(449, 322);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 26);
+            this.label5.Size = new System.Drawing.Size(100, 21);
             this.label5.TabIndex = 8;
             this.label5.Text = "Ma_ChuVu:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -149,7 +149,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(18, 374);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 26);
+            this.label6.Size = new System.Drawing.Size(86, 21);
             this.label6.TabIndex = 9;
             this.label6.Text = "Họ và tên:";
             // 
@@ -159,7 +159,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(18, 462);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 26);
+            this.label7.Size = new System.Drawing.Size(73, 21);
             this.label7.TabIndex = 10;
             this.label7.Text = "Ghi chú:";
             // 
@@ -167,42 +167,42 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(150, 314);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 34);
+            this.textBox2.Size = new System.Drawing.Size(226, 29);
             this.textBox2.TabIndex = 11;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(580, 314);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 34);
+            this.textBox3.Size = new System.Drawing.Size(226, 29);
             this.textBox3.TabIndex = 12;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(580, 366);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 34);
+            this.textBox4.Size = new System.Drawing.Size(226, 29);
             this.textBox4.TabIndex = 13;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(150, 366);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(226, 34);
+            this.textBox5.Size = new System.Drawing.Size(226, 29);
             this.textBox5.TabIndex = 14;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(580, 410);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(226, 34);
+            this.textBox6.Size = new System.Drawing.Size(226, 29);
             this.textBox6.TabIndex = 15;
             // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(150, 454);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(656, 34);
+            this.textBox7.Size = new System.Drawing.Size(656, 29);
             this.textBox7.TabIndex = 16;
             // 
             // button2
@@ -253,7 +253,7 @@
             // 
             // HoSoNhanSu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 731);
             this.Controls.Add(this.button6);
@@ -282,6 +282,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "HoSoNhanSu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hồ sơ nhân sự";
             ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).EndInit();
             this.ResumeLayout(false);

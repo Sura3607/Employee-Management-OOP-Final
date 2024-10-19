@@ -26,7 +26,7 @@ namespace Managenment_Windows
             try
             {
                 Run.Instance.Login(username, password);
-                MessageBox.Show("Đăng nhập thành công");
+                MessageBox.Show("Đăng nhập thành công","Chú ý" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 MainMenu mainMenu = new MainMenu();
                 mainMenu.ShowDialog();
@@ -34,7 +34,7 @@ namespace Managenment_Windows
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
