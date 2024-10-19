@@ -106,7 +106,7 @@ namespace ManagementLogic
             get => department; 
             set
             {
-                if (department != null)
+                if (department != null && value != null)
                     throw new ArgumentException("Nhân viên này đang ở trong một phòng ban khác");
                 department = value;
             } 

@@ -44,30 +44,21 @@ namespace ManagementLogic
                 leader = value;
             }
         }
-        public List<Employee> Employees
-        {
-            get => employees;
-            set
-            {
-                if (value == null)
-                    throw new ArgumentNullException("Danh sach nv khong duoc de trong");
-                employees = value;
-            }
-        }
+        public List<Employee> Employees { get => employees; }
         public Department() { }
         public Department(string id, string name, Employee leader, List<Employee> employees = default)
         {
             Id = id;
             Name = name;
             Leader = leader;
-            Employees = employees;
+            this.employees = employees;
         }
         public Department(SerializationInfo info, StreamingContext context)
         {
             Id = info.GetString("id");
             Name = info.GetString("name");
             Leader = (Employee)info.GetValue("Leader",typeof(Employee));
-            Employees = (List<Employee>)info.GetValue("Employees",typeof (List<Employee>));
+            employees = (List<Employee>)info.GetValue("Employees",typeof (List<Employee>));
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
