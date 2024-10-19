@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ManagementLogic
@@ -22,6 +23,13 @@ namespace ManagementLogic
             {
                 senority--;
             }
+        }
+
+        [JsonConstructor]
+        public FulltimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary, int senority)
+        : base(id, name, phone, email, address, gender, birthday, beginWork, department, salary)
+        {
+            this.senority = senority;
         }
         public FulltimeEmployee(SerializationInfo info, StreamingContext context) : base(info, context) 
         {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace ManagementLogic
 {
@@ -27,6 +28,14 @@ namespace ManagementLogic
             employeesList = (List<Employee>)info.GetValue("Employees",typeof(List<Employee>));
             departmentList = (List<Department>)info.GetValue("Departments",typeof (List<Department>));
             projectList = (List<Project>)info.GetValue("Projects",typeof(List<Project>));
+        }
+
+        [JsonConstructor] // Constructor này sẽ được gọi khi deserialization từ JSON
+        public Management(List<Employee> employeesList, List<Department> departmentList, List<Project> projectList)
+        {
+            this.employeesList = employeesList;
+            this.departmentList = departmentList;
+            this.projectList = projectList;
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ManagementLogic
@@ -13,6 +14,8 @@ namespace ManagementLogic
         private int worktime;
         public int Worktime { get => worktime; }
         public ParttimeEmployee():base(){}
+
+        [JsonConstructor]
         public ParttimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department deparment, uint salary, int worktime = 0) 
             : base(id, name, phone, email, address, gender, birthday, DateTime.Now, deparment, 25000)
         {

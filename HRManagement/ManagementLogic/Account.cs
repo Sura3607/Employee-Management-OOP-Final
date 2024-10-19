@@ -15,6 +15,10 @@ namespace ManagementLogic
         private string password;
         private const string FilePath = "Data.json";
         public string UserName { get => username; }
+        public string Password { get => password; }
+
+        //Do ko thể set qua property json cần có 1 contructor để làm việc đó
+        [JsonConstructor]
         public Account(string username, string password)
         {
             if (!IsValidPasswordCreate(password))
@@ -25,12 +29,13 @@ namespace ManagementLogic
             this.password = password;
         }
         public Account() { }
+
         public Account(SerializationInfo info, StreamingContext context)
         {
             username = info.GetString("username");
             password = info.GetString("password");
         }
-        
+
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("username", username);

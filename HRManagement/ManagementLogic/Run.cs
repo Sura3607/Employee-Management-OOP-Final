@@ -9,12 +9,30 @@ namespace ManagementLogic
     public class Run // main thuc thi hanh dong ow day, tien xu li
     {
         private Management management = null;
-        public Run() { }
+        private static Run instance;
+        private Run() { }
+        public static Run Instance 
+        {
+            get
+            {
+                if(instance == null)
+                    instance = new Run();
+                return instance;
+            }
+        }
         public void Login(string username, string password)
         {
             List<Account> accounts = Data.LoadAccounts();
 
-            Account account = accounts.Find(a => a.IsValidUsername(username));
+            Account account = null;
+            foreach(Account a in accounts)
+            {
+                if(a.UserName == username)
+                {
+                    account = a;
+                    break;
+                }
+            }
             if (account == null)
             {
                 throw new Exception("Username does not exist.");
