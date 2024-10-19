@@ -38,7 +38,8 @@ namespace ManagementLogic
             if (File.Exists(accountFilePath))
             {
                 string json = File.ReadAllText(accountFilePath);
-                return JsonSerializer.Deserialize<List<Account>>(json);
+                List<Account> accounts = JsonSerializer.Deserialize<List<Account>>(json);
+                return accounts;
             }
             return new List<Account>(); 
         }

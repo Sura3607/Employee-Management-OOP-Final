@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagementLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,27 @@ namespace Managenment_Windows
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void Login_click(object sender, EventArgs e)
+        {
+            string username = txtTenTaiKhoan.Text;
+            string password = txtMatKhau.Text;
+
+            try
+            {
+                Run.Instance.Login(username, password);
+                MessageBox.Show("Đăng nhập thành công");
+                this.Hide();
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.ShowDialog();
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

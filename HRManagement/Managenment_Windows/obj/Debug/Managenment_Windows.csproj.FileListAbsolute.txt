@@ -62,3 +62,4 @@ C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenme
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.xml
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CopyComplete
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Login.resources
