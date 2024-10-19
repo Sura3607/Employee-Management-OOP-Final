@@ -1,6 +1,6 @@
 ﻿namespace Managenment_Windows
 {
-    partial class frmHoSoNhanSu
+    partial class HoSoNhanSu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoSoNhanSu));
             this.dtgMain = new System.Windows.Forms.DataGridView();
             this.lblTongSo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -250,7 +251,7 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // frmHoSoNhanSu
+            // HoSoNhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -278,8 +279,9 @@
             this.Controls.Add(this.lblTongSo);
             this.Controls.Add(this.dtgMain);
             this.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "frmHoSoNhanSu";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "HoSoNhanSu";
             this.Text = "Hồ sơ nhân sự";
             ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).EndInit();
             this.ResumeLayout(false);

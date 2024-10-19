@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
@@ -80,7 +81,7 @@
             // thêmTkToolStripMenuItem
             // 
             this.thêmTkToolStripMenuItem.Name = "thêmTkToolStripMenuItem";
-            this.thêmTkToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thêmTkToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
             this.thêmTkToolStripMenuItem.Text = "Xem hồ sơ nhân sự";
             this.thêmTkToolStripMenuItem.Click += new System.EventHandler(this.ThemTKToolStripMenuItem_Click);
             // 
@@ -96,13 +97,13 @@
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // dataGridView1
@@ -115,7 +116,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(749, 113);
             this.dataGridView1.TabIndex = 3;
             // 
-            // frmMain
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,8 +124,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmMain";
+            this.Name = "MainMenu";
             this.Text = "Quản lý hồ sơ nhân sự";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

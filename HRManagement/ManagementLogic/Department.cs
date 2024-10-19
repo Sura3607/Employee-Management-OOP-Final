@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace ManagementLogic
 {
@@ -46,12 +47,14 @@ namespace ManagementLogic
         }
         public List<Employee> Employees { get => employees; }
         public Department() { }
+
+        [JsonConstructor]
         public Department(string id, string name, Employee leader, List<Employee> employees = default)
         {
             Id = id;
             Name = name;
             Leader = leader;
-            this.employees = employees;
+            this.employees = employees ?? new List<Employee>();
         }
         public Department(SerializationInfo info, StreamingContext context)
         {
