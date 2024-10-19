@@ -17,12 +17,12 @@ namespace Managenment_Windows
             InitializeComponent();
         }
 
-        private void chỉnhSửaThôngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChinhSuaThongBaoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void thêmTkToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ThemTKToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
