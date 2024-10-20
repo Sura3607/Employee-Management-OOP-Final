@@ -36,7 +36,25 @@ namespace Managenment_Windows
             {
                 MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+        }
+        private bool isPasswordHidden = true;
+
+        private void btnShowHidePassword_Click(object sender, EventArgs e)
+        {
+            if (isPasswordHidden)
+            {
+                // Hiện mật khẩu
+                txtMatKhau.UseSystemPasswordChar = false;
+                btnShowHidePassword.Text = "Hide"; 
+            }
+            else
+            {
+                // Ẩn mật khẩu
+                txtMatKhau.UseSystemPasswordChar = true;
+                btnShowHidePassword.Text = "Show";
+            }
+
+            isPasswordHidden = !isPasswordHidden;
         }
     }
 }
