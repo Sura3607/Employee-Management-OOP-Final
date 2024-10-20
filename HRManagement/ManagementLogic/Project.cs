@@ -48,8 +48,8 @@ namespace ManagementLogic
                 description = value;
             }
         }
-        public List<Employee> Employees { get; }
-        public Employee Leader { get; }
+        public List<Employee> Employees { get => employees; }
+        public Employee Leader { get => leader; }
 
         public Project() { }
         [JsonConstructor]
