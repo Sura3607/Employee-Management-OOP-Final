@@ -122,7 +122,7 @@ namespace ManagementLogic
                 salary = value;
             } 
         }
-        public List<Project> Projects { get => projects; set => projects = value; }
+        public List<Project> Projects { get => projects;}
 
         protected Employee() { }
 
