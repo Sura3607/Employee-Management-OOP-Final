@@ -10,6 +10,9 @@ namespace ManagementLogic
     {
         private Management management = null;
         private static Run instance;
+        private uint nextId_E;
+        private uint nextId_D;
+        private uint nextId_P;
         private Run() { }
         public static Run Instance 
         {
@@ -41,30 +44,56 @@ namespace ManagementLogic
             management = Data.LoadData(account.GetFilePath());
             management.SetFilePath(account.GetFilePath());
             management.SetCurrentAccount(account);
+            nextId_E = (uint)management.EmployeesList.Count() + 1;
+            nextId_D = (uint)management.DepartmentList.Count() + 1;
+            nextId_P = (uint)management.ProjectList.Count() + 1;
+
+        }
+        //Tạo Id với parameter = 1 là nhân viên, 0 là Derpartment, -1 là project 
+        public string GenerateId(int who = 1)
+        {
+            char c;
+            if (who == 1)
+                c = 'P';
+            else if (who == 0)
+                c = 'D';
+            else
+                c = 'P';
+            string id = $"{c}{nextId_D.ToString("D4")}";
+            nextId_D++;
+            return id;
+        }
+        public void CreateEmployee(string name, string phone, string email, 
+                                   string address, bool gender, DateTime birthday, 
+                                   DateTime beginWork, Department deparment, uint salary, 
+                                   bool isFullTime = true)
+        {
+            if(isFullTime)
+            {
+                FulltimeEmployee employee = new FulltimeEmployee(GenerateId(),name,phone,email,address,gender,
+                                                                 birthday,beginWork,deparment,salary);
+                management.Add(employee);
+            }
         }
         public void AddADMIN(string username, string password)
         {
-            try
-            {
-                management.AddADMIN(username, password);
-            }
-            catch (Exception e) { }
+            management.AddADMIN(username, password);
         }
         public void ChangePass(string password, string newPassword)
         {
-            try
-            {
-                management.ChangePasssword(password, newPassword);
-            }
-            catch (Exception e) { }
+            management.ChangePasssword(password, newPassword);
         }
-        public List<Employee> FindEmployees(string keyword = "")
+        public List<Employee> FindEmployee(string keyword = "")
         {
-            return new List<Employee>();
+            return management.FindEmployee(keyword);
         }
         public List<Department> FindIDeparment(string keyword = "")
         {
-            return new List<Department>();
+            return management.FindDepartment(keyword);
+        }
+        public List<Project> FindProject(string keyword = "")
+        {
+            return management.FindProject(keyword);
         }
         
     }
