@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -51,9 +50,33 @@ namespace ManagementLogic
         }
         private bool IsValidPasswordCreate(string password)
         {
-            return !string.IsNullOrEmpty(password) &&
-                   password.Any(char.IsUpper) &&
-                   password.Any(ch => !char.IsLetterOrDigit(ch));
+            if (!string.IsNullOrEmpty(password))
+            {
+                bool hasUpperCase = false;
+                bool hasSpecialCharacter = false;
+
+                foreach (char ch in password)
+                {
+                    if (char.IsUpper(ch))
+                    {
+                        hasUpperCase = true;
+                    }
+                    if (!char.IsLetterOrDigit(ch))
+                    {
+                        hasSpecialCharacter = true;
+                    }
+
+                    // Nếu đã thỏa mãn cả 2 điều kiện, có thể dừng vòng lặp
+                    if (hasUpperCase && hasSpecialCharacter)
+                    {
+                        break;
+                    }
+                }
+
+                return hasUpperCase && hasSpecialCharacter;
+            }
+
+            return false;
         }
         public bool IsValidPassword(string password)
         {

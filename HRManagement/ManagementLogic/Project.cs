@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -108,9 +107,24 @@ namespace ManagementLogic
         }
         public string GetInfo()
         {
-            string employeeNames = employees.Count > 0 ? string.Join(", ", employees.Select(e => e.Name)) : "Khong co nv";
-            //                                           nối chuỗi         chọn thuộc tính name trong danh sách 
-            return $"\n Ten project: {ProjectName} \n Id: {id} \n Leader: {leader} \n Thanh vien: {employeeNames} \n Description: {Description} ";
+            string employeeNames = "Không có nhân viên";
+            string leaderName = "";
+            if (employees.Count > 0)
+            {
+                employeeNames = "";
+                foreach (Employee employee in employees)
+                {
+                    employeeNames += employee.Name + ", ";
+                }
+                // Xóa dấu phẩy và khoảng trắng cuối cùng
+                employeeNames = employeeNames.TrimEnd(',', ' ');
+            }
+            if (leader != null)
+            {
+                leaderName = leader.Name;
+            }
+
+            return $"\n Ten project: {ProjectName} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} \n Description: {Description} ";
         }
     }
 }
