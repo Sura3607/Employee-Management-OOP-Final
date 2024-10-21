@@ -119,7 +119,7 @@ namespace ManagementLogic
                 // Xóa dấu phẩy và khoảng trắng cuối cùng
                 employeeNames = employeeNames.TrimEnd(',', ' ');
             }
-            if (leader == null)
+            if (leader != null)
             {
                 leaderName = leader.Name;
             }
