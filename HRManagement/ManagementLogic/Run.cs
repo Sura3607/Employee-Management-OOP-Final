@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,9 +45,9 @@ namespace ManagementLogic
             management = Data.LoadData(account.GetFilePath());
             management.SetFilePath(account.GetFilePath());
             management.SetCurrentAccount(account);
-            nextId_E = (uint)management.EmployeesList.Count() + 1;
-            nextId_D = (uint)management.DepartmentList.Count() + 1;
-            nextId_P = (uint)management.ProjectList.Count() + 1;
+            nextId_E = (uint)management.EmployeesList.Count + 1;
+            nextId_D = (uint)management.DepartmentList.Count + 1;
+            nextId_P = (uint)management.ProjectList.Count + 1;
 
         }
         public string GenerateId(int who = 1)

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Text;
@@ -62,8 +61,14 @@ namespace ManagementLogic
         //Thêm vào listProject một project mới
         public override void AddProject(Project project)
         {
-            if (Projects.Any(p => p.Id == project.Id)) // Giả sử mỗi project có một thuộc tính Id duy nhất để phân biệt
-                throw new Exception("Project đã tồn tại trong danh sách.");
+            foreach (Project p in Projects)
+            {
+                if (p.Id == project.Id)
+                {
+                    throw new Exception("Project đã tồn tại trong danh sách.");
+                }
+            }
+
             Projects.Add(project);
         }
     }

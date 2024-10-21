@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.IO;
-using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Runtime.Serialization;
 using System.Text;
@@ -62,8 +61,13 @@ namespace ManagementLogic
                     throw new ArgumentException("Số điện thoại phải có đúng 10 chữ số.");
 
                 // Kiểm tra tất cả các ký tự phải là số
-                if (!value.All(char.IsDigit))
-                    throw new ArgumentException("Số điện thoại chỉ được chứa các chữ số.");
+                foreach (char ch in value)
+                {
+                    if (!char.IsDigit(ch))
+                    {
+                        throw new ArgumentException("Số điện thoại chỉ được chứa các chữ số.");
+                    }
+                }
 
                 phone = value;
             }
