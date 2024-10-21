@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class MainMenu : Form
+    public partial class frmMainMenu : Form
     {
-        public MainMenu()
+        public frmMainMenu()
         {
             InitializeComponent();
         }

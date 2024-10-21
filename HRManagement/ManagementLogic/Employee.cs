@@ -184,6 +184,7 @@ namespace ManagementLogic
             info.AddValue("Salary",Salary);
         }
         public abstract void AddProject(Project project);
+        //tạo abstract void RemoveProject
         public abstract bool Find(string keyword);
         public abstract string GetInfo();
     }

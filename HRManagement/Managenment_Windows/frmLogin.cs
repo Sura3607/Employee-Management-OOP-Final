@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace Managenment_Windows
                 Run.Instance.Login(username, password);
                 MessageBox.Show("Đăng nhập thành công","Chú ý" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                MainMenu mainMenu = new MainMenu();
+                frmMainMenu mainMenu = new frmMainMenu();
                 mainMenu.ShowDialog();
                 this.Close();
             }

@@ -51,7 +51,6 @@ namespace ManagementLogic
             nextId_P = (uint)management.ProjectList.Count() + 1;
 
         }
-        //Tạo Id với parameter = 1 là nhân viên, 0 là Derpartment, -1 là project 
         public string GenerateId(int who = 1)
         {
             char c;
@@ -77,6 +76,18 @@ namespace ManagementLogic
                 management.Add(employee);
             }
         }
+        //create Depart, Project-Nhut
+        //Remove 3 hàm -Nhut
+        public void RemoveEmployee(Employee employee)
+        {
+            management.Remove(employee);
+        }
+
+        //Ham tangw luong mployee employee-Linh
+        //Change Employe, thay đổi name-Thien
+        //Depart-Linh
+        //Project-linh
+
         public void AddADMIN(string username, string password)
         {
             management.AddADMIN(username, password);
