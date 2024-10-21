@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class HoSoNhanSu : Form
+    public partial class frmEmployee : Form
     {
-        public HoSoNhanSu()
+        public frmEmployee()
         {
             InitializeComponent();
         }
