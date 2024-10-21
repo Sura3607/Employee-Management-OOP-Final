@@ -92,7 +92,8 @@ namespace ManagementLogic
         }
         public string GetInfo()
         {
-            string employeeNames = "Khong co nv";
+            string employeeNames = "Không có nhân viên";
+            string leaderName = "Không có leader";
             if (employees.Count > 0)
             {
                 employeeNames = "";
@@ -100,11 +101,13 @@ namespace ManagementLogic
                 {
                     employeeNames += employee.Name + ", ";
                 }
-                // Xóa dấu phẩy và khoảng trắng cuối cùng
                 employeeNames = employeeNames.TrimEnd(',', ' ');
             }
-
-            return $"\n Ten phong bam: {Name} \n Id: {id} \n Leader: {leader} \n Thanh vien: {employeeNames} ";
+            if (leader != null)
+            {
+                leaderName = leader.Name;
+            }
+            return $"\n Ten phong bam: {Name} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} ";
         }
 
     }
