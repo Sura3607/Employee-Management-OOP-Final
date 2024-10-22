@@ -288,5 +288,59 @@ namespace ManagementLogic
             }
             Data.SaveAccounts(accounts);
         }
+        public void ChangeInfoProject(string projectId, string newProjectName, string newDescription, string newLeaderId)
+        {
+            Project project = projectList.Find(p => p.Id == projectId);
+            if (project == null)
+            {
+                throw new ArgumentException("Không tìm thấy dự án.");
+            }
+
+            if (!string.IsNullOrEmpty(newProjectName)) // trả về true nếu ko null 
+            {
+                project.ProjectName = newProjectName;
+            }
+
+            if (!string.IsNullOrEmpty(newDescription))
+            {
+                project.Description = newDescription;
+            }
+
+            if (!string.IsNullOrEmpty(newLeaderId))
+            {
+                Employee newLeader = employeesList.Find(e => e.Id == newLeaderId);
+                if (newLeader == null || newLeader is ParttimeEmployee)
+                {
+                    throw new ArgumentException("Leader không hợp lệ ");
+                }
+                project.AddLeader(newLeader);
+            }
+        }
+        public void ChangeInfoDepartment(string departmentId, string newName, string newLeaderId)
+        {
+            Department department = departmentList.Find(d => d.Id == departmentId);
+            if (department == null)
+            {
+                throw new ArgumentException("Không tìm thấy phòng ban.");
+            }
+
+            if (!string.IsNullOrEmpty(newName)) // trả về true nếu ko null 
+            {
+                department.Name = newName; 
+            }
+
+            if (!string.IsNullOrEmpty(newLeaderId))
+            {
+                Employee newLeader = employeesList.Find(e => e.Id == newLeaderId);
+                if (newLeader == null || newLeader is ParttimeEmployee)
+                {
+                    throw new ArgumentException("Leader không hợp lệ hoặc là nhân viên part-time.");
+                }
+                department.Leader = newLeader; 
+            }
+
+        }
+
+
     }
 }
