@@ -75,11 +75,29 @@ namespace ManagementLogic
                 management.Add(employee);
             }
         }
+        public void CreateDepart(string name, Employee leader = null)
+        {
+            Department department = new Department(GenerateId(0), name, leader, new List<Employee>());
+            management.Add(department);
+        }
+        public void CreateProject(string name, Employee leader = null, string scrip = "")
+        {
+            Project project = new Project(GenerateId(-1), name, leader, new List<Employee>(), scrip);
+            management.Add(project);
+        }
         //create Depart, Project-Nhut
         //Remove 3 hàm -Nhut
         public void RemoveEmployee(Employee employee)
         {
             management.Remove(employee);
+        }
+        public void RemoveDepart(Department department)
+        {
+            management.Remove(department);
+        }
+        public void RemoveProject(Project project)
+        {
+            management.Remove(project);
         }
 
         //Ham tangw luong mployee employee-Linh
@@ -107,6 +125,5 @@ namespace ManagementLogic
         {
             return management.FindProject(keyword);
         }
-        
     }
 }
