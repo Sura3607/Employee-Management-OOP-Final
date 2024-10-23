@@ -70,11 +70,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDeparment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeparment.Designer.cs">
+      <DependentUpon>frmDeparment.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEmployee.Designer.cs">
       <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoDepartment.Designer.cs">
+      <DependentUpon>frmInfoDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoProject.Designer.cs">
+      <DependentUpon>frmInfoProject.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMainMenu.cs">
       <SubType>Form</SubType>
@@ -88,16 +106,43 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProject.Designer.cs">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoEmployee.Designer.cs">
+      <DependentUpon>frmInfoEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDeparment.resx">
+      <DependentUpon>frmDeparment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoDepartment.resx">
+      <DependentUpon>frmInfoDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoProject.resx">
+      <DependentUpon>frmInfoProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProject.resx">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoEmployee.resx">
+      <DependentUpon>frmInfoEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +152,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -140,6 +186,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="loginscreen.png" />
     <Content Include="Managemet.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

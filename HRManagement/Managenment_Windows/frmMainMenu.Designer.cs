@@ -30,24 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2.SuspendLayout();
+            this.btnNhanVien = new System.Windows.Forms.Button();
+            this.btnPhongBan = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnDuAn = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // contextMenuStrip1
             // 
@@ -55,66 +43,76 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // menuStrip2
+            // btnNhanVien
             // 
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tàiKhoảnToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(800, 28);
-            this.menuStrip2.TabIndex = 2;
-            this.menuStrip2.Text = "menuStrip2";
+            this.btnNhanVien.BackColor = System.Drawing.Color.Azure;
+            this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNhanVien.Location = new System.Drawing.Point(191, 79);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Size = new System.Drawing.Size(240, 180);
+            this.btnNhanVien.TabIndex = 3;
+            this.btnNhanVien.Text = "Nhân viên";
+            this.btnNhanVien.UseVisualStyleBackColor = false;
             // 
-            // tàiKhoảnToolStripMenuItem
+            // btnPhongBan
             // 
-            this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thôngTinTàiKhoảnToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem});
-            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            this.btnPhongBan.BackColor = System.Drawing.Color.Azure;
+            this.btnPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongBan.Location = new System.Drawing.Point(551, 79);
+            this.btnPhongBan.Name = "btnPhongBan";
+            this.btnPhongBan.Size = new System.Drawing.Size(240, 180);
+            this.btnPhongBan.TabIndex = 3;
+            this.btnPhongBan.Text = "Phòng ban";
+            this.btnPhongBan.UseVisualStyleBackColor = false;
             // 
-            // thôngTinTàiKhoảnToolStripMenuItem
+            // button3
             // 
-            this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thêm tài khoản";
+            this.button3.BackColor = System.Drawing.Color.Azure;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(551, 294);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(240, 180);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Tài khoản";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // đăngXuấtToolStripMenuItem
+            // btnDuAn
             // 
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.btnDuAn.BackColor = System.Drawing.Color.Azure;
+            this.btnDuAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDuAn.Location = new System.Drawing.Point(191, 294);
+            this.btnDuAn.Name = "btnDuAn";
+            this.btnDuAn.Size = new System.Drawing.Size(240, 180);
+            this.btnDuAn.TabIndex = 3;
+            this.btnDuAn.Text = "Dự án";
+            this.btnDuAn.UseVisualStyleBackColor = false;
             // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.menuStrip2);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(982, 553);
+            this.Controls.Add(this.btnDuAn);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnPhongBan);
+            this.Controls.Add(this.btnNhanVien);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý hồ sơ nhân sự";
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.Load += new System.EventHandler(this.frmMainMenu_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.Button btnNhanVien;
+        private System.Windows.Forms.Button btnPhongBan;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDuAn;
     }
 }
