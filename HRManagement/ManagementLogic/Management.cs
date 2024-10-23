@@ -288,7 +288,7 @@ namespace ManagementLogic
             }
             Data.SaveAccounts(accounts);
         }
-        public void ChangeInfoProject(string projectId, string newProjectName, string newDescription, string newLeaderId)
+        public void ChangeInfoProject(string projectId, string newProjectName = null, string newDescription = null, string newLeaderId = null)
         {
             Project project = projectList.Find(p => p.Id == projectId);
             if (project == null)
@@ -316,7 +316,7 @@ namespace ManagementLogic
                 project.AddLeader(newLeader);
             }
         }
-        public void ChangeInfoDepartment(string departmentId, string newName, string newLeaderId)
+        public void ChangeInfoDepartment(string departmentId, string newName = null, string newLeaderId = null)
         {
             Department department = departmentList.Find(d => d.Id == departmentId);
             if (department == null)
