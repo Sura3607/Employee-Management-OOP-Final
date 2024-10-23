@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
@@ -75,17 +73,56 @@ namespace ManagementLogic
                 management.Add(employee);
             }
         }
-        //create Depart, Project-Nhut
-        //Remove 3 hàm -Nhut
+
         public void RemoveEmployee(Employee employee)
         {
             management.Remove(employee);
         }
 
-        //Ham tangw luong mployee employee-Linh
         //Change Employe, thay đổi name-Thien
-        //Depart-Linh
-        //Project-linh
+        public void EditEmployee(Employee employee, string name = null, string phone = null,
+                                 string email = null, string address = null,
+                                 bool? gender = null, DateTime? birthday = null,
+                                 uint? salary = null)
+        {
+            if (management.EmployeesList.Contains(employee))
+            {
+                if (!string.IsNullOrWhiteSpace(name))
+                {
+                    employee.Name = name;
+                }
+                if (!string.IsNullOrWhiteSpace(phone))
+                {
+                    employee.Phone = phone; 
+                }
+                if (!string.IsNullOrWhiteSpace(email))
+                {
+                    employee.Email = email;
+                }
+                if (!string.IsNullOrWhiteSpace(address))
+                {
+                    employee.Address = address;
+                }
+                if (gender.HasValue) //has value kiểm tra có giá trị hay không
+                {
+                    employee.Gender = gender.Value;
+                }
+                if (birthday.HasValue)
+                {
+                    employee.Birthday = birthday.Value;
+                }
+                if (salary.HasValue)
+                {
+                    employee.Salary = salary.Value; 
+                }
+
+                management.SaveData();
+            }
+            else
+            {
+                throw new Exception("Nhân viên không tồn tại.");
+            }
+        }
 
         public void AddADMIN(string username, string password)
         {
