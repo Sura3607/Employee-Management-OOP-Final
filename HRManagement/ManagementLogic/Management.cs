@@ -199,6 +199,50 @@ namespace ManagementLogic
             projectList.Remove(p);
             SaveData();
         }
+
+        public void EditEmployee(Employee employee, string name = null, string phone = null,
+                                 string email = null, string address = null,
+                                 bool? gender = null, DateTime? birthday = null,
+                                 uint? salary = null)
+        {
+            if (EmployeesList.Contains(employee))
+            {
+                if (!string.IsNullOrWhiteSpace(name))
+                {
+                    employee.Name = name;
+                }
+                if (!string.IsNullOrWhiteSpace(phone))
+                {
+                    employee.Phone = phone;
+                }
+                if (!string.IsNullOrWhiteSpace(email))
+                {
+                    employee.Email = email;
+                }
+                if (!string.IsNullOrWhiteSpace(address))
+                {
+                    employee.Address = address;
+                }
+                if (gender.HasValue) //has value kiểm tra có giá trị hay không
+                {
+                    employee.Gender = gender.Value;
+                }
+                if (birthday.HasValue)
+                {
+                    employee.Birthday = birthday.Value;
+                }
+                if (salary.HasValue)
+                {
+                    employee.Salary = salary.Value;
+                }
+
+                SaveData();
+            }
+            else
+            {
+                throw new Exception("Nhân viên không tồn tại.");
+            }
+        }
         public string GetInfo(Employee e)
         {
             return e.GetInfo();

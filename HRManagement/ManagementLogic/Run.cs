@@ -85,43 +85,7 @@ namespace ManagementLogic
                                  bool? gender = null, DateTime? birthday = null,
                                  uint? salary = null)
         {
-            if (management.EmployeesList.Contains(employee))
-            {
-                if (!string.IsNullOrWhiteSpace(name))
-                {
-                    employee.Name = name;
-                }
-                if (!string.IsNullOrWhiteSpace(phone))
-                {
-                    employee.Phone = phone; 
-                }
-                if (!string.IsNullOrWhiteSpace(email))
-                {
-                    employee.Email = email;
-                }
-                if (!string.IsNullOrWhiteSpace(address))
-                {
-                    employee.Address = address;
-                }
-                if (gender.HasValue) //has value kiểm tra có giá trị hay không
-                {
-                    employee.Gender = gender.Value;
-                }
-                if (birthday.HasValue)
-                {
-                    employee.Birthday = birthday.Value;
-                }
-                if (salary.HasValue)
-                {
-                    employee.Salary = salary.Value; 
-                }
-
-                management.SaveData();
-            }
-            else
-            {
-                throw new Exception("Nhân viên không tồn tại.");
-            }
+            management.EditEmployee(employee, name, phone, email, address, gender, birthday, salary);
         }
 
         public void AddADMIN(string username, string password)
