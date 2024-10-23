@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
-    public class Run // main thuc thi hanh dong ow day, tien xu li
+    public class Run
     {
         private Management management = null;
         private static Run instance;
@@ -70,7 +68,7 @@ namespace ManagementLogic
         {
             if(isFullTime)
             {
-                FulltimeEmployee employee = new FulltimeEmployee(GenerateId(),name,phone,email,address,gender,
+                FulltimeEmployee employee = new FulltimeEmployee(GenerateId(1),name,phone,email,address,gender,
                                                                  birthday,beginWork,deparment,salary);
                 management.Add(employee);
             }
@@ -85,8 +83,6 @@ namespace ManagementLogic
             Project project = new Project(GenerateId(-1), name, leader, new List<Employee>(), scrip);
             management.Add(project);
         }
-        //create Depart, Project-Nhut
-        //Remove 3 hàm -Nhut
         public void RemoveEmployee(Employee employee)
         {
             management.Remove(employee);
@@ -99,11 +95,13 @@ namespace ManagementLogic
         {
             management.Remove(project);
         }
-
-        //Ham tangw luong mployee employee-Linh
-        //Change Employe, thay đổi name-Thien
-        //Depart-Linh
-        //Project-linh
+        public void EditEmployee(Employee employee, string name = null, string phone = null,
+                                 string email = null, string address = null,
+                                 bool? gender = null, DateTime? birthday = null,
+                                 uint? salary = null)
+        {
+            management.EditEmployee(employee, name, phone, email, address, gender, birthday, salary);
+        }
 
         public void AddADMIN(string username, string password)
         {
