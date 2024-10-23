@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ManagementLogic
 {
-    public class Run // main thuc thi hanh dong ow day, tien xu li
+    public class Run
     {
         private Management management = null;
         private static Run instance;
@@ -68,18 +68,33 @@ namespace ManagementLogic
         {
             if(isFullTime)
             {
-                FulltimeEmployee employee = new FulltimeEmployee(GenerateId(),name,phone,email,address,gender,
+                FulltimeEmployee employee = new FulltimeEmployee(GenerateId(1),name,phone,email,address,gender,
                                                                  birthday,beginWork,deparment,salary);
                 management.Add(employee);
             }
         }
-
+        public void CreateDepart(string name, Employee leader = null)
+        {
+            Department department = new Department(GenerateId(0), name, leader, new List<Employee>());
+            management.Add(department);
+        }
+        public void CreateProject(string name, Employee leader = null, string scrip = "")
+        {
+            Project project = new Project(GenerateId(-1), name, leader, new List<Employee>(), scrip);
+            management.Add(project);
+        }
         public void RemoveEmployee(Employee employee)
         {
             management.Remove(employee);
         }
-
-        //Change Employe, thay đổi name-Thien
+        public void RemoveDepart(Department department)
+        {
+            management.Remove(department);
+        }
+        public void RemoveProject(Project project)
+        {
+            management.Remove(project);
+        }
         public void EditEmployee(Employee employee, string name = null, string phone = null,
                                  string email = null, string address = null,
                                  bool? gender = null, DateTime? birthday = null,
@@ -108,6 +123,5 @@ namespace ManagementLogic
         {
             return management.FindProject(keyword);
         }
-        
     }
 }
