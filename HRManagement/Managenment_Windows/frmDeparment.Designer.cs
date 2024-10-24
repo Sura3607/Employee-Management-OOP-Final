@@ -48,6 +48,7 @@
             this.btnHuy.TabIndex = 28;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThem
             // 
@@ -125,6 +126,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDeparment";
             this.Text = "Danh sách phòng ban";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDeparment_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

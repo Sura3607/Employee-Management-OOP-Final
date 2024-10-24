@@ -12,29 +12,46 @@ namespace Managenment_Windows
 {
     public partial class frmMainMenu : Form
     {
-        public frmMainMenu()
+        private frmLogin loginForm;
+        public frmMainMenu(frmLogin previousForm)
         {
             InitializeComponent();
+            this.loginForm = previousForm;
         }
 
-        private void ChinhSuaThongBaoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            loginForm.Show();
         }
 
-        private void ThemTKToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnNhanVien_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmEmployee frmEmployee = new frmEmployee();
+            frmEmployee.ShowDialog();
+            this.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void frmMainMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void frmMainMenu_Load(object sender, EventArgs e)
+        private void btnPhongBan_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            frmDeparment frmDeparment = new frmDeparment();
+            frmDeparment.ShowDialog();
+            this.Show();
+        }
 
+        private void btnDuAn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmProject frmProject = new frmProject();
+            frmProject.ShowDialog();
+            this.Show();
         }
     }
 }

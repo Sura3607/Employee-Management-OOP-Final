@@ -70,11 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAdd.cs">
+    <Compile Include="frmEAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdd.Designer.cs">
-      <DependentUpon>frmAdd.cs</DependentUpon>
+    <Compile Include="frmEAdd.Designer.cs">
+      <DependentUpon>frmEAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDeparment.cs">
       <SubType>Form</SubType>
@@ -126,8 +126,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAdd.resx">
-      <DependentUpon>frmAdd.cs</DependentUpon>
+    <EmbeddedResource Include="frmEAdd.resx">
+      <DependentUpon>frmEAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeparment.resx">
       <DependentUpon>frmDeparment.cs</DependentUpon>

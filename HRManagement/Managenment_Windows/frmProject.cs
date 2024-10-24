@@ -16,5 +16,15 @@ namespace Managenment_Windows
         {
             InitializeComponent();
         }
+
+        private void frmProject_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

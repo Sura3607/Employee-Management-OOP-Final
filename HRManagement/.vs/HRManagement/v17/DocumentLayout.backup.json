@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "D:\\Project_Management\\HR_Management\\HRManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|d:\\project_management\\hr_management\\hrmanagement\\managementlogic\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|d:\\project_management\\hr_management\\hrmanagement\\managementlogic\\fulltimeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\fulltimeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|d:\\project_management\\hr_management\\hrmanagement\\managenment_windows\\frmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|solutionrelative:managenment_windows\\frmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|d:\\project_management\\hr_management\\hrmanagement\\managenment_windows\\frmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|solutionrelative:managenment_windows\\frmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|d:\\project_management\\hr_management\\hrmanagement\\managenment_windows\\frmeadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|solutionrelative:managenment_windows\\frmeadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|d:\\project_management\\hr_management\\hrmanagement\\managenment_windows\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|solutionrelative:managenment_windows\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|d:\\project_management\\hr_management\\hrmanagement\\managementlogic\\run.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\run.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|d:\\project_management\\hr_management\\hrmanagement\\managementlogic\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|D:\\Project_Management\\HR_Management\\HRManagement\\managementlogic\\management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|d:\\project_management\\hr_management\\hrmanagement\\managenment_windows\\frmeadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{65F48CFB-95AC-42AF-A69B-DF2EB9A39CDD}|Managenment_Windows\\Managenment_Windows.csproj|solutionrelative:managenment_windows\\frmeadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|d:\\project_management\\hr_management\\hrmanagement\\managementlogic\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|D:\\Project_Management\\HR_Management\\HRManagement\\managementlogic\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|D:\\Project_Management\\HR_Management\\HRManagement\\managementlogic\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,80 +63,117 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Project.cs",
-              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Project.cs",
-              "RelativeDocumentMoniker": "ManagementLogic\\Project.cs",
-              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Project.cs",
-              "RelativeToolTip": "ManagementLogic\\Project.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAABcAAAAAAAAAA==",
+              "Title": "FulltimeEmployee.cs",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\FulltimeEmployee.cs",
+              "RelativeDocumentMoniker": "ManagementLogic\\FulltimeEmployee.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\FulltimeEmployee.cs",
+              "RelativeToolTip": "ManagementLogic\\FulltimeEmployee.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T14:59:52.572Z",
+              "WhenOpened": "2024-10-24T17:58:11.006Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Department.cs",
-              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Department.cs",
-              "RelativeDocumentMoniker": "ManagementLogic\\Department.cs",
-              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Department.cs",
-              "RelativeToolTip": "ManagementLogic\\Department.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwDIAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T14:56:13.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Data.cs",
-              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Data.cs",
-              "RelativeDocumentMoniker": "ManagementLogic\\Data.cs",
-              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Data.cs",
-              "RelativeToolTip": "ManagementLogic\\Data.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T08:07:25.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Employee.cs",
               "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Employee.cs",
               "RelativeDocumentMoniker": "ManagementLogic\\Employee.cs",
               "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Employee.cs",
               "RelativeToolTip": "ManagementLogic\\Employee.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAAALsAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAAAHcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T08:04:12.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Management.cs",
-              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Management.cs",
-              "RelativeDocumentMoniker": "ManagementLogic\\Management.cs",
-              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Management.cs",
-              "RelativeToolTip": "ManagementLogic\\Management.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAwHYAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "frmEmployee.cs [Design]",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmEmployee.cs",
+              "RelativeDocumentMoniker": "Managenment_Windows\\frmEmployee.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmEmployee.cs [Design]",
+              "RelativeToolTip": "Managenment_Windows\\frmEmployee.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T07:13:45.439Z",
+              "WhenOpened": "2024-10-24T17:50:05.384Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmEmployee.cs",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmEmployee.cs",
+              "RelativeDocumentMoniker": "Managenment_Windows\\frmEmployee.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmEmployee.cs",
+              "RelativeToolTip": "Managenment_Windows\\frmEmployee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T17:50:03.303Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Department.cs",
+              "RelativeDocumentMoniker": "ManagementLogic\\Department.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Department.cs",
+              "RelativeToolTip": "ManagementLogic\\Department.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAiwHIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T17:36:13.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Run.cs",
               "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Run.cs",
               "RelativeDocumentMoniker": "ManagementLogic\\Run.cs",
               "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Run.cs",
               "RelativeToolTip": "ManagementLogic\\Run.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAwGgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T15:33:23.676Z",
+              "WhenOpened": "2024-10-24T17:10:53.976Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Managenment_Windows\\frmLogin.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmLogin.cs",
+              "RelativeToolTip": "Managenment_Windows\\frmLogin.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCQAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T17:10:43.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmEAdd.cs",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmEAdd.cs",
+              "RelativeDocumentMoniker": "Managenment_Windows\\frmEAdd.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmEAdd.cs",
+              "RelativeToolTip": "Managenment_Windows\\frmEAdd.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T17:10:14.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmEAdd.cs [Design]",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmEAdd.cs",
+              "RelativeDocumentMoniker": "Managenment_Windows\\frmEAdd.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\Managenment_Windows\\frmEAdd.cs [Design]",
+              "RelativeToolTip": "Managenment_Windows\\frmEAdd.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T17:06:22.834Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

@@ -35,6 +35,7 @@
             this.btnPhongBan = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnDuAn = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -54,6 +55,7 @@
             this.btnNhanVien.TabIndex = 3;
             this.btnNhanVien.Text = "Nhân viên";
             this.btnNhanVien.UseVisualStyleBackColor = false;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // btnPhongBan
             // 
@@ -65,6 +67,7 @@
             this.btnPhongBan.TabIndex = 3;
             this.btnPhongBan.Text = "Phòng ban";
             this.btnPhongBan.UseVisualStyleBackColor = false;
+            this.btnPhongBan.Click += new System.EventHandler(this.btnPhongBan_Click);
             // 
             // button3
             // 
@@ -87,6 +90,17 @@
             this.btnDuAn.TabIndex = 3;
             this.btnDuAn.Text = "Dự án";
             this.btnDuAn.UseVisualStyleBackColor = false;
+            this.btnDuAn.Click += new System.EventHandler(this.btnDuAn_Click);
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(825, 493);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(135, 49);
+            this.btnLogOut.TabIndex = 4;
+            this.btnLogOut.Text = "Đăng xuất";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // frmMainMenu
             // 
@@ -94,6 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(982, 553);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnDuAn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnPhongBan);
@@ -103,7 +118,7 @@
             this.Name = "frmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý hồ sơ nhân sự";
-            this.Load += new System.EventHandler(this.frmMainMenu_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMainMenu_FormClosed);
             this.ResumeLayout(false);
 
         }
@@ -114,5 +129,6 @@
         private System.Windows.Forms.Button btnPhongBan;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnDuAn;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

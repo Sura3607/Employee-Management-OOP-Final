@@ -127,9 +127,6 @@ namespace ManagementLogic
             departmentList.Add(d);
             SaveData();
         }
-        //Khi thêm một prọect mới thì cunngx phải thêm, leader và employees có thể bỏ trống
-        //ếu có leaader hoặc một list emplyees thì phải đảm bảo Project đó đã được thêm cho các nhân viên đó .
-        //Ví dụ bên duói 
         public void Add(Project p, Employee leader = null, List<Employee> employees = default)
         {
             if (projectList.Contains(p))
@@ -235,7 +232,6 @@ namespace ManagementLogic
                 {
                     employee.Salary = salary.Value;
                 }
-
                 SaveData();
             }
             else
@@ -255,10 +251,6 @@ namespace ManagementLogic
         {
             return p.GetInfo();
         }
-        //sau khi cập nhật lương cũng sẽ được save, cập nhật lương thì cũng phả kiểm tra điều kiện ,
-        //Kt đầu tiên đó là nhân viên gì part hay full
-        //kt việc tăng lương ddungs với đối tượng ko. Lương full ko thấp hơn lương cơ bản, lương parttime ko ít hơn 25k
-        //Và parttime thì đủ giơpf làm mới được tính tăng lương, Nhân viên full time thì phải đủ 3 dự án trở lên.
         public void SalaryIncrease(Employee e)
         {
             if (e is FulltimeEmployee fulltimeEmployee)

@@ -11,7 +11,6 @@ D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\M
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenm.91DEFA3C.Up2Date
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Form1.resources
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Json.dll
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Memory.dll
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.ValueTuple.dll
@@ -62,9 +61,6 @@ C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenme
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.xml
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CopyComplete
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Login.resources
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.HoSoNhanSu.resources
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.MainMenu.resources
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.HoSoNhanSu.resources
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Login.resources
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.MainMenu.resources
@@ -108,3 +104,12 @@ D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debu
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenm.91DEFA3C.Up2Date
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEAdd.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDeparment.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEmployee.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoDepartment.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoProject.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmLogin.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmMainMenu.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmProject.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoEmployee.resources

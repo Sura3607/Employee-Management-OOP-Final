@@ -110,5 +110,9 @@ namespace ManagementLogic
             return $"\n Ten phong bam: {Name} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} ";
         }
 
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

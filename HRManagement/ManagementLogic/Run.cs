@@ -11,6 +11,7 @@ namespace ManagementLogic
         private uint nextId_D;
         private uint nextId_P;
         private Run() { }
+        public Management Management { get => management; }
 
         //singleton design patten
         public static Run Instance 

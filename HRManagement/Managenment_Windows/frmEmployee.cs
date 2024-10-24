@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ManagementLogic;
+using System;
 using System.Windows.Forms;
 
 namespace Managenment_Windows
@@ -15,32 +9,33 @@ namespace Managenment_Windows
         public frmEmployee()
         {
             InitializeComponent();
+            LoadEmployees();
         }
-
-        private void label5_Click(object sender, EventArgs e)
+        private void dtgMain_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmEAdd frmEAdd = new frmEAdd();
+            frmEAdd.ShowDialog();
+            this.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void frmEmployee_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
-
-        private void dtgMain_CellContentClick(object sender, 
-            DataGridViewCellEventArgs e)
+        private void LoadEmployees()
         {
-            
+            dtgEmployees.DataSource = Run.Instance.Management.EmployeesList;
         }
     }
 }
