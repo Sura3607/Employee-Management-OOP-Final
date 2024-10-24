@@ -111,6 +111,18 @@ namespace ManagementLogic
         {
             management.ChangePasssword(password, newPassword);
         }
+        public void ChangeProjectInfo(string projectId, string newName, string newDescription, string newLeader)
+        {
+            management.ChangeInfoProject(projectId, newName, newDescription, newLeader);
+        }
+        public void ChangeDepartmentInfo(string departmentId, string newName, string newLeader)
+        {
+            management.ChangeInfoDepartment(departmentId, newName, newLeader);
+        }
+        public void IncreaseEmployeeSalary(Employee e)
+        {
+            management.SalaryIncrease(e);
+        }
         public List<Employee> FindEmployee(string keyword = "")
         {
             return management.FindEmployee(keyword);
