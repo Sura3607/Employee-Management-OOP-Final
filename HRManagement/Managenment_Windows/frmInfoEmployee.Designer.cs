@@ -41,14 +41,16 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
+            this.lblProject = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(463, 333);
+            this.btnThoat.Location = new System.Drawing.Point(471, 387);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(187, 35);
             this.btnThoat.TabIndex = 29;
@@ -58,33 +60,33 @@
             // txtPhongBan
             // 
             this.txtPhongBan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhongBan.Location = new System.Drawing.Point(231, 284);
+            this.txtPhongBan.Location = new System.Drawing.Point(176, 321);
             this.txtPhongBan.Name = "txtPhongBan";
-            this.txtPhongBan.Size = new System.Drawing.Size(419, 34);
+            this.txtPhongBan.Size = new System.Drawing.Size(169, 34);
             this.txtPhongBan.TabIndex = 27;
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(231, 84);
+            this.textBox5.Location = new System.Drawing.Point(176, 83);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(419, 34);
+            this.textBox5.Size = new System.Drawing.Size(169, 34);
             this.textBox5.TabIndex = 26;
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(231, 234);
+            this.txtEmail.Location = new System.Drawing.Point(176, 263);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(419, 34);
+            this.txtEmail.Size = new System.Drawing.Size(169, 34);
             this.txtEmail.TabIndex = 25;
             // 
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDienThoai.Location = new System.Drawing.Point(231, 134);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(176, 141);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(419, 34);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(169, 34);
             this.txtSoDienThoai.TabIndex = 24;
             // 
             // lblHoTen
@@ -92,7 +94,7 @@
             this.lblHoTen.AutoSize = true;
             this.lblHoTen.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoTen.ForeColor = System.Drawing.Color.Black;
-            this.lblHoTen.Location = new System.Drawing.Point(66, 93);
+            this.lblHoTen.Location = new System.Drawing.Point(11, 92);
             this.lblHoTen.Name = "lblHoTen";
             this.lblHoTen.Size = new System.Drawing.Size(116, 25);
             this.lblHoTen.TabIndex = 23;
@@ -104,7 +106,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.Color.Black;
-            this.lblPhone.Location = new System.Drawing.Point(66, 143);
+            this.lblPhone.Location = new System.Drawing.Point(11, 150);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(149, 25);
             this.lblPhone.TabIndex = 22;
@@ -116,7 +118,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(66, 293);
+            this.label3.Location = new System.Drawing.Point(11, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 25);
             this.label3.TabIndex = 21;
@@ -128,7 +130,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
-            this.lblEmail.Location = new System.Drawing.Point(66, 243);
+            this.lblEmail.Location = new System.Drawing.Point(11, 272);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(76, 25);
             this.lblEmail.TabIndex = 20;
@@ -138,9 +140,9 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(231, 184);
+            this.txtDiaChi.Location = new System.Drawing.Point(176, 206);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(419, 34);
+            this.txtDiaChi.Size = new System.Drawing.Size(169, 34);
             this.txtDiaChi.TabIndex = 31;
             // 
             // lblDiaChi
@@ -148,7 +150,7 @@
             this.lblDiaChi.AutoSize = true;
             this.lblDiaChi.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiaChi.ForeColor = System.Drawing.Color.Black;
-            this.lblDiaChi.Location = new System.Drawing.Point(66, 193);
+            this.lblDiaChi.Location = new System.Drawing.Point(11, 215);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(90, 25);
             this.lblDiaChi.TabIndex = 30;
@@ -158,31 +160,45 @@
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(231, 333);
+            this.btnLuu.Location = new System.Drawing.Point(239, 387);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(187, 35);
             this.btnLuu.TabIndex = 32;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(231, 34);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(419, 34);
-            this.txtID.TabIndex = 34;
-            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.Black;
-            this.lblID.Location = new System.Drawing.Point(66, 43);
+            this.lblID.Location = new System.Drawing.Point(11, 41);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(46, 25);
             this.lblID.TabIndex = 33;
             this.lblID.Text = "ID:";
+            this.lblID.Click += new System.EventHandler(this.lblID_Click);
+            // 
+            // lblProject
+            // 
+            this.lblProject.AutoSize = true;
+            this.lblProject.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProject.ForeColor = System.Drawing.Color.Black;
+            this.lblProject.Location = new System.Drawing.Point(379, 41);
+            this.lblProject.Name = "lblProject";
+            this.lblProject.Size = new System.Drawing.Size(82, 25);
+            this.lblProject.TabIndex = 35;
+            this.lblProject.Text = "Dự án:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(384, 74);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(323, 281);
+            this.dataGridView1.TabIndex = 36;
             // 
             // frmInfoEmployee
             // 
@@ -190,7 +206,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(732, 453);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblProject);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtDiaChi);
@@ -208,6 +225,7 @@
             this.Name = "frmInfoEmployee";
             this.Text = "Thông tin nhân Viên";
             this.Load += new System.EventHandler(this.frmThongTinNhanVien_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,7 +245,8 @@
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblProject;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

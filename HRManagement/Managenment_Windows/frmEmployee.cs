@@ -36,5 +36,11 @@ namespace Managenment_Windows
         {
 
         }
+
+        private void dtgMain_CellContentClick(object sender, 
+            DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }

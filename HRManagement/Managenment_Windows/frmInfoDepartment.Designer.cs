@@ -37,6 +37,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,23 +73,23 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(229, 36);
+            this.textBox1.Location = new System.Drawing.Point(195, 39);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 22);
+            this.textBox1.Size = new System.Drawing.Size(262, 22);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(229, 74);
+            this.textBox2.Location = new System.Drawing.Point(195, 77);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(286, 22);
+            this.textBox2.Size = new System.Drawing.Size(262, 22);
             this.textBox2.TabIndex = 4;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(229, 112);
+            this.textBox3.Location = new System.Drawing.Point(195, 115);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(286, 22);
+            this.textBox3.Size = new System.Drawing.Size(262, 22);
             this.textBox3.TabIndex = 5;
             // 
             // dataGridView1
@@ -98,15 +99,16 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(647, 237);
             this.dataGridView1.TabIndex = 6;
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(565, 105);
+            this.btnBack.Location = new System.Drawing.Point(505, 105);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(125, 35);
+            this.btnBack.Size = new System.Drawing.Size(185, 35);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Trở lại";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -114,12 +116,22 @@
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(565, 33);
+            this.btnLuu.Location = new System.Drawing.Point(505, 33);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(125, 35);
+            this.btnLuu.Size = new System.Drawing.Size(185, 35);
             this.btnLuu.TabIndex = 33;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(505, 69);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(185, 35);
+            this.btnAdd.TabIndex = 34;
+            this.btnAdd.Text = "Thêm nhân viên";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // frmInfoDepartment
             // 
@@ -127,6 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(732, 453);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
@@ -155,5 +168,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

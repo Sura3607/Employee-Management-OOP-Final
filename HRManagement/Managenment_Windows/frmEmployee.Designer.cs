@@ -101,8 +101,10 @@
             this.dtgMain.Name = "dtgMain";
             this.dtgMain.RowHeadersWidth = 51;
             this.dtgMain.RowTemplate.Height = 24;
+            this.dtgMain.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgMain.Size = new System.Drawing.Size(922, 370);
             this.dtgMain.TabIndex = 0;
+            this.dtgMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellContentClick);
             // 
             // frmEmployee
             // 

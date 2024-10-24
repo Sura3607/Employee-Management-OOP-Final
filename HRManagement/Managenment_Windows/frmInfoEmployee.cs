@@ -19,7 +19,7 @@ namespace Managenment_Windows
 
         private void frmThongTinNhanVien_Load(object sender, EventArgs e)
         {
-
+            lblID.Text += "001";
         }
 
         private void lblPhone_Click(object sender, EventArgs e)
@@ -43,6 +43,11 @@ namespace Managenment_Windows
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblID_Click(object sender, EventArgs e)
         {
 
         }
