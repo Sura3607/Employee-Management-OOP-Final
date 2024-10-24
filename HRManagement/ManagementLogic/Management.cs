@@ -199,6 +199,50 @@ namespace ManagementLogic
             projectList.Remove(p);
             SaveData();
         }
+
+        public void EditEmployee(Employee employee, string name = null, string phone = null,
+                                 string email = null, string address = null,
+                                 bool? gender = null, DateTime? birthday = null,
+                                 uint? salary = null)
+        {
+            if (EmployeesList.Contains(employee))
+            {
+                if (!string.IsNullOrWhiteSpace(name))
+                {
+                    employee.Name = name;
+                }
+                if (!string.IsNullOrWhiteSpace(phone))
+                {
+                    employee.Phone = phone;
+                }
+                if (!string.IsNullOrWhiteSpace(email))
+                {
+                    employee.Email = email;
+                }
+                if (!string.IsNullOrWhiteSpace(address))
+                {
+                    employee.Address = address;
+                }
+                if (gender.HasValue) //has value kiểm tra có giá trị hay không
+                {
+                    employee.Gender = gender.Value;
+                }
+                if (birthday.HasValue)
+                {
+                    employee.Birthday = birthday.Value;
+                }
+                if (salary.HasValue)
+                {
+                    employee.Salary = salary.Value;
+                }
+
+                SaveData();
+            }
+            else
+            {
+                throw new Exception("Nhân viên không tồn tại.");
+            }
+        }
         public string GetInfo(Employee e)
         {
             return e.GetInfo();
@@ -288,5 +332,59 @@ namespace ManagementLogic
             }
             Data.SaveAccounts(accounts);
         }
+        public void ChangeInfoProject(string projectId, string newProjectName = null, string newDescription = null, string newLeaderId = null)
+        {
+            Project project = projectList.Find(p => p.Id == projectId);
+            if (project == null)
+            {
+                throw new ArgumentException("Không tìm thấy dự án.");
+            }
+
+            if (!string.IsNullOrEmpty(newProjectName)) // trả về true nếu ko null 
+            {
+                project.ProjectName = newProjectName;
+            }
+
+            if (!string.IsNullOrEmpty(newDescription))
+            {
+                project.Description = newDescription;
+            }
+
+            if (!string.IsNullOrEmpty(newLeaderId))
+            {
+                Employee newLeader = employeesList.Find(e => e.Id == newLeaderId);
+                if (newLeader == null || newLeader is ParttimeEmployee)
+                {
+                    throw new ArgumentException("Leader không hợp lệ ");
+                }
+                project.AddLeader(newLeader);
+            }
+        }
+        public void ChangeInfoDepartment(string departmentId, string newName = null, string newLeaderId = null)
+        {
+            Department department = departmentList.Find(d => d.Id == departmentId);
+            if (department == null)
+            {
+                throw new ArgumentException("Không tìm thấy phòng ban.");
+            }
+
+            if (!string.IsNullOrEmpty(newName)) // trả về true nếu ko null 
+            {
+                department.Name = newName; 
+            }
+
+            if (!string.IsNullOrEmpty(newLeaderId))
+            {
+                Employee newLeader = employeesList.Find(e => e.Id == newLeaderId);
+                if (newLeader == null || newLeader is ParttimeEmployee)
+                {
+                    throw new ArgumentException("Leader không hợp lệ hoặc là nhân viên part-time.");
+                }
+                department.Leader = newLeader; 
+            }
+
+        }
+
+
     }
 }

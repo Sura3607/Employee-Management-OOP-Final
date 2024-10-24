@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
-    public class Run // main thuc thi hanh dong ow day, tien xu li
+    public class Run
     {
         private Management management = null;
         private static Run instance;
@@ -70,22 +68,40 @@ namespace ManagementLogic
         {
             if(isFullTime)
             {
-                FulltimeEmployee employee = new FulltimeEmployee(GenerateId(),name,phone,email,address,gender,
+                FulltimeEmployee employee = new FulltimeEmployee(GenerateId(1),name,phone,email,address,gender,
                                                                  birthday,beginWork,deparment,salary);
                 management.Add(employee);
             }
         }
-        //create Depart, Project-Nhut
-        //Remove 3 hàm -Nhut
+        public void CreateDepart(string name, Employee leader = null)
+        {
+            Department department = new Department(GenerateId(0), name, leader, new List<Employee>());
+            management.Add(department);
+        }
+        public void CreateProject(string name, Employee leader = null, string scrip = "")
+        {
+            Project project = new Project(GenerateId(-1), name, leader, new List<Employee>(), scrip);
+            management.Add(project);
+        }
         public void RemoveEmployee(Employee employee)
         {
             management.Remove(employee);
         }
-
-        //Ham tangw luong mployee employee-Linh
-        //Change Employe, thay đổi name-Thien
-        //Depart-Linh
-        //Project-linh
+        public void RemoveDepart(Department department)
+        {
+            management.Remove(department);
+        }
+        public void RemoveProject(Project project)
+        {
+            management.Remove(project);
+        }
+        public void EditEmployee(Employee employee, string name = null, string phone = null,
+                                 string email = null, string address = null,
+                                 bool? gender = null, DateTime? birthday = null,
+                                 uint? salary = null)
+        {
+            management.EditEmployee(employee, name, phone, email, address, gender, birthday, salary);
+        }
 
         public void AddADMIN(string username, string password)
         {
@@ -94,6 +110,18 @@ namespace ManagementLogic
         public void ChangePass(string password, string newPassword)
         {
             management.ChangePasssword(password, newPassword);
+        }
+        public void ChangeProjectInfo(string projectId, string newName, string newDescription, string newLeader)
+        {
+            management.ChangeInfoProject(projectId, newName, newDescription, newLeader);
+        }
+        public void ChangeDepartmentInfo(string departmentId, string newName, string newLeader)
+        {
+            management.ChangeInfoDepartment(departmentId, newName, newLeader);
+        }
+        public void IncreaseEmployeeSalary(Employee e)
+        {
+            management.SalaryIncrease(e);
         }
         public List<Employee> FindEmployee(string keyword = "")
         {
@@ -107,6 +135,5 @@ namespace ManagementLogic
         {
             return management.FindProject(keyword);
         }
-        
     }
 }
