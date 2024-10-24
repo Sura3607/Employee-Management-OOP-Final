@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class frmMainMenu : Form
+    public partial class frmAdd : Form
     {
-        public frmMainMenu()
+        public frmAdd()
         {
             InitializeComponent();
-        }
-
-        private void ChinhSuaThongBaoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ThemTKToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,7 +22,7 @@ namespace Managenment_Windows
 
         }
 
-        private void frmMainMenu_Load(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

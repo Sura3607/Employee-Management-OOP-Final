@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class frmMainMenu : Form
+    public partial class frmInfoProject : Form
     {
-        public frmMainMenu()
+        public frmInfoProject()
         {
             InitializeComponent();
         }
 
-        private void ChinhSuaThongBaoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void ThemTKToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void frmMainMenu_Load(object sender, EventArgs e)
+        private void frmInfoProject_Load(object sender, EventArgs e)
         {
 
         }

@@ -56,5 +56,10 @@ namespace Managenment_Windows
 
             isPasswordHidden = !isPasswordHidden;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
