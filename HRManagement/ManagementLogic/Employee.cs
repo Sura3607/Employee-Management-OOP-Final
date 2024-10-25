@@ -130,20 +130,20 @@ namespace ManagementLogic
 
         protected Employee() { }
 
-        protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary)
-        {
-            this.id = id;
-            this.name = name;
-            this.phone = phone;
-            this.email = email;
-            this.address = address;
-            this.gender = gender;
-            this.birthday = birthday;
-            this.beginWork = beginWork;
-            this.department = department;
-            this.projects = new List<Project>();
-            this.salary = salary;
-        }
+        //protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary)
+        //{
+        //    this.id = id;
+        //    this.name = name;
+        //    this.phone = phone;
+        //    this.email = email;
+        //    this.address = address;
+        //    this.gender = gender;
+        //    this.birthday = birthday;
+        //    this.beginWork = beginWork;
+        //    this.department = department;
+        //    this.projects = new List<Project>();
+        //    this.salary = salary;
+        //}
 
         [JsonConstructor]
         protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary, List<Project> projects = null)
@@ -157,7 +157,7 @@ namespace ManagementLogic
             this.birthday = birthday;
             this.beginWork = beginWork;
             this.department = department;
-            this.projects = projects ?? new List<Project>(); // Nếu projects null thì khởi tạo mới
+            this.projects = projects ?? new List<Project>();
             this.salary = salary;
         }
         protected Employee(SerializationInfo info, StreamingContext context)

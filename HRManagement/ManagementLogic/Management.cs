@@ -29,7 +29,7 @@ namespace ManagementLogic
             projectList = (List<Project>)info.GetValue("Projects",typeof(List<Project>));
         }
 
-        [JsonConstructor] // Constructor này sẽ được gọi khi deserialization từ JSON
+        //[JsonConstructor] // Constructor này sẽ được gọi khi deserialization từ JSON
         public Management(List<Employee> employeesList, List<Department> departmentList, List<Project> projectList)
         {
             this.employeesList = employeesList;
