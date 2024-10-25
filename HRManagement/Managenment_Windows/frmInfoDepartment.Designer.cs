@@ -50,6 +50,7 @@
             this.btnXphDepartment.TabIndex = 47;
             this.btnXphDepartment.Text = "Xóa phòng ban";
             this.btnXphDepartment.UseVisualStyleBackColor = true;
+            this.btnXphDepartment.Click += new System.EventHandler(this.btnXphDepartment_Click);
             // 
             // btnAdd
             // 
@@ -81,6 +82,7 @@
             this.btnBack.TabIndex = 44;
             this.btnBack.Text = "Trở lại";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dataGridView1
             // 
@@ -154,7 +156,6 @@
             this.Controls.Add(this.lblID);
             this.Name = "frmInfoDepartment";
             this.Text = "frmInfoDepartment";
-            this.Load += new System.EventHandler(this.frmInfoDepartment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

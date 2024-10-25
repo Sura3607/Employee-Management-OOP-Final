@@ -16,5 +16,10 @@ namespace Managenment_Windows
         {
             InitializeComponent();
         }
+
+        private void btnTroLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

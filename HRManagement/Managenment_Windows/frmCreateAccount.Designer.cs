@@ -77,6 +77,7 @@
             this.btnTrolai.TabIndex = 3;
             this.btnTrolai.Text = "Trở lại";
             this.btnTrolai.UseVisualStyleBackColor = true;
+            this.btnTrolai.Click += new System.EventHandler(this.btnTrolai_Click);
             // 
             // txtNameAccount
             // 

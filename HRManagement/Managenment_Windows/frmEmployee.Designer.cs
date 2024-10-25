@@ -74,6 +74,7 @@
             this.btnTimKiem.TabIndex = 4;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnThem
             // 
@@ -100,12 +101,14 @@
             this.dtgEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEmployees.Location = new System.Drawing.Point(22, 95);
             this.dtgEmployees.Name = "dtgEmployees";
+            this.dtgEmployees.ReadOnly = true;
             this.dtgEmployees.RowHeadersWidth = 51;
             this.dtgEmployees.RowTemplate.Height = 24;
             this.dtgEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgEmployees.Size = new System.Drawing.Size(922, 370);
             this.dtgEmployees.TabIndex = 0;
             this.dtgEmployees.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellContentDoubleClick);
+            this.dtgEmployees.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgEmployees_CellFormatting);
             // 
             // frmEmployee
             // 

@@ -101,7 +101,6 @@
             this.lblHoTen.Size = new System.Drawing.Size(116, 25);
             this.lblHoTen.TabIndex = 23;
             this.lblHoTen.Text = "Họ và tên:";
-            this.lblHoTen.Click += new System.EventHandler(this.lblHoTen_Click);
             // 
             // lblPhone
             // 
@@ -113,7 +112,6 @@
             this.lblPhone.Size = new System.Drawing.Size(149, 25);
             this.lblPhone.TabIndex = 22;
             this.lblPhone.Text = "Số điện thoại:";
-            this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
             // 
             // label3
             // 
@@ -125,7 +123,6 @@
             this.label3.Size = new System.Drawing.Size(132, 25);
             this.label3.TabIndex = 21;
             this.label3.Text = "Phòng Ban:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblEmail
             // 
@@ -137,7 +134,6 @@
             this.lblEmail.Size = new System.Drawing.Size(76, 25);
             this.lblEmail.TabIndex = 20;
             this.lblEmail.Text = "Email:";
-            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // txtDiaChi
             // 
@@ -157,7 +153,6 @@
             this.lblDiaChi.Size = new System.Drawing.Size(90, 25);
             this.lblDiaChi.TabIndex = 30;
             this.lblDiaChi.Text = "Địa chỉ:";
-            this.lblDiaChi.Click += new System.EventHandler(this.lblDiaChi_Click);
             // 
             // btnLuu
             // 
@@ -168,7 +163,6 @@
             this.btnLuu.TabIndex = 32;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // lblID
             // 
@@ -180,7 +174,6 @@
             this.lblID.Size = new System.Drawing.Size(46, 25);
             this.lblID.TabIndex = 33;
             this.lblID.Text = "ID:";
-            this.lblID.Click += new System.EventHandler(this.lblID_Click);
             // 
             // lblProject
             // 
@@ -212,7 +205,7 @@
             this.btnXnhEmployee.TabIndex = 39;
             this.btnXnhEmployee.Text = "Xóa nhân viên";
             this.btnXnhEmployee.UseVisualStyleBackColor = true;
-            this.btnXnhEmployee.Click += new System.EventHandler(this.btnXoaProject_Click);
+            this.btnXnhEmployee.Click += new System.EventHandler(this.btnXnhEmployee_Click);
             // 
             // frmInfoEmployee
             // 
@@ -239,7 +232,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInfoEmployee";
             this.Text = "Thông tin nhân Viên";
-            this.Load += new System.EventHandler(this.frmThongTinNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

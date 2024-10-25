@@ -60,6 +60,7 @@
             this.btnThem.TabIndex = 27;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTimKiem
             // 
@@ -70,6 +71,7 @@
             this.btnTimKiem.TabIndex = 26;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTuKhoa
             // 
@@ -106,10 +108,12 @@
             this.dtgMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMain.Location = new System.Drawing.Point(22, 95);
             this.dtgMain.Name = "dtgMain";
+            this.dtgMain.ReadOnly = true;
             this.dtgMain.RowHeadersWidth = 51;
             this.dtgMain.RowTemplate.Height = 24;
             this.dtgMain.Size = new System.Drawing.Size(922, 370);
             this.dtgMain.TabIndex = 22;
+            this.dtgMain.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellContentDoubleClick);
             // 
             // btnXphDepartment
             // 
@@ -120,6 +124,7 @@
             this.btnXphDepartment.TabIndex = 48;
             this.btnXphDepartment.Text = "Xóa phòng ban";
             this.btnXphDepartment.UseVisualStyleBackColor = true;
+            this.btnXphDepartment.Click += new System.EventHandler(this.btnXphDepartment_Click);
             // 
             // frmDeparment
             // 

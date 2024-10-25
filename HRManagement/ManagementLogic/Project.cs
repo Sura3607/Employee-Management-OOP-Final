@@ -13,8 +13,9 @@ namespace ManagementLogic
         private string id;
         private string projectName;
         private string description;
-        List<Employee> employees;
         Employee leader;
+        private List<FulltimeEmployee> employees_FullTime = new List<FulltimeEmployee>();
+        private List<ParttimeEmployee> employees_PartTime = new List<ParttimeEmployee>();
 
         //Tạo các logic cho viêccj set của các property dưới đây , ví dụ description ko đuocwj quá 250 kí tự 
         public string Id
@@ -47,16 +48,28 @@ namespace ManagementLogic
                 description = value;
             }
         }
-        public List<Employee> Employees { get => employees; set => employees = value; }
+        public List<FulltimeEmployee> Employees_FullTime { get => employees_FullTime; set => employees_FullTime = value; }
+        public List<ParttimeEmployee> Employees_PartTime { get => employees_PartTime; set => employees_PartTime = value; }
+        public List<Employee> Employees
+        {
+            get
+            {
+                List<Employee> allEmployees = new List<Employee>();
+                allEmployees.AddRange(Employees_FullTime);
+                allEmployees.AddRange(Employees_PartTime);
+                return allEmployees;
+            }
+        }
         public Employee Leader { get => leader; set => leader = value; }
 
         public Project() { }
-        public Project(string id, string projectName, Employee leader = null, string description = "",List<Employee> employees= null)
+        public Project(string id, string projectName, Employee leader = null, string description = "", List<FulltimeEmployee> employees_FullTime = null, List<ParttimeEmployee> employees_PartTime = null)
         {
             Id = id;
             ProjectName = projectName;
             Description = description;
-            this.employees = employees ?? new List<Employee>();
+            this.employees_FullTime = employees_FullTime ?? new List<FulltimeEmployee>();
+            this.employees_PartTime = employees_PartTime ?? new List<ParttimeEmployee>();
             this.leader = leader;
         }
         public Project(SerializationInfo info, StreamingContext context)
@@ -64,7 +77,8 @@ namespace ManagementLogic
             Id = info.GetString("Id");
             ProjectName = info.GetString("ProjectName");
             Description = info.GetString("Description");
-            employees = (List<Employee>)info.GetValue("Employees",typeof(List<Employee>));
+            Employees_FullTime = (List<FulltimeEmployee>)info.GetValue("Employees_FullTime", typeof(List<FulltimeEmployee>));
+            Employees_PartTime = (List<ParttimeEmployee>)info.GetValue("Employees_PartTime", typeof(List<ParttimeEmployee>));
             leader = (Employee)info.GetValue("Leader", typeof(Employee));
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
@@ -72,7 +86,8 @@ namespace ManagementLogic
             info.AddValue("Id", Id);
             info.AddValue("ProjectName", ProjectName);
             info.AddValue("Description", Description);
-            info.AddValue("Employees", employees);
+            info.AddValue("Employees_FullTime", Employees_FullTime);
+            info.AddValue("Employees_PartTime", Employees_PartTime);
             info.AddValue("Leader",leader);
         }
         //Thêm logic chỉ khi leader la null mới được addd nếu ko sẽ trả về ngoại lệ 
@@ -83,21 +98,33 @@ namespace ManagementLogic
             this.leader = leader;
         }
 
-        public void AddEmployee(Employee employee)
+        public void AddEmployee(Employee e)
         {
-            if (leader == employee)
-                leader = null;
-            if (employees == null)
+            if (e == null)
                 throw new ArgumentException("Them nhan vien that bai");
-            employees.Add(employee);
+            if (Employees.Contains(e))
+                throw new ArgumentException("Nhan vien da ton tai");
+
+            if (e is FulltimeEmployee fullTimeEmployee)
+                Employees_FullTime.Add(fullTimeEmployee);
+            else if (e is ParttimeEmployee parttime)
+                Employees_PartTime.Add(parttime);
         }
         public void RemoveEmployee(Employee employee)
         {
-            if (employees.Contains(employee))
-                employees.Remove(employee);
-            throw new ArgumentException("Project khong co nhan vien nay");
+            if (leader == employee)
+            {
+                leader = null;
+                return;
+            }
+            if (!Employees.Contains(employee))
+                throw new ArgumentException("Khong tim thay nhan vien nay");
+
+            if (employee is FulltimeEmployee fullTimeEmployee)
+                Employees_FullTime.Remove(fullTimeEmployee);
+            else if (employee is ParttimeEmployee parttime)
+                Employees_PartTime.Remove(parttime);
         }
-        //Xử lí việc tìm nếu có tồn tại keyword trong tên project
         public bool Find(string keyword)
         {
             if (ProjectName.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0) // keyword ko phan biet in hoa hay thuong
@@ -108,10 +135,10 @@ namespace ManagementLogic
         {
             string employeeNames = "Không có nhân viên";
             string leaderName = "";
-            if (employees.Count > 0)
+            if (Employees.Count > 0)
             {
                 employeeNames = "";
-                foreach (Employee employee in employees)
+                foreach (Employee employee in Employees)
                 {
                     employeeNames += employee.Name + ", ";
                 }

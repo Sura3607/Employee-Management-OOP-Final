@@ -16,5 +16,21 @@ namespace Managenment_Windows
         {
             InitializeComponent();
         }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmCreateAccount frmCreateAccount = new frmCreateAccount();
+            frmCreateAccount.ShowDialog();
+            this.Show();
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmChangePassword frmChangePassword = new frmChangePassword();
+            frmChangePassword.ShowDialog();
+            this.Show();
+        }
     }
 }

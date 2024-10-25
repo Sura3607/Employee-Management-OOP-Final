@@ -43,6 +43,7 @@
             this.btnCreateAccount.TabIndex = 0;
             this.btnCreateAccount.Text = "Tạo tài khoản";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // btnChangePassword
             // 
@@ -53,6 +54,7 @@
             this.btnChangePassword.TabIndex = 1;
             this.btnChangePassword.Text = "Đổi mật khẩu";
             this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnLogOut
             // 

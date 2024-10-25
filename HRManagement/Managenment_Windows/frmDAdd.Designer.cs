@@ -35,8 +35,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblProjectName = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.lblProjectEmployee = new System.Windows.Forms.Label();
             this.lblAllEmployee = new System.Windows.Forms.Label();
             this.btnRemoveAll = new System.Windows.Forms.Button();
@@ -60,7 +58,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(599, 118);
+            this.btnBack.Location = new System.Drawing.Point(599, 84);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(121, 32);
             this.btnBack.TabIndex = 42;
@@ -69,24 +67,23 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(140, 125);
+            this.textBox3.Location = new System.Drawing.Point(144, 83);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(435, 22);
             this.textBox3.TabIndex = 41;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(140, 78);
+            this.textBox2.Location = new System.Drawing.Point(144, 36);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(435, 22);
             this.textBox2.TabIndex = 40;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(12, 126);
+            this.lblDescription.Location = new System.Drawing.Point(16, 84);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(81, 25);
             this.lblDescription.TabIndex = 39;
@@ -96,29 +93,11 @@
             // 
             this.lblProjectName.AutoSize = true;
             this.lblProjectName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjectName.Location = new System.Drawing.Point(12, 77);
+            this.lblProjectName.Location = new System.Drawing.Point(16, 35);
             this.lblProjectName.Name = "lblProjectName";
             this.lblProjectName.Size = new System.Drawing.Size(122, 25);
             this.lblProjectName.TabIndex = 38;
             this.lblProjectName.Text = "Tên dự án:";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(12, 28);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(46, 25);
-            this.lblID.TabIndex = 37;
-            this.lblID.Text = "ID:";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(140, 31);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(435, 22);
-            this.txtID.TabIndex = 44;
-            this.txtID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblProjectEmployee
             // 
@@ -208,14 +187,12 @@
             this.Controls.Add(this.btnAddAll);
             this.Controls.Add(this.chklstRight);
             this.Controls.Add(this.chklstLeft);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblProjectName);
-            this.Controls.Add(this.lblID);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDAdd";
             this.Text = "Thêm phòng ban";
@@ -232,8 +209,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblProjectName;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblProjectEmployee;
         private System.Windows.Forms.Label lblAllEmployee;
         private System.Windows.Forms.Button btnRemoveAll;

@@ -1,63 +1,36 @@
-﻿using System;
+﻿using ManagementLogic;
+using System;
 using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
     public partial class frmInfoEmployee : Form
     {
-        public frmInfoEmployee()
+        private Employee _employee;
+        public frmInfoEmployee(Employee employee)
         {
             InitializeComponent();
+            _employee = employee;
+            lblID.Text += $" {_employee.Id}";
         }
 
-        private void frmThongTinNhanVien_Load(object sender, EventArgs e)
+        private void btnXnhEmployee_Click(object sender, EventArgs e)
         {
-            lblID.Text += "001";
-        }
-
-        private void lblPhone_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDiaChi_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHoTen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblID_Click(object sender, EventArgs e)
-        {
-
+            try
+            {
+                Run.Instance.RemoveEmployee(_employee);
+                MessageBox.Show($"Nhân viên {_employee.Name} đã bị xóa");
+                this.Close();
+            }
+            catch( Exception ex )
+            {
+                MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnXoaProject_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

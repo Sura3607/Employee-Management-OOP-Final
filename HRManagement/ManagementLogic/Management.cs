@@ -115,7 +115,7 @@ namespace ManagementLogic
 
             SaveData();
         }
-        public void Add(Department d, Employee leader = null, List<Employee> employees = default)
+        public void Add(Department d, Employee leader = null)
         {
             if (departmentList.Contains(d))
             {
@@ -126,18 +126,10 @@ namespace ManagementLogic
                 leader.Department = d;
                 d.Leader = leader;
             }
-            if (employees.Count > 0)
-            {
-                foreach (Employee e in employees)
-                {
-                    e.Department = d;
-                    d.AddEmployee(e);
-                }
-            }
             departmentList.Add(d);
             SaveData();
         }
-        public void Add(Project p, Employee leader = null, List<Employee> employees = default)
+        public void Add(Project p, Employee leader = null)
         {
             if (projectList.Contains(p))
             {
@@ -147,15 +139,6 @@ namespace ManagementLogic
             {
                 leader.AddProject(p);
                 p.AddLeader(leader);
-            }
-
-            if (employees.Count > 0)
-            {
-                foreach (Employee e in employees)
-                {
-                    e.AddProject(p);
-                    p.AddEmployee(e);
-                }
             }
             projectList.Add(p);
             SaveData();
@@ -172,6 +155,10 @@ namespace ManagementLogic
             Department d = e.Department;
             d.RemoveEmployee(e);
 
+            if (e is FulltimeEmployee fullTimeEmployee)
+                EmployeesList_FullTime.Remove(fullTimeEmployee);
+            else if (e is ParttimeEmployee parttime)
+                EmployeesList_PartTime.Remove(parttime);
 
             SaveData();
         }
@@ -229,7 +216,7 @@ namespace ManagementLogic
                 {
                     employee.Address = address;
                 }
-                if (gender.HasValue) //has value kiểm tra có giá trị hay không
+                if (gender.HasValue) 
                 {
                     employee.Gender = gender.Value;
                 }

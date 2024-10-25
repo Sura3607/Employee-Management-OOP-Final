@@ -53,7 +53,7 @@ namespace ManagementLogic
         {
             char c;
             if (who == 1)
-                c = 'P';
+                c = 'E';
             else if (who == 0)
                 c = 'D';
             else
@@ -69,19 +69,23 @@ namespace ManagementLogic
         {
             if(isFullTime)
             {
-                FulltimeEmployee employee = new FulltimeEmployee(GenerateId(1),name,phone,email,address,gender,
+                FulltimeEmployee fulltimeEmployee = new FulltimeEmployee(GenerateId(1),name,phone,email,address,gender,
                                                                  birthday,beginWork,deparment,salary);
-                management.Add(employee);
+                management.Add(fulltimeEmployee);
+                return;
             }
+            ParttimeEmployee parttimeEmployee = new ParttimeEmployee(GenerateId(1), name, phone, email, address, gender,
+                                                                birthday, beginWork, deparment, salary);
+            management.Add(parttimeEmployee);
         }
         public void CreateDepart(string name, Employee leader = null)
         {
-            Department department = new Department(GenerateId(0), name, leader, new List<Employee>());
+            Department department = new Department(GenerateId(0), name, leader);
             management.Add(department);
         }
         public void CreateProject(string name, Employee leader = null, string scrip = "")
         {
-            Project project = new Project(GenerateId(-1), name, leader, scrip, new List<Employee>());
+            Project project = new Project(GenerateId(-1), name, leader, scrip);
             management.Add(project);
         }
         public void RemoveEmployee(Employee employee)

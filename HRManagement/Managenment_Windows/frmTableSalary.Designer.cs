@@ -53,6 +53,7 @@
             this.btnTroLai.TabIndex = 1;
             this.btnTroLai.Text = "Trở lại";
             this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // frmTableSalary
             // 
