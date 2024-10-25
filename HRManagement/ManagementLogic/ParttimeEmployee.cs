@@ -11,12 +11,10 @@ namespace ManagementLogic
     public class ParttimeEmployee : Employee, ICalSalary
     {
         private int worktime;
-        public int Worktime { get => worktime; }
+        public int Worktime { get => worktime; set => worktime = value; }
         public ParttimeEmployee():base(){}
-
-        [JsonConstructor]
-        public ParttimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department deparment, uint salary, int worktime = 0) 
-            : base(id, name, phone, email, address, gender, birthday, DateTime.Now, deparment, 25000)
+        public ParttimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department deparment, uint salary = 25000, int worktime = 0) 
+            : base(id, name, phone, email, address, gender, birthday, beginWork, deparment, salary)
         {
             this.worktime = worktime;
         }
@@ -27,7 +25,7 @@ namespace ManagementLogic
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             base.GetObjectData(info, context);
-            info.AddValue("Worktime",worktime);
+            info.AddValue("Worktime",Worktime);
         }
         //Tính lương theo giờ làm việc, lấy lương của đối tượng tính với giờ làm 
         public double CalculateSalary()

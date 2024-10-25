@@ -2,31 +2,35 @@
   "EmployeesList": [
     {
       "Id": "P0001",
-      "Name": "Nguyen Van A",
-      "Phone": "0255946307",
-      "Email": "vana@gmail.com",
-      "Address": "tphcm",
+      "Name": "a",
+      "Phone": "0123456789",
+      "Email": "a@gmail.com",
+      "Address": "adasd",
       "Gender": true,
-      "Birthday": "1990-03-21T00:43:30",
-      "BeginWork": "2024-10-25T00:45:10.4000257+07:00",
+      "Birthday": "1990-07-19T00:21:18",
+      "BeginWork": "2024-10-26T00:21:18.032163+07:00",
       "Department": null,
-      "Salary": 5000000,
-      "Projects": []
-    },
-    {
-      "Id": "P0002",
-      "Name": "Nguyen Van A",
-      "Phone": "0255946307",
-      "Email": "vana@gmail.com",
-      "Address": "tphcm",
-      "Gender": true,
-      "Birthday": "1990-03-21T00:43:30",
-      "BeginWork": "2024-10-25T00:45:23.8896103+07:00",
-      "Department": null,
-      "Salary": 5000000,
+      "Salary": 10000000,
       "Projects": []
     }
   ],
   "DepartmentList": [],
-  "ProjectList": []
+  "ProjectList": [],
+  "EmployeesList_FullTime": [
+    {
+      "Senority": 0,
+      "Id": "P0001",
+      "Name": "a",
+      "Phone": "0123456789",
+      "Email": "a@gmail.com",
+      "Address": "adasd",
+      "Gender": true,
+      "Birthday": "1990-07-19T00:21:18",
+      "BeginWork": "2024-10-26T00:21:18.032163+07:00",
+      "Department": null,
+      "Salary": 10000000,
+      "Projects": []
+    }
+  ],
+  "EmployeesList_PartTime": []
 }

@@ -44,11 +44,10 @@ namespace ManagementLogic
                 leader = value;
             }
         }
-        public List<Employee> Employees { get => employees; }
+        public List<Employee> Employees { get => employees; set => employees = value; }
         public Department() { }
 
-        [JsonConstructor]
-        public Department(string id, string name, Employee leader, List<Employee> employees = default)
+        public Department(string id, string name, Employee leader, List<Employee> employees = null)
         {
             Id = id;
             Name = name;
@@ -57,8 +56,8 @@ namespace ManagementLogic
         }
         public Department(SerializationInfo info, StreamingContext context)
         {
-            Id = info.GetString("id");
-            Name = info.GetString("name");
+            Id = info.GetString("Id");
+            Name = info.GetString("Name");
             Leader = (Employee)info.GetValue("Leader",typeof(Employee));
             employees = (List<Employee>)info.GetValue("Employees",typeof (List<Employee>));
         }

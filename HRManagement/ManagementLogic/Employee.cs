@@ -126,26 +126,9 @@ namespace ManagementLogic
                 salary = value;
             } 
         }
-        public List<Project> Projects { get => projects;}
+        public List<Project> Projects { get => projects; set => projects = value; }
 
         protected Employee() { }
-
-        //protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary)
-        //{
-        //    this.id = id;
-        //    this.name = name;
-        //    this.phone = phone;
-        //    this.email = email;
-        //    this.address = address;
-        //    this.gender = gender;
-        //    this.birthday = birthday;
-        //    this.beginWork = beginWork;
-        //    this.department = department;
-        //    this.projects = new List<Project>();
-        //    this.salary = salary;
-        //}
-
-        [JsonConstructor]
         protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary, List<Project> projects = null)
         {
             this.id = id;
@@ -171,7 +154,7 @@ namespace ManagementLogic
             birthday = info.GetDateTime("Birthday");
             beginWork = info.GetDateTime("BeginWork");
             department = (Department)info.GetValue("Department",typeof(Department));
-            projects = (List<Project>)info.GetValue("Project",typeof (List<Project>));
+            projects = (List<Project>)info.GetValue("Projects",typeof (List<Project>));
             salary = info.GetUInt32("Salary");
         }
         public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
@@ -182,7 +165,7 @@ namespace ManagementLogic
             info.AddValue("Email",Email);
             info.AddValue("Gender",Gender);
             info.AddValue("Birthday", Birthday);
-            info.AddValue("BeginWord",BeginWork);
+            info.AddValue("BeginWork",BeginWork);
             info.AddValue("Department", Department);
             info.AddValue("Projects", Projects);
             info.AddValue("Salary",Salary);
