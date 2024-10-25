@@ -36,12 +36,13 @@
             this.lblTuKhoa = new System.Windows.Forms.Label();
             this.lblTongSo = new System.Windows.Forms.Label();
             this.dtgMain = new System.Windows.Forms.DataGridView();
+            this.btnXoaProject = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuy
             // 
-            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Location = new System.Drawing.Point(725, 471);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(219, 35);
@@ -52,8 +53,8 @@
             // 
             // btnThem
             // 
-            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(453, 471);
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(215, 471);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(218, 35);
             this.btnThem.TabIndex = 27;
@@ -62,7 +63,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.Location = new System.Drawing.Point(553, 55);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(118, 34);
@@ -110,12 +111,23 @@
             this.dtgMain.Size = new System.Drawing.Size(922, 370);
             this.dtgMain.TabIndex = 22;
             // 
+            // btnXoaProject
+            // 
+            this.btnXoaProject.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaProject.Location = new System.Drawing.Point(453, 471);
+            this.btnXoaProject.Name = "btnXoaProject";
+            this.btnXoaProject.Size = new System.Drawing.Size(218, 35);
+            this.btnXoaProject.TabIndex = 38;
+            this.btnXoaProject.Text = "Xóa dự án";
+            this.btnXoaProject.UseVisualStyleBackColor = true;
+            // 
             // frmProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(982, 553);
+            this.Controls.Add(this.btnXoaProject);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTimKiem);
@@ -142,5 +154,6 @@
         private System.Windows.Forms.Label lblTuKhoa;
         private System.Windows.Forms.Label lblTongSo;
         private System.Windows.Forms.DataGridView dtgMain;
+        private System.Windows.Forms.Button btnXoaProject;
     }
 }

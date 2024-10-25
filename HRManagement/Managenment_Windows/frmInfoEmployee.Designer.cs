@@ -44,18 +44,20 @@
             this.lblID = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnXnhEmployee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(471, 387);
+            this.btnThoat.Location = new System.Drawing.Point(520, 389);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(187, 35);
             this.btnThoat.TabIndex = 29;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // txtPhongBan
             // 
@@ -160,12 +162,13 @@
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(239, 387);
+            this.btnLuu.Location = new System.Drawing.Point(130, 389);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(187, 35);
             this.btnLuu.TabIndex = 32;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // lblID
             // 
@@ -200,12 +203,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(323, 281);
             this.dataGridView1.TabIndex = 36;
             // 
+            // btnXnhEmployee
+            // 
+            this.btnXnhEmployee.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXnhEmployee.Location = new System.Drawing.Point(325, 389);
+            this.btnXnhEmployee.Name = "btnXnhEmployee";
+            this.btnXnhEmployee.Size = new System.Drawing.Size(187, 35);
+            this.btnXnhEmployee.TabIndex = 39;
+            this.btnXnhEmployee.Text = "Xóa nhân viên";
+            this.btnXnhEmployee.UseVisualStyleBackColor = true;
+            this.btnXnhEmployee.Click += new System.EventHandler(this.btnXoaProject_Click);
+            // 
             // frmInfoEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(732, 453);
+            this.Controls.Add(this.btnXnhEmployee);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblProject);
             this.Controls.Add(this.lblID);
@@ -248,5 +263,6 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblProject;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnXnhEmployee;
     }
 }

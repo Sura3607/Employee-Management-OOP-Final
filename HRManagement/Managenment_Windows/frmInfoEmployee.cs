@@ -44,5 +44,20 @@ namespace Managenment_Windows
         {
 
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoaProject_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

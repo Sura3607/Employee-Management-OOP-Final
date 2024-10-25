@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class frmInfoDepartment : Form
+    public partial class frmDAdd : Form
     {
-        public frmInfoDepartment()
+        public frmDAdd()
         {
             InitializeComponent();
         }
 
-        private void frmInfoDepartment_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
