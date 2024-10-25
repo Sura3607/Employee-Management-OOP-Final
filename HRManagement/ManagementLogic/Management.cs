@@ -10,35 +10,48 @@ namespace ManagementLogic
     [Serializable]
     public class Management : ISerializable
     {
-        private List<Employee> employeesList = new List<Employee>();
+        private List<FulltimeEmployee> employeesList_FullTime = new List<FulltimeEmployee>();
+        private List<ParttimeEmployee> employeesList_PartTime = new List<ParttimeEmployee>();
         private List<Department> departmentList = new List<Department>();
         private List<Project> projectList = new List<Project>();
         private Data data = new Data();
         private string filePath;
         private Account account;
 
-        public List<Employee> EmployeesList { get => employeesList;}
-        public List<Department> DepartmentList { get => departmentList;}
-        public List<Project> ProjectList { get => projectList;}
+        public List<Employee> EmployeesList
+        {
+            get
+            {
+                List<Employee> allEmployees = new List<Employee>();
+                allEmployees.AddRange(EmployeesList_FullTime);
+                allEmployees.AddRange(EmployeesList_PartTime);
+                return allEmployees;
+            }
+        }
+        public List<Department> DepartmentList { get => departmentList; set => departmentList = value; }
+        public List<Project> ProjectList { get => projectList; set => projectList = value; }
+        public List<FulltimeEmployee> EmployeesList_FullTime { get => employeesList_FullTime; set => employeesList_FullTime = value; }
+        public List<ParttimeEmployee> EmployeesList_PartTime { get => employeesList_PartTime; set => employeesList_PartTime = value; }
 
         public Management() { }
         public Management(SerializationInfo info, StreamingContext context)
         {
-            employeesList = (List<Employee>)info.GetValue("Employees",typeof(List<Employee>));
+            employeesList_FullTime = (List<FulltimeEmployee>)info.GetValue("Employees_FullTime", typeof(List<FulltimeEmployee>));
+            employeesList_PartTime = (List<ParttimeEmployee>)info.GetValue("Employees_PartTime", typeof(List<ParttimeEmployee>));
             departmentList = (List<Department>)info.GetValue("Departments",typeof (List<Department>));
             projectList = (List<Project>)info.GetValue("Projects",typeof(List<Project>));
         }
-
-        //[JsonConstructor] // Constructor này sẽ được gọi khi deserialization từ JSON
-        public Management(List<Employee> employeesList, List<Department> departmentList, List<Project> projectList)
+        public Management(List<FulltimeEmployee> employeesList_FullTime, List<ParttimeEmployee> employeesList_PartTime, List<Department> departmentList, List<Project> projectList)
         {
-            this.employeesList = employeesList;
+            this.employeesList_FullTime = employeesList_FullTime;
+            this.employeesList_PartTime = employeesList_PartTime;
             this.departmentList = departmentList;
             this.projectList = projectList;
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            info.AddValue("Employees", EmployeesList);
+            info.AddValue("Employees_FullTime", EmployeesList_FullTime);
+            info.AddValue("Employees_PartTime", EmployeesList_PartTime);
             info.AddValue("Departmants", DepartmentList);
             info.AddValue("Projects",ProjectList);
         } 
@@ -54,7 +67,6 @@ namespace ManagementLogic
         {
             data.SaveData(this,this.filePath);
         }
-
         public List<Employee> FindEmployee(string keyword)
         {
             List<Employee> l = new List<Employee>();
@@ -91,20 +103,18 @@ namespace ManagementLogic
             }
             return l;
         }
-        //Sau khi add/remove sẽ gọi savedata ngay lập tức
-        //Các phương thức sau sẽ gọi tới các đói tượng
-        //Add cái gì thì thêm vào list đó.
-        //Remove trong list 
-        //Lưu ý nên kiểm tra đối tượng lại một nữa xem đã hợp lệ chưa và add. ví dụ 
         public void Add(Employee e)
         {
-            if (employeesList.Contains(e))
-            {
-                throw new Exception($"Nhân viên {e.Name} đã tồn tại");
-            }
-            employeesList.Add(e);
+            if (EmployeesList.Contains(e))
+                throw new Exception($"Nhân viên {e.Name} đã tồn tại"); 
+
+            if (e is FulltimeEmployee fullTimeEmployee)
+                EmployeesList_FullTime.Add(fullTimeEmployee);
+            else if(e is ParttimeEmployee parttime)
+                EmployeesList_PartTime.Add(parttime);
+
             SaveData();
-            }
+        }
         public void Add(Department d, Employee leader = null, List<Employee> employees = default)
         {
             if (departmentList.Contains(d))
@@ -152,10 +162,9 @@ namespace ManagementLogic
         }
         public void Remove(Employee e)
         {
-            if (!employeesList.Contains(e))
-            {
+            if (!EmployeesList.Contains(e))
                 throw new Exception("Không tồn tại nhân viên cần xóa");
-            }
+
             foreach (Project p in e.Projects)
             {
                 p.RemoveEmployee(e);
@@ -163,7 +172,7 @@ namespace ManagementLogic
             Department d = e.Department;
             d.RemoveEmployee(e);
 
-            employeesList.Remove(e);
+
             SaveData();
         }
         public void Remove(Department d)
@@ -344,7 +353,7 @@ namespace ManagementLogic
 
             if (!string.IsNullOrEmpty(newLeaderId))
             {
-                Employee newLeader = employeesList.Find(e => e.Id == newLeaderId);
+                Employee newLeader = EmployeesList.Find(e => e.Id == newLeaderId);
                 if (newLeader == null || newLeader is ParttimeEmployee)
                 {
                     throw new ArgumentException("Leader không hợp lệ ");
@@ -367,7 +376,7 @@ namespace ManagementLogic
 
             if (!string.IsNullOrEmpty(newLeaderId))
             {
-                Employee newLeader = employeesList.Find(e => e.Id == newLeaderId);
+                Employee newLeader = EmployeesList.Find(e => e.Id == newLeaderId);
                 if (newLeader == null || newLeader is ParttimeEmployee)
                 {
                     throw new ArgumentException("Leader không hợp lệ hoặc là nhân viên part-time.");

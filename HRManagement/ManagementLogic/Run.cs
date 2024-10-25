@@ -81,7 +81,7 @@ namespace ManagementLogic
         }
         public void CreateProject(string name, Employee leader = null, string scrip = "")
         {
-            Project project = new Project(GenerateId(-1), name, leader, new List<Employee>(), scrip);
+            Project project = new Project(GenerateId(-1), name, leader, scrip, new List<Employee>());
             management.Add(project);
         }
         public void RemoveEmployee(Employee employee)

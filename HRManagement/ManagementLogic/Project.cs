@@ -47,12 +47,11 @@ namespace ManagementLogic
                 description = value;
             }
         }
-        public List<Employee> Employees { get => employees; }
-        public Employee Leader { get => leader; }
+        public List<Employee> Employees { get => employees; set => employees = value; }
+        public Employee Leader { get => leader; set => leader = value; }
 
         public Project() { }
-        [JsonConstructor]
-        public Project(string id, string projectName, Employee leader = null, List<Employee> employees= default, string description = "")
+        public Project(string id, string projectName, Employee leader = null, string description = "",List<Employee> employees= null)
         {
             Id = id;
             ProjectName = projectName;
