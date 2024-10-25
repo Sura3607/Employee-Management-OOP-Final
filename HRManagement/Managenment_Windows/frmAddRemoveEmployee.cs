@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class frmInfoDepartment : Form
+    public partial class frmAddRemoveEmployee : Form
     {
-        public frmInfoDepartment()
+        public frmAddRemoveEmployee()
         {
             InitializeComponent();
         }
 
-        private void frmInfoDepartment_Load(object sender, EventArgs e)
+        private void frmAddRemoveEmployee_Load(object sender, EventArgs e)
         {
 
         }

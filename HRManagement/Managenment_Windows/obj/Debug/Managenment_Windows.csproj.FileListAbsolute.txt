@@ -89,7 +89,6 @@ D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\bin\Debu
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.xml
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.AssemblyReference.cache
-D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAdd.resources
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDeparment.resources
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEmployee.resources
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoDepartment.resources
@@ -153,3 +152,4 @@ C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CopyComplete
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
+D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEAdd.resources

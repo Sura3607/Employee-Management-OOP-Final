@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class frmInfoDepartment : Form
+    public partial class frmPAdd : Form
     {
-        public frmInfoDepartment()
+        public frmPAdd()
         {
             InitializeComponent();
-        }
-
-        private void frmInfoDepartment_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

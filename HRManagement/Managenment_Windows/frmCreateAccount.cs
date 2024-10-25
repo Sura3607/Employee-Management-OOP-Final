@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class frmInfoDepartment : Form
+    public partial class frmCreateAccount : Form
     {
-        public frmInfoDepartment()
+        public frmCreateAccount()
         {
             InitializeComponent();
         }
 
-        private void frmInfoDepartment_Load(object sender, EventArgs e)
+        private void btnCreateAccount_Click(object sender, EventArgs e)
         {
 
         }

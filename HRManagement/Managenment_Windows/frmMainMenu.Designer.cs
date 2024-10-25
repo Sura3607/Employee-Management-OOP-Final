@@ -36,6 +36,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnDuAn = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnTableSalary = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -49,7 +50,7 @@
             this.btnNhanVien.BackColor = System.Drawing.Color.Azure;
             this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNhanVien.Location = new System.Drawing.Point(191, 79);
+            this.btnNhanVien.Location = new System.Drawing.Point(29, 79);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(240, 180);
             this.btnNhanVien.TabIndex = 3;
@@ -61,7 +62,7 @@
             // 
             this.btnPhongBan.BackColor = System.Drawing.Color.Azure;
             this.btnPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhongBan.Location = new System.Drawing.Point(551, 79);
+            this.btnPhongBan.Location = new System.Drawing.Point(374, 79);
             this.btnPhongBan.Name = "btnPhongBan";
             this.btnPhongBan.Size = new System.Drawing.Size(240, 180);
             this.btnPhongBan.TabIndex = 3;
@@ -102,12 +103,24 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // btnTableSalary
+            // 
+            this.btnTableSalary.BackColor = System.Drawing.Color.Azure;
+            this.btnTableSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTableSalary.Location = new System.Drawing.Point(719, 79);
+            this.btnTableSalary.Name = "btnTableSalary";
+            this.btnTableSalary.Size = new System.Drawing.Size(240, 180);
+            this.btnTableSalary.TabIndex = 5;
+            this.btnTableSalary.Text = "Bảng lương";
+            this.btnTableSalary.UseVisualStyleBackColor = false;
+            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(982, 553);
+            this.Controls.Add(this.btnTableSalary);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnDuAn);
             this.Controls.Add(this.button3);
@@ -130,5 +143,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnDuAn;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnTableSalary;
     }
 }
