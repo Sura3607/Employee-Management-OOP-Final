@@ -33,7 +33,7 @@ namespace ManagementLogic
                 //Kiểm tra xem có rỗng hoặc null không?
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Id không được để trống");
-                id = value; 
+                this.id = value; 
             } 
         }
         public string Name
