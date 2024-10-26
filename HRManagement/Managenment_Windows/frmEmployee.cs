@@ -7,6 +7,7 @@ namespace Managenment_Windows
 {
     public partial class frmEmployee : Form
     {
+        private bool isBack = false;
         public frmEmployee()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace Managenment_Windows
                     this.Hide();
                     frmInfoEmployee frmInfoEmployee = new frmInfoEmployee(selectedEmployee);
                     frmInfoEmployee.ShowDialog();
+                    LoadEmployees(Run.Instance.Management.EmployeesList);
                     this.Show();
                 }
             }
@@ -43,24 +45,16 @@ namespace Managenment_Windows
             this.Hide();
             frmEAdd frmEAdd = new frmEAdd();
             frmEAdd.ShowDialog();
+            LoadEmployees(Run.Instance.Management.EmployeesList);
             this.Show();
         }
 
-        private void frmEmployee_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
         private void LoadEmployees(List<Employee> list)
         {
             dtgEmployees.Columns.Clear();  
             dtgEmployees.AutoGenerateColumns = false;
 
-            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "ID", DataPropertyName = "id" });
+            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "ID", DataPropertyName = "Id" });
             dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Name", DataPropertyName = "Name" });
             DataGridViewTextBoxColumn genderColumn = new DataGridViewTextBoxColumn();
             genderColumn.Name = "Gender";
@@ -94,6 +88,16 @@ namespace Managenment_Windows
             {
                 MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            isBack = true;
+            this.Close();
+        }
+        private void frmEmployee_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(!isBack)
+                Application.Exit();
         }
     }
 }

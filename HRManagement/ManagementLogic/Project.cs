@@ -63,14 +63,19 @@ namespace ManagementLogic
         public Employee Leader { get => leader; set => leader = value; }
 
         public Project() { }
-        public Project(string id, string projectName, Employee leader = null, string description = "", List<FulltimeEmployee> employees_FullTime = null, List<ParttimeEmployee> employees_PartTime = null)
+        public Project(string id, string projectName, Employee leader, string description = "", List<FulltimeEmployee> employees_FullTime = null, List<ParttimeEmployee> employees_PartTime = null)
         {
             Id = id;
             ProjectName = projectName;
             Description = description;
             this.employees_FullTime = employees_FullTime ?? new List<FulltimeEmployee>();
             this.employees_PartTime = employees_PartTime ?? new List<ParttimeEmployee>();
-            this.leader = leader;
+            Leader = leader;
+
+            if (leader is FulltimeEmployee fulltime)
+                employees_FullTime.Add(fulltime);
+            else if (leader is ParttimeEmployee parttime)
+                employees_PartTime.Add(parttime);
         }
         public Project(SerializationInfo info, StreamingContext context)
         {
@@ -90,14 +95,6 @@ namespace ManagementLogic
             info.AddValue("Employees_PartTime", Employees_PartTime);
             info.AddValue("Leader",leader);
         }
-        //Thêm logic chỉ khi leader la null mới được addd nếu ko sẽ trả về ngoại lệ 
-        public void AddLeader(Employee leader)
-        {
-            if (this.leader != null)
-                throw new InvalidOperationException("Da co leader cho project nay");
-            this.leader = leader;
-        }
-
         public void AddEmployee(Employee e)
         {
             if (e == null)
@@ -112,13 +109,12 @@ namespace ManagementLogic
         }
         public void RemoveEmployee(Employee employee)
         {
-            if (leader == employee)
-            {
-                leader = null;
-                return;
-            }
+
             if (!Employees.Contains(employee))
                 throw new ArgumentException("Khong tim thay nhan vien nay");
+
+            if (leader == employee)
+                leader = null;
 
             if (employee is FulltimeEmployee fullTimeEmployee)
                 Employees_FullTime.Remove(fullTimeEmployee);

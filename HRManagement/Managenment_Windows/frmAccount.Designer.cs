@@ -65,6 +65,7 @@
             this.btnLogOut.TabIndex = 2;
             this.btnLogOut.Text = "Đăng xuất";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // frmAccount
             // 
@@ -79,6 +80,7 @@
             this.Name = "frmAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tài khoản";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAccount_FormClosing);
             this.ResumeLayout(false);
 
         }

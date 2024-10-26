@@ -2,13 +2,52 @@
   "EmployeesList": [
     {
       "Id": "E0001",
-      "Name": "a",
+      "Name": "Nguyen Van A",
       "Phone": "0123456789",
-      "Email": "a@gmail.com",
-      "Address": "adasd",
+      "Email": "nguyenvana@gmail.com",
+      "Address": "Tphcm",
       "Gender": true,
-      "Birthday": "1990-07-19T00:21:18",
-      "BeginWork": "2024-10-26T00:21:18.032163+07:00",
+      "Birthday": "2000-02-02T01:58:06",
+      "BeginWork": "2024-10-27T01:58:06.4821324+07:00",
+      "Department": null,
+      "Salary": 10000000,
+      "Projects": []
+    },
+    {
+      "Id": "E0006",
+      "Name": "ACV",
+      "Phone": "0577894514",
+      "Email": "ACV@gmail.com",
+      "Address": "asa",
+      "Gender": true,
+      "Birthday": "2006-07-19T02:13:19",
+      "BeginWork": "2024-10-27T02:13:19.3670698+07:00",
+      "Department": null,
+      "Salary": 12000000,
+      "Projects": []
+    },
+    {
+      "Id": "E0009",
+      "Name": "ASD",
+      "Phone": "0115984457",
+      "Email": "ACD@gmail.com",
+      "Address": "sds",
+      "Gender": false,
+      "Birthday": "1993-05-27T02:14:28",
+      "BeginWork": "2024-10-27T02:14:28.799357+07:00",
+      "Department": null,
+      "Salary": 5000000,
+      "Projects": []
+    },
+    {
+      "Id": "E0005",
+      "Name": "Le Thu",
+      "Phone": "0254789412",
+      "Email": "thu@gmail.com",
+      "Address": "An Giang",
+      "Gender": false,
+      "Birthday": "2000-02-02T02:11:12",
+      "BeginWork": "2024-10-27T02:11:12.2132366+07:00",
       "Department": null,
       "Salary": 10000000,
       "Projects": []
@@ -20,17 +59,60 @@
     {
       "Senority": 0,
       "Id": "E0001",
-      "Name": "a",
+      "Name": "Nguyen Van A",
       "Phone": "0123456789",
-      "Email": "a@gmail.com",
-      "Address": "adasd",
+      "Email": "nguyenvana@gmail.com",
+      "Address": "Tphcm",
       "Gender": true,
-      "Birthday": "1990-07-19T00:21:18",
-      "BeginWork": "2024-10-26T00:21:18.032163+07:00",
+      "Birthday": "2000-02-02T01:58:06",
+      "BeginWork": "2024-10-27T01:58:06.4821324+07:00",
+      "Department": null,
+      "Salary": 10000000,
+      "Projects": []
+    },
+    {
+      "Senority": 0,
+      "Id": "E0006",
+      "Name": "ACV",
+      "Phone": "0577894514",
+      "Email": "ACV@gmail.com",
+      "Address": "asa",
+      "Gender": true,
+      "Birthday": "2006-07-19T02:13:19",
+      "BeginWork": "2024-10-27T02:13:19.3670698+07:00",
+      "Department": null,
+      "Salary": 12000000,
+      "Projects": []
+    },
+    {
+      "Senority": 0,
+      "Id": "E0009",
+      "Name": "ASD",
+      "Phone": "0115984457",
+      "Email": "ACD@gmail.com",
+      "Address": "sds",
+      "Gender": false,
+      "Birthday": "1993-05-27T02:14:28",
+      "BeginWork": "2024-10-27T02:14:28.799357+07:00",
+      "Department": null,
+      "Salary": 5000000,
+      "Projects": []
+    }
+  ],
+  "EmployeesList_PartTime": [
+    {
+      "Worktime": 0,
+      "Id": "E0005",
+      "Name": "Le Thu",
+      "Phone": "0254789412",
+      "Email": "thu@gmail.com",
+      "Address": "An Giang",
+      "Gender": false,
+      "Birthday": "2000-02-02T02:11:12",
+      "BeginWork": "2024-10-27T02:11:12.2132366+07:00",
       "Department": null,
       "Salary": 10000000,
       "Projects": []
     }
-  ],
-  "EmployeesList_PartTime": []
+  ]
 }

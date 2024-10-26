@@ -143,7 +143,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDeparment";
             this.Text = "Danh sách phòng ban";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDeparment_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDeparment_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

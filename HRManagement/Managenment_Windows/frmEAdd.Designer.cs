@@ -62,7 +62,6 @@
             this.lblHoTen.Size = new System.Drawing.Size(87, 25);
             this.lblHoTen.TabIndex = 0;
             this.lblHoTen.Text = "Họ tên:";
-            this.lblHoTen.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -114,7 +113,6 @@
             this.lblBirthday.Size = new System.Drawing.Size(118, 25);
             this.lblBirthday.TabIndex = 5;
             this.lblBirthday.Text = "Ngày sinh:";
-            this.lblBirthday.Click += new System.EventHandler(this.lblBirthday_Click);
             // 
             // lblDepartment
             // 
@@ -189,7 +187,6 @@
             this.dtBirthday.Name = "dtBirthday";
             this.dtBirthday.Size = new System.Drawing.Size(174, 22);
             this.dtBirthday.TabIndex = 15;
-            this.dtBirthday.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // comboDepart
             // 
@@ -245,7 +242,6 @@
             this.lblBeginWork.Size = new System.Drawing.Size(155, 25);
             this.lblBeginWork.TabIndex = 5;
             this.lblBeginWork.Text = "Ngày vào làm:";
-            this.lblBeginWork.Click += new System.EventHandler(this.lblBirthday_Click);
             // 
             // dtBeginWork
             // 
@@ -254,7 +250,6 @@
             this.dtBeginWork.Name = "dtBeginWork";
             this.dtBeginWork.Size = new System.Drawing.Size(184, 22);
             this.dtBeginWork.TabIndex = 15;
-            this.dtBeginWork.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // frmEAdd
             // 

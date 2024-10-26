@@ -106,16 +106,8 @@ namespace ManagementLogic
             }
         }
         public DateTime BeginWork { get => beginWork; set => beginWork = value; }
-        public Department Department 
-        { 
-            get => department; 
-            set
-            {
-                if (department != null && value != null)
-                    throw new ArgumentException("Nhân viên này đang ở trong một phòng ban khác");
-                department = value;
-            } 
-        }
+        public Department Department { get => department; set => department = value; }
+        
         public uint Salary
         {
             get => salary;
@@ -174,5 +166,10 @@ namespace ManagementLogic
         //tạo abstract void RemoveProject
         public abstract bool Find(string keyword);
         public abstract string GetInfo();
+
+        public override string ToString()
+        {
+            return $"{Id} - {Name}";
+        }
     }
 }

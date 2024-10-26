@@ -115,31 +115,27 @@ namespace ManagementLogic
 
             SaveData();
         }
-        public void Add(Department d, Employee leader = null)
+        public void Add(Department d)
         {
             if (departmentList.Contains(d))
-            {
                 throw new Exception($"Phòng ban {d.Name} đã tồn tại");
-            }
-            if (leader != null)
-            {
-                leader.Department = d;
-                d.Leader = leader;
-            }
+
+            foreach(Employee e in EmployeesList)
+                e.Department = d;
+            d.Leader.Department = d;
+            
             departmentList.Add(d);
             SaveData();
         }
-        public void Add(Project p, Employee leader = null)
+        public void Add(Project p)
         {
             if (projectList.Contains(p))
-            {
                 throw new Exception("Project đã tồn tại");
-            }
-            if (leader != null)
-            {
-                leader.AddProject(p);
-                p.AddLeader(leader);
-            }
+
+            foreach(Employee e in EmployeesList)
+                e.AddProject(p);
+            p.Leader.AddProject(p);
+
             projectList.Add(p);
             SaveData();
         }
@@ -152,8 +148,11 @@ namespace ManagementLogic
             {
                 p.RemoveEmployee(e);
             }
-            Department d = e.Department;
-            d.RemoveEmployee(e);
+            if(e.Department != null)
+            {
+                Department d = e.Department;
+                d.RemoveEmployee(e);
+            }
 
             if (e is FulltimeEmployee fullTimeEmployee)
                 EmployeesList_FullTime.Remove(fullTimeEmployee);
@@ -313,7 +312,7 @@ namespace ManagementLogic
             List<Account> accounts = Data.LoadAccounts();
             if (accounts.Exists(a => a.IsValidUsername(username)))
             {
-                throw new Exception("Username already exists.");
+                throw new Exception("Tên tài khoản đã tồn tại.");
             }
             accounts.Add(new Account(username, password));
             Data.SaveAccounts(accounts);
@@ -330,7 +329,7 @@ namespace ManagementLogic
             }
             Data.SaveAccounts(accounts);
         }
-        public void ChangeInfoProject(string projectId, string newProjectName = null, string newDescription = null, string newLeaderId = null)
+        public void EditInfoProject(string projectId, string newProjectName = null, string newDescription = null, string newLeaderId = null)
         {
             Project project = projectList.Find(p => p.Id == projectId);
             if (project == null)
@@ -355,10 +354,10 @@ namespace ManagementLogic
                 {
                     throw new ArgumentException("Leader không hợp lệ ");
                 }
-                project.AddLeader(newLeader);
+                project.Leader = newLeader;
             }
         }
-        public void ChangeInfoDepartment(string departmentId, string newName = null, string newLeaderId = null)
+        public void EditInfoDepartment(string departmentId, string newName = null, string newLeaderId = null)
         {
             Department department = departmentList.Find(d => d.Id == departmentId);
             if (department == null)
@@ -380,7 +379,6 @@ namespace ManagementLogic
                 }
                 department.Leader = newLeader; 
             }
-
         }
 
 

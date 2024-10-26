@@ -13,23 +13,16 @@ namespace Managenment_Windows
 {
     public partial class frmDeparment : Form
     {
+        private bool isBack = false;
         public frmDeparment()
         {
             InitializeComponent();
             LoadDepartments(Run.Instance.Management.DepartmentList);
         }
-
-        private void frmDeparment_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
         private void LoadDepartments(List<Department> departments)
         {
+            dtgMain.Columns.Clear();
+            dtgMain.AutoGenerateColumns = true;
             dtgMain.DataSource = departments;
         }
         
@@ -83,6 +76,17 @@ namespace Managenment_Windows
             frmDAdd frmDAdd = new frmDAdd();
             frmDAdd.ShowDialog();
             this.Show();
+        }
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            isBack = true;
+            this.Close();
+        }
+
+        private void frmDeparment_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(!isBack) 
+                Application.Exit();
         }
     }
 }

@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInfoEmployee));
             this.btnThoat = new System.Windows.Forms.Button();
-            this.txtPhongBan = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblHoTen = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgProjects = new System.Windows.Forms.DataGridView();
             this.btnXnhEmployee = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cbDepart = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProjects)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -59,21 +59,13 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // txtPhongBan
+            // txtName
             // 
-            this.txtPhongBan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhongBan.Location = new System.Drawing.Point(176, 321);
-            this.txtPhongBan.Name = "txtPhongBan";
-            this.txtPhongBan.Size = new System.Drawing.Size(169, 34);
-            this.txtPhongBan.TabIndex = 27;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(176, 83);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 34);
-            this.textBox5.TabIndex = 26;
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(176, 83);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(169, 34);
+            this.txtName.TabIndex = 26;
             // 
             // txtEmail
             // 
@@ -83,13 +75,13 @@
             this.txtEmail.Size = new System.Drawing.Size(169, 34);
             this.txtEmail.TabIndex = 25;
             // 
-            // txtSoDienThoai
+            // txtPhone
             // 
-            this.txtSoDienThoai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDienThoai.Location = new System.Drawing.Point(176, 141);
-            this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(169, 34);
-            this.txtSoDienThoai.TabIndex = 24;
+            this.txtPhone.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(176, 141);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(169, 34);
+            this.txtPhone.TabIndex = 24;
             // 
             // lblHoTen
             // 
@@ -135,13 +127,13 @@
             this.lblEmail.TabIndex = 20;
             this.lblEmail.Text = "Email:";
             // 
-            // txtDiaChi
+            // txtAddress
             // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(176, 206);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(169, 34);
-            this.txtDiaChi.TabIndex = 31;
+            this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(176, 206);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(169, 34);
+            this.txtAddress.TabIndex = 31;
             // 
             // lblDiaChi
             // 
@@ -163,6 +155,7 @@
             this.btnLuu.TabIndex = 32;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // lblID
             // 
@@ -186,15 +179,16 @@
             this.lblProject.TabIndex = 35;
             this.lblProject.Text = "Dự án:";
             // 
-            // dataGridView1
+            // dtgProjects
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(384, 74);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(323, 281);
-            this.dataGridView1.TabIndex = 36;
+            this.dtgProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProjects.Location = new System.Drawing.Point(384, 74);
+            this.dtgProjects.Name = "dtgProjects";
+            this.dtgProjects.ReadOnly = true;
+            this.dtgProjects.RowHeadersWidth = 51;
+            this.dtgProjects.RowTemplate.Height = 24;
+            this.dtgProjects.Size = new System.Drawing.Size(323, 281);
+            this.dtgProjects.TabIndex = 36;
             // 
             // btnXnhEmployee
             // 
@@ -207,24 +201,32 @@
             this.btnXnhEmployee.UseVisualStyleBackColor = true;
             this.btnXnhEmployee.Click += new System.EventHandler(this.btnXnhEmployee_Click);
             // 
+            // cbDepart
+            // 
+            this.cbDepart.FormattingEnabled = true;
+            this.cbDepart.Location = new System.Drawing.Point(176, 330);
+            this.cbDepart.Name = "cbDepart";
+            this.cbDepart.Size = new System.Drawing.Size(169, 24);
+            this.cbDepart.TabIndex = 40;
+            // 
             // frmInfoEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(732, 453);
+            this.Controls.Add(this.cbDepart);
             this.Controls.Add(this.btnXnhEmployee);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgProjects);
             this.Controls.Add(this.lblProject);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.txtDiaChi);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.lblDiaChi);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.txtPhongBan);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtSoDienThoai);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lblHoTen);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.label3);
@@ -232,7 +234,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInfoEmployee";
             this.Text = "Thông tin nhân Viên";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProjects)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,20 +243,20 @@
         #endregion
 
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.TextBox txtPhongBan;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtSoDienThoai;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lblHoTen;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblProject;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgProjects;
         private System.Windows.Forms.Button btnXnhEmployee;
+        private System.Windows.Forms.ComboBox cbDepart;
     }
 }

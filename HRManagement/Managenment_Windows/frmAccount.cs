@@ -12,9 +12,14 @@ namespace Managenment_Windows
 {
     public partial class frmAccount : Form
     {
-        public frmAccount()
+        private frmMainMenu frmMainMenu;
+        private frmLogin frmLogin;
+        private bool isLogOut = false;
+        public frmAccount(frmMainMenu frmMainMenu, frmLogin frmLogin)
         {
             InitializeComponent();
+            this.frmMainMenu = frmMainMenu;
+            this.frmLogin = frmLogin;
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
@@ -31,6 +36,21 @@ namespace Managenment_Windows
             frmChangePassword frmChangePassword = new frmChangePassword();
             frmChangePassword.ShowDialog();
             this.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            isLogOut = true;
+            this.Close();
+        }
+
+        private void frmAccount_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(isLogOut)
+            {
+                frmMainMenu.Close();
+                frmLogin.Show();
+            }
         }
     }
 }

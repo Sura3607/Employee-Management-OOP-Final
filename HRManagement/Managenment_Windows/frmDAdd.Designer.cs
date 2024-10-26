@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDAdd));
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtScrip = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblProjectName = new System.Windows.Forms.Label();
             this.lblProjectEmployee = new System.Windows.Forms.Label();
@@ -41,8 +41,9 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnAddAll = new System.Windows.Forms.Button();
-            this.chklstRight = new System.Windows.Forms.CheckedListBox();
-            this.chklstLeft = new System.Windows.Forms.CheckedListBox();
+            this.chklstSelect = new System.Windows.Forms.CheckedListBox();
+            this.chklstList = new System.Windows.Forms.CheckedListBox();
+            this.cbLeader = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnLuu
@@ -54,6 +55,7 @@
             this.btnLuu.TabIndex = 43;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnBack
             // 
@@ -64,20 +66,21 @@
             this.btnBack.TabIndex = 42;
             this.btnBack.Text = "Trở lại";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // textBox3
+            // txtScrip
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 83);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(435, 22);
-            this.textBox3.TabIndex = 41;
+            this.txtScrip.Location = new System.Drawing.Point(144, 83);
+            this.txtScrip.Name = "txtScrip";
+            this.txtScrip.Size = new System.Drawing.Size(435, 22);
+            this.txtScrip.TabIndex = 41;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(435, 22);
-            this.textBox2.TabIndex = 40;
+            this.txtName.Location = new System.Drawing.Point(144, 36);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(435, 22);
+            this.txtName.TabIndex = 40;
             // 
             // lblDescription
             // 
@@ -127,6 +130,7 @@
             this.btnRemoveAll.TabIndex = 50;
             this.btnRemoveAll.Text = "<<";
             this.btnRemoveAll.UseVisualStyleBackColor = true;
+            this.btnRemoveAll.Click += new System.EventHandler(this.btnRemoveAll_Click);
             // 
             // btnRemove
             // 
@@ -136,6 +140,7 @@
             this.btnRemove.TabIndex = 49;
             this.btnRemove.Text = "<";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
@@ -145,6 +150,7 @@
             this.btnAdd.TabIndex = 48;
             this.btnAdd.Text = ">";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnAddAll
             // 
@@ -154,24 +160,33 @@
             this.btnAddAll.TabIndex = 47;
             this.btnAddAll.Text = ">>";
             this.btnAddAll.UseVisualStyleBackColor = true;
+            this.btnAddAll.Click += new System.EventHandler(this.btnAddAll_Click);
             // 
-            // chklstRight
+            // chklstSelect
             // 
-            this.chklstRight.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklstRight.FormattingEnabled = true;
-            this.chklstRight.Location = new System.Drawing.Point(407, 195);
-            this.chklstRight.Name = "chklstRight";
-            this.chklstRight.Size = new System.Drawing.Size(319, 229);
-            this.chklstRight.TabIndex = 46;
+            this.chklstSelect.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklstSelect.FormattingEnabled = true;
+            this.chklstSelect.Location = new System.Drawing.Point(407, 195);
+            this.chklstSelect.Name = "chklstSelect";
+            this.chklstSelect.Size = new System.Drawing.Size(319, 229);
+            this.chklstSelect.TabIndex = 46;
             // 
-            // chklstLeft
+            // chklstList
             // 
-            this.chklstLeft.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklstLeft.FormattingEnabled = true;
-            this.chklstLeft.Location = new System.Drawing.Point(12, 195);
-            this.chklstLeft.Name = "chklstLeft";
-            this.chklstLeft.Size = new System.Drawing.Size(319, 229);
-            this.chklstLeft.TabIndex = 45;
+            this.chklstList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklstList.FormattingEnabled = true;
+            this.chklstList.Location = new System.Drawing.Point(12, 195);
+            this.chklstList.Name = "chklstList";
+            this.chklstList.Size = new System.Drawing.Size(319, 229);
+            this.chklstList.TabIndex = 45;
+            // 
+            // cbLeader
+            // 
+            this.cbLeader.FormattingEnabled = true;
+            this.cbLeader.Location = new System.Drawing.Point(144, 122);
+            this.cbLeader.Name = "cbLeader";
+            this.cbLeader.Size = new System.Drawing.Size(434, 24);
+            this.cbLeader.TabIndex = 53;
             // 
             // frmDAdd
             // 
@@ -179,23 +194,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(732, 453);
+            this.Controls.Add(this.cbLeader);
             this.Controls.Add(this.lblProjectEmployee);
             this.Controls.Add(this.lblAllEmployee);
             this.Controls.Add(this.btnRemoveAll);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnAddAll);
-            this.Controls.Add(this.chklstRight);
-            this.Controls.Add(this.chklstLeft);
+            this.Controls.Add(this.chklstSelect);
+            this.Controls.Add(this.chklstList);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtScrip);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblProjectName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDAdd";
-            this.Text = "Thêm phòng ban";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,8 +220,8 @@
 
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtScrip;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblProjectName;
         private System.Windows.Forms.Label lblProjectEmployee;
@@ -215,7 +230,8 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnAddAll;
-        private System.Windows.Forms.CheckedListBox chklstRight;
-        private System.Windows.Forms.CheckedListBox chklstLeft;
+        private System.Windows.Forms.CheckedListBox chklstSelect;
+        private System.Windows.Forms.CheckedListBox chklstList;
+        private System.Windows.Forms.ComboBox cbLeader;
     }
 }

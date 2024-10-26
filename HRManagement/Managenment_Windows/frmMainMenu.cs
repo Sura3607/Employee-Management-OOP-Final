@@ -13,6 +13,7 @@ namespace Managenment_Windows
     public partial class frmMainMenu : Form
     {
         private frmLogin loginForm;
+        private bool isLogOut =false;
         public frmMainMenu(frmLogin previousForm)
         {
             InitializeComponent();
@@ -21,8 +22,8 @@ namespace Managenment_Windows
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            isLogOut = true;
             this.Close();
-            loginForm.Show();
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
@@ -33,10 +34,6 @@ namespace Managenment_Windows
             this.Show();
         }
 
-        private void frmMainMenu_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void btnPhongBan_Click(object sender, EventArgs e)
         {
@@ -65,9 +62,21 @@ namespace Managenment_Windows
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAccount frmAccount = new frmAccount();
+            frmAccount frmAccount = new frmAccount(this,loginForm);
             frmAccount.ShowDialog();
             this.Show();
+        }
+
+        private void frmMainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(isLogOut)
+            {
+                loginForm.Show();
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }

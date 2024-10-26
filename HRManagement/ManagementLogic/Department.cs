@@ -65,6 +65,11 @@ namespace ManagementLogic
             Leader = leader;
             this.employees_FullTime = employees_FullTime ?? new List<FulltimeEmployee>();
             this.employees_PartTime = employees_PartTime ?? new List<ParttimeEmployee>();
+
+            if(leader is FulltimeEmployee fulltime)
+                employees_FullTime.Add(fulltime);
+            else if(leader is ParttimeEmployee parttime)
+                employees_PartTime.Add(parttime);
         }
         public Department(SerializationInfo info, StreamingContext context)
         {
@@ -96,13 +101,11 @@ namespace ManagementLogic
         }
         public void RemoveEmployee(Employee employee)
         {
-            if (leader == employee)
-            {
-                leader = null;
-                return;
-            }    
             if (!Employees.Contains(employee))
                 throw new ArgumentException("Khong tim thay nhan vien nay");
+
+            if (leader == employee)            
+                leader = null;                
 
             if (employee is FulltimeEmployee fullTimeEmployee)
                 Employees_FullTime.Remove(fullTimeEmployee);

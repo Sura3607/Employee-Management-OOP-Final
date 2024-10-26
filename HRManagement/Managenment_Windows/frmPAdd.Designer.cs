@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPAdd));
-            this.chklstLeft = new System.Windows.Forms.CheckedListBox();
-            this.chklstRight = new System.Windows.Forms.CheckedListBox();
+            this.chklstList = new System.Windows.Forms.CheckedListBox();
+            this.chklstSelect = new System.Windows.Forms.CheckedListBox();
             this.btnAddAll = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -47,23 +47,23 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // chklstLeft
+            // chklstList
             // 
-            this.chklstLeft.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklstLeft.FormattingEnabled = true;
-            this.chklstLeft.Location = new System.Drawing.Point(9, 196);
-            this.chklstLeft.Name = "chklstLeft";
-            this.chklstLeft.Size = new System.Drawing.Size(319, 229);
-            this.chklstLeft.TabIndex = 0;
+            this.chklstList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklstList.FormattingEnabled = true;
+            this.chklstList.Location = new System.Drawing.Point(9, 196);
+            this.chklstList.Name = "chklstList";
+            this.chklstList.Size = new System.Drawing.Size(319, 229);
+            this.chklstList.TabIndex = 0;
             // 
-            // chklstRight
+            // chklstSelect
             // 
-            this.chklstRight.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklstRight.FormattingEnabled = true;
-            this.chklstRight.Location = new System.Drawing.Point(404, 196);
-            this.chklstRight.Name = "chklstRight";
-            this.chklstRight.Size = new System.Drawing.Size(319, 229);
-            this.chklstRight.TabIndex = 1;
+            this.chklstSelect.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklstSelect.FormattingEnabled = true;
+            this.chklstSelect.Location = new System.Drawing.Point(404, 196);
+            this.chklstSelect.Name = "chklstSelect";
+            this.chklstSelect.Size = new System.Drawing.Size(319, 229);
+            this.chklstSelect.TabIndex = 1;
             // 
             // btnAddAll
             // 
@@ -213,8 +213,8 @@
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnAddAll);
-            this.Controls.Add(this.chklstRight);
-            this.Controls.Add(this.chklstLeft);
+            this.Controls.Add(this.chklstSelect);
+            this.Controls.Add(this.chklstList);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPAdd";
             this.Text = "Thêm dự án";
@@ -225,8 +225,8 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckedListBox chklstLeft;
-        private System.Windows.Forms.CheckedListBox chklstRight;
+        private System.Windows.Forms.CheckedListBox chklstList;
+        private System.Windows.Forms.CheckedListBox chklstSelect;
         private System.Windows.Forms.Button btnAddAll;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRemove;

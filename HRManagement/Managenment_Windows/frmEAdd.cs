@@ -20,21 +20,6 @@ namespace Managenment_Windows
             AddItemsToComboBox();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblBirthday_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();  
@@ -61,7 +46,7 @@ namespace Managenment_Windows
             try
             {
                 Run.Instance.CreateEmployee(name, phone, email, address, 
-                                            gender,birthday,beginWork, deparment,salary,gender);
+                                            gender,birthday,beginWork, deparment,salary,isFullTime);
                 MessageBox.Show("Thêm nhân viên thành công");
                 Reset();
             }
@@ -76,6 +61,7 @@ namespace Managenment_Windows
             comboGender.Items.Add("Nữ");
 
             comboDepart.DataSource = Run.Instance.Management.DepartmentList;
+            comboDepart.DisplayMember = "Name";
 
             comboHinhthuc.Items.Add("FullTime");
             comboHinhthuc.Items.Add("PartTime");

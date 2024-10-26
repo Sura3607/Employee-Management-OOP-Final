@@ -29,7 +29,7 @@ namespace Managenment_Windows
                 MessageBox.Show("Đăng nhập thành công","Chú ý" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 frmMainMenu mainMenu = new frmMainMenu(this);
-                mainMenu.Show();
+                mainMenu.ShowDialog();
                 Reset();
             }
             catch(Exception ex)

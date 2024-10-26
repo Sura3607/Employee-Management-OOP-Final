@@ -98,6 +98,7 @@
             // 
             // dtgEmployees
             // 
+            this.dtgEmployees.AllowUserToResizeColumns = false;
             this.dtgEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEmployees.Location = new System.Drawing.Point(22, 95);
             this.dtgEmployees.Name = "dtgEmployees";
@@ -129,7 +130,7 @@
             this.Name = "frmEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hồ sơ nhân sự";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmEmployee_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEmployee_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmployees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
