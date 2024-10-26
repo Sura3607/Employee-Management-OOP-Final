@@ -33,7 +33,7 @@ namespace ManagementLogic
                 //Kiểm tra xem có rỗng hoặc null không?
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Id không được để trống");
-                id = value; 
+                this.id = value; 
             } 
         }
         public string Name
@@ -132,16 +132,16 @@ namespace ManagementLogic
         protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary, List<Project> projects = null)
         {
             this.id = id;
-            this.name = name;
-            this.phone = phone;
-            this.email = email;
+            Name = name;
+            Phone = phone;
+            Email = email;
             this.address = address;
             this.gender = gender;
-            this.birthday = birthday;
-            this.beginWork = beginWork;
-            this.department = department;
+            Birthday = birthday;
+            BeginWork = beginWork;
+            Department = department;
             this.projects = projects ?? new List<Project>();
-            this.salary = salary;
+            Salary = salary;
         }
         protected Employee(SerializationInfo info, StreamingContext context)
         {

@@ -196,7 +196,7 @@ namespace ManagementLogic
         public void EditEmployee(Employee employee, string name = null, string phone = null,
                                  string email = null, string address = null,
                                  bool? gender = null, DateTime? birthday = null,
-                                 uint? salary = null)
+                                 uint? salary = null, Department department = null)
         {
             if (EmployeesList.Contains(employee))
             {
@@ -216,7 +216,7 @@ namespace ManagementLogic
                 {
                     employee.Address = address;
                 }
-                if (gender.HasValue) 
+                if (gender.HasValue)
                 {
                     employee.Gender = gender.Value;
                 }
@@ -227,6 +227,16 @@ namespace ManagementLogic
                 if (salary.HasValue)
                 {
                     employee.Salary = salary.Value;
+                }
+                if (department != null)
+                {
+                    Department currentDepartment = employee.Department;
+                    if (currentDepartment != null)
+                    {
+                        currentDepartment.RemoveEmployee(employee);
+                    }
+                    department.AddEmployee(employee);
+                    employee.Department = department;
                 }
                 SaveData();
             }

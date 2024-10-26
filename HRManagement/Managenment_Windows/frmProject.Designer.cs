@@ -137,6 +137,7 @@
             this.Controls.Add(this.dtgMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProject";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách dự án";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmProject_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).EndInit();
