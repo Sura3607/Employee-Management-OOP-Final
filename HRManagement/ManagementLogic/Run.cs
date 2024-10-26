@@ -103,9 +103,9 @@ namespace ManagementLogic
         public void EditEmployee(Employee employee, string name = null, string phone = null,
                                  string email = null, string address = null,
                                  bool? gender = null, DateTime? birthday = null,
-                                 uint? salary = null)
+                                 uint? salary = null,string departmentName = null)
         {
-            management.EditEmployee(employee, name, phone, email, address, gender, birthday, salary);
+            management.EditEmployee(employee, name, phone, email, address, gender, birthday, salary,departmentName);
         }
 
         public void AddADMIN(string username, string password)
