@@ -53,7 +53,7 @@ namespace Managenment_Windows
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
         private void LoadEmployees(List<Employee> list)
         {

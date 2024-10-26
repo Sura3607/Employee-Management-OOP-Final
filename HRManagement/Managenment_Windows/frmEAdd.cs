@@ -37,7 +37,7 @@ namespace Managenment_Windows
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();  
+            this.Hide();  
         }
 
         private void frmEAdd_FormClosed(object sender, FormClosedEventArgs e)
