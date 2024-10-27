@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDAdd));
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.txtScrip = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblProjectName = new System.Windows.Forms.Label();
@@ -68,18 +67,11 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // txtScrip
-            // 
-            this.txtScrip.Location = new System.Drawing.Point(144, 83);
-            this.txtScrip.Name = "txtScrip";
-            this.txtScrip.Size = new System.Drawing.Size(435, 22);
-            this.txtScrip.TabIndex = 41;
-            // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(144, 36);
+            this.txtName.Location = new System.Drawing.Point(186, 36);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(435, 22);
+            this.txtName.Size = new System.Drawing.Size(393, 22);
             this.txtName.TabIndex = 40;
             // 
             // lblDescription
@@ -88,9 +80,9 @@
             this.lblDescription.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.Location = new System.Drawing.Point(16, 84);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(81, 25);
+            this.lblDescription.Size = new System.Drawing.Size(164, 25);
             this.lblDescription.TabIndex = 39;
-            this.lblDescription.Text = "Mô tả:";
+            this.lblDescription.Text = "Trưởng phòng:";
             // 
             // lblProjectName
             // 
@@ -98,9 +90,9 @@
             this.lblProjectName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProjectName.Location = new System.Drawing.Point(16, 35);
             this.lblProjectName.Name = "lblProjectName";
-            this.lblProjectName.Size = new System.Drawing.Size(122, 25);
+            this.lblProjectName.Size = new System.Drawing.Size(171, 25);
             this.lblProjectName.TabIndex = 38;
-            this.lblProjectName.Text = "Tên dự án:";
+            this.lblProjectName.Text = "Tên phòng ban:";
             // 
             // lblProjectEmployee
             // 
@@ -183,9 +175,9 @@
             // cbLeader
             // 
             this.cbLeader.FormattingEnabled = true;
-            this.cbLeader.Location = new System.Drawing.Point(144, 122);
+            this.cbLeader.Location = new System.Drawing.Point(186, 84);
             this.cbLeader.Name = "cbLeader";
-            this.cbLeader.Size = new System.Drawing.Size(434, 24);
+            this.cbLeader.Size = new System.Drawing.Size(392, 24);
             this.cbLeader.TabIndex = 53;
             // 
             // frmDAdd
@@ -205,12 +197,12 @@
             this.Controls.Add(this.chklstList);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.txtScrip);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblProjectName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDAdd";
+            this.Text = "Thêm phòng ban";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +212,6 @@
 
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.TextBox txtScrip;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblProjectName;
