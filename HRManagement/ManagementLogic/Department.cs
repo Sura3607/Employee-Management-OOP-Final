@@ -11,7 +11,7 @@ namespace ManagementLogic
     {
         private string id;
         private string name;
-        private Employee leader;
+        private string leaderId;
         private List<FulltimeEmployee> employees_FullTime = new List<FulltimeEmployee>();
         private List<ParttimeEmployee> employees_PartTime = new List<ParttimeEmployee>();
         public string Id 
@@ -34,14 +34,14 @@ namespace ManagementLogic
                 name = value;
             }
         }
-        public Employee Leader
+        public string LeaderId
         {
-            get => leader;
+            get => leaderId;
             set
             {
-                if (value is ParttimeEmployee)
-                    throw new ArgumentException("Leader khong duoc la nhan vien part time");
-                leader = value;
+                //if (value is ParttimeEmployee)
+                //    throw new ArgumentException("Leader khong duoc la nhan vien part time");
+                leaderId = value;
             }
         }
         public List<FulltimeEmployee> Employees_FullTime { get => employees_FullTime; set => employees_FullTime = value; }
@@ -62,7 +62,7 @@ namespace ManagementLogic
         {
             Id = id;
             Name = name;
-            Leader = leader;
+            LeaderId = leader.Id;
             this.employees_FullTime = employees_FullTime ?? new List<FulltimeEmployee>();
             this.employees_PartTime = employees_PartTime ?? new List<ParttimeEmployee>();
 
@@ -75,7 +75,7 @@ namespace ManagementLogic
         {
             Id = info.GetString("Id");
             Name = info.GetString("Name");
-            Leader = (Employee)info.GetValue("Leader",typeof(Employee));
+            LeaderId = info.GetString("Leader");
             Employees_FullTime = (List<FulltimeEmployee>)info.GetValue("Employees_FullTime", typeof (List<FulltimeEmployee>));
             Employees_PartTime = (List<ParttimeEmployee>)info.GetValue("Employees_PartTime", typeof(List<ParttimeEmployee>));
         }
@@ -83,7 +83,7 @@ namespace ManagementLogic
         {
             info.AddValue("Id", Id);
             info.AddValue("Name", Name);
-            info.AddValue("Leader",Leader);
+            info.AddValue("Leader",LeaderId);
             info.AddValue("Employees_FullTime", Employees_FullTime);
             info.AddValue("Employees_PartTime", Employees_PartTime);
         }
@@ -104,8 +104,8 @@ namespace ManagementLogic
             if (!Employees.Contains(employee))
                 throw new ArgumentException("Khong tim thay nhan vien nay");
 
-            if (leader == employee)            
-                leader = null;                
+            //if (leader == employee)            
+            //    leader = null;       .         
 
             if (employee is FulltimeEmployee fullTimeEmployee)
                 Employees_FullTime.Remove(fullTimeEmployee);
@@ -132,9 +132,9 @@ namespace ManagementLogic
                 }
                 employeeNames = employeeNames.TrimEnd(',', ' ');
             }
-            if (leader != null)
+            if (leaderId != null)
             {
-                leaderName = leader.Name;
+                leaderName = leaderId;
             }
             return $"\n Ten phong bam: {Name} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} ";
         }

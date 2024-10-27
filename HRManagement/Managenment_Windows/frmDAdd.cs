@@ -67,7 +67,8 @@ namespace Managenment_Windows
         }
         private void btnAddAll_Click(object sender, EventArgs e)
         {
-            foreach(Employee employee in chklstList.Items)
+            List<Employee> listSelected = chklstList.Items.OfType<Employee>().ToList();
+            foreach (Employee employee in listSelected)
             {
                 selectList.Add(employee);
                 chklstSelect.Items.Add(employee);
@@ -79,7 +80,8 @@ namespace Managenment_Windows
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            foreach(Employee employee in chklstList.CheckedItems)
+            List<Employee> listSelected = chklstList.CheckedItems.OfType<Employee>().ToList(); 
+            foreach (Employee employee in listSelected)
             {
                 if(employee != null)
                 {
@@ -95,7 +97,8 @@ namespace Managenment_Windows
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            foreach(Employee employee in chklstSelect.CheckedItems)
+            List<Employee> listSelected = chklstSelect.CheckedItems.OfType<Employee>().ToList();
+            foreach(Employee employee in listSelected)
             {
                 if(employee != null)
                 {
@@ -111,7 +114,8 @@ namespace Managenment_Windows
 
         private void btnRemoveAll_Click(object sender, EventArgs e)
         {
-            foreach(Employee employee in chklstSelect.Items)
+            List<Employee> listSelected = chklstSelect.Items.OfType<Employee>().ToList();
+            foreach(Employee employee in listSelected)
             {
                 selectList.Remove(employee);
                 chklstSelect.Items.Remove(employee);

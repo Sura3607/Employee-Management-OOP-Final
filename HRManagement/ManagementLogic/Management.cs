@@ -122,7 +122,7 @@ namespace ManagementLogic
 
             foreach(Employee e in EmployeesList)
                 e.Department = d;
-            d.Leader.Department = d;
+            
             
             departmentList.Add(d);
             SaveData();
@@ -167,8 +167,6 @@ namespace ManagementLogic
             {
                 throw new Exception("Không tồn tại phòng ban cần xóa");             
             }
-            Employee leader = d.Leader;
-            leader.Department = null;
             foreach (Employee e in d.Employees)
             {
                 e.Department = null;
@@ -377,7 +375,7 @@ namespace ManagementLogic
                 {
                     throw new ArgumentException("Leader không hợp lệ hoặc là nhân viên part-time.");
                 }
-                department.Leader = newLeader; 
+                department.LeaderId = newLeader.Id; 
             }
         }
 
