@@ -28,11 +28,11 @@ namespace Managenment_Windows
             foreach(Employee e in Run.Instance.Management.EmployeesList)
             {
                 if(e.Department == null)
-                    list.Add(e); 
-            }
-            foreach (Employee e in list)
-            {
-                chklstList.Items.Add(e);
+                {
+                    list.Add(e);
+                    chklstList.Items.Add(e);
+                }
+                     
             }
             LoadLeader(selectList);
         }
@@ -62,8 +62,25 @@ namespace Managenment_Windows
         private void Reset()
         {
             txtName.Text = string.Empty;
-            LoadList();
+
+            chklstSelect.Items.Clear();
+            selectList.Clear();
+
             cbLeader.SelectedIndex = -1;
+
+            chklstList.Items.Clear();
+            list.Clear();
+
+            foreach (Employee e in Run.Instance.Management.EmployeesList)
+            {
+                if (e.Department == null)
+                {
+                    list.Add(e);
+                    chklstList.Items.Add(e);
+                }  
+            }
+
+            LoadLeader(selectList);
         }
         private void btnAddAll_Click(object sender, EventArgs e)
         {

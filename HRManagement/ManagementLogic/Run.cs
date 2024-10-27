@@ -94,29 +94,17 @@ namespace ManagementLogic
             if (leader == null)
                 throw new Exception("Leader không được để trống");
 
-            List<FulltimeEmployee> fulltimeEmployees = new List<FulltimeEmployee>();
-            List<ParttimeEmployee> parttimeEmployees = new List<ParttimeEmployee>();
-            if (employees != null)
-            {
-                foreach(Employee employee in employees)
-                {
-                    if(employee is FulltimeEmployee)
-                        fulltimeEmployees.Add((FulltimeEmployee)employee);
-                    else
-                        parttimeEmployees.Add((ParttimeEmployee)employee);
-                }
-            }
 
-            Department department = new Department(GenerateId(0), name, leader,fulltimeEmployees,parttimeEmployees);
-            management.Add(department);
+            Department department = new Department(GenerateId(0), name, leader,employees);
+            management.Add(department,employees);
         }
-        public void CreateProject(string name, Employee leader, string scrip = "")
+        public void CreateProject(string name, Employee leader, List<Employee> employees = null, string scrip = "")
         {
             if (leader == null)
                 throw new Exception("Leader không được để trống");
 
-            Project project = new Project(GenerateId(-1), name, leader, scrip);
-            management.Add(project);
+            Project project = new Project(GenerateId(-1), name, leader,employees, scrip);
+            management.Add(project,employees);
         }
         public void RemoveEmployee(Employee employee)
         {

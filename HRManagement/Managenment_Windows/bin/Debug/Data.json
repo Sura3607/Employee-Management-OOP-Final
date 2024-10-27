@@ -9,7 +9,16 @@
       "Gender": true,
       "Birthday": "2000-02-02T01:58:06",
       "BeginWork": "2024-10-27T01:58:06.4821324+07:00",
-      "Department": null,
+      "Department": {
+        "Id": "D0001",
+        "Name": "IT",
+        "LeaderId": "E0001",
+        "EmployeesId": [
+          "E0001",
+          "E0006",
+          "E0009"
+        ]
+      },
       "Salary": 10000000,
       "Projects": []
     },
@@ -22,7 +31,16 @@
       "Gender": true,
       "Birthday": "2006-07-19T02:13:19",
       "BeginWork": "2024-10-27T02:13:19.3670698+07:00",
-      "Department": null,
+      "Department": {
+        "Id": "D0001",
+        "Name": "IT",
+        "LeaderId": "E0001",
+        "EmployeesId": [
+          "E0001",
+          "E0006",
+          "E0009"
+        ]
+      },
       "Salary": 12000000,
       "Projects": []
     },
@@ -35,7 +53,16 @@
       "Gender": false,
       "Birthday": "1993-05-27T02:14:28",
       "BeginWork": "2024-10-27T02:14:28.799357+07:00",
-      "Department": null,
+      "Department": {
+        "Id": "D0001",
+        "Name": "IT",
+        "LeaderId": "E0001",
+        "EmployeesId": [
+          "E0001",
+          "E0006",
+          "E0009"
+        ]
+      },
       "Salary": 5000000,
       "Projects": []
     },
@@ -53,7 +80,18 @@
       "Projects": []
     }
   ],
-  "DepartmentList": [],
+  "DepartmentList": [
+    {
+      "Id": "D0001",
+      "Name": "IT",
+      "LeaderId": "E0001",
+      "EmployeesId": [
+        "E0001",
+        "E0006",
+        "E0009"
+      ]
+    }
+  ],
   "ProjectList": [],
   "EmployeesList_FullTime": [
     {
@@ -66,7 +104,16 @@
       "Gender": true,
       "Birthday": "2000-02-02T01:58:06",
       "BeginWork": "2024-10-27T01:58:06.4821324+07:00",
-      "Department": null,
+      "Department": {
+        "Id": "D0001",
+        "Name": "IT",
+        "LeaderId": "E0001",
+        "EmployeesId": [
+          "E0001",
+          "E0006",
+          "E0009"
+        ]
+      },
       "Salary": 10000000,
       "Projects": []
     },
@@ -80,7 +127,16 @@
       "Gender": true,
       "Birthday": "2006-07-19T02:13:19",
       "BeginWork": "2024-10-27T02:13:19.3670698+07:00",
-      "Department": null,
+      "Department": {
+        "Id": "D0001",
+        "Name": "IT",
+        "LeaderId": "E0001",
+        "EmployeesId": [
+          "E0001",
+          "E0006",
+          "E0009"
+        ]
+      },
       "Salary": 12000000,
       "Projects": []
     },
@@ -94,14 +150,23 @@
       "Gender": false,
       "Birthday": "1993-05-27T02:14:28",
       "BeginWork": "2024-10-27T02:14:28.799357+07:00",
-      "Department": null,
+      "Department": {
+        "Id": "D0001",
+        "Name": "IT",
+        "LeaderId": "E0001",
+        "EmployeesId": [
+          "E0001",
+          "E0006",
+          "E0009"
+        ]
+      },
       "Salary": 5000000,
       "Projects": []
     }
   ],
   "EmployeesList_PartTime": [
     {
-      "Worktime": 0,
+      "Worktime": 15,
       "Id": "E0005",
       "Name": "Le Thu",
       "Phone": "0254789412",

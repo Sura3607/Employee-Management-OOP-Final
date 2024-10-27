@@ -115,26 +115,27 @@ namespace ManagementLogic
 
             SaveData();
         }
-        public void Add(Department d)
+        public void Add(Department d,List<Employee> employees)
         {
             if (departmentList.Contains(d))
                 throw new Exception($"Phòng ban {d.Name} đã tồn tại");
 
-            foreach(Employee e in EmployeesList)
-                e.Department = d;
-            
-            
+            if(employees!= null)
+            {
+                foreach (Employee e in employees)
+                    e.Department = d;
+            }
+           
             departmentList.Add(d);
             SaveData();
         }
-        public void Add(Project p)
+        public void Add(Project p, List<Employee> employees)
         {
             if (projectList.Contains(p))
                 throw new Exception("Project đã tồn tại");
 
-            foreach(Employee e in EmployeesList)
+            foreach(Employee e in employees)
                 e.AddProject(p);
-            p.Leader.AddProject(p);
 
             projectList.Add(p);
             SaveData();
@@ -167,9 +168,12 @@ namespace ManagementLogic
             {
                 throw new Exception("Không tồn tại phòng ban cần xóa");             
             }
-            foreach (Employee e in d.Employees)
+            foreach (Employee employee in EmployeesList)
             {
-                e.Department = null;
+                if (d.EmployeesId.Contains(employee.Id))
+                {
+                    employee.Department = null;
+                }
             }
             departmentList.Remove(d);
             SaveData();
@@ -180,11 +184,13 @@ namespace ManagementLogic
             {
                 throw new Exception("Không tồn tại dự án cần xóa");
             }
-            Employee leader = p.Leader;
-            leader.Projects.Remove(p);
-            foreach (Employee e in p.Employees)
+
+            foreach (Employee e in EmployeesList)
             {
-                e.Projects.Remove(p);
+                if (p.EmployeesId.Contains(e.Id))
+                {
+                    e.Projects.Remove(p);
+                }
             }
             projectList.Remove(p);
             SaveData();
@@ -242,18 +248,18 @@ namespace ManagementLogic
                 throw new Exception("Nhân viên không tồn tại.");
             }
         }
-        public string GetInfo(Employee e)
-        {
-            return e.GetInfo();
-        }
-        public string GetInfo(Department d)
-        {
-            return d.GetInfo();
-        }
-        public string GetInfo(Project p)
-        {
-            return p.GetInfo();
-        }
+        //public string GetInfo(Employee e)
+        //{
+        //    return e.GetInfo();
+        //}
+        //public string GetInfo(Department d)
+        //{
+        //    return d.GetInfo();
+        //}
+        //public string GetInfo(Project p)
+        //{
+        //    return p.GetInfo();
+        //}
         public void SalaryIncrease(Employee e)
         {
             if (e is FulltimeEmployee fulltimeEmployee)
@@ -352,7 +358,7 @@ namespace ManagementLogic
                 {
                     throw new ArgumentException("Leader không hợp lệ ");
                 }
-                project.Leader = newLeader;
+                project.LeaderId = newLeader.Id;
             }
         }
         public void EditInfoDepartment(string departmentId, string newName = null, string newLeaderId = null)
