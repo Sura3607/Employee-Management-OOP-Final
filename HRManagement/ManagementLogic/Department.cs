@@ -33,22 +33,16 @@ namespace ManagementLogic
                 name = value;
             }
         }
-        public string LeaderId
-        {
-            get => leaderId;
-            set
-            {
-                //if (value is ParttimeEmployee)
-                //    throw new ArgumentException("Leader khong duoc la nhan vien part time");
-                leaderId = value;
-            }
-        }
+        public string LeaderId { get => leaderId; set => leaderId = value; }
+        
         public List<string> EmployeesId { get => employeesId; set => employeesId = value; }
       
         public Department() { }
 
         public Department(string id, string name, Employee leader, List<Employee> employees = null) 
-        { 
+        {
+            if (leader is ParttimeEmployee)
+                throw new Exception("Leader không được là nhân viên partime");
             Id = id;
             Name = name;
             LeaderId = leader.Id;
@@ -61,7 +55,6 @@ namespace ManagementLogic
                     EmployeesId.Add(e.Id);
                 }
             }              
-
         }
         public Department(SerializationInfo info, StreamingContext context)
         {
@@ -86,6 +79,7 @@ namespace ManagementLogic
                 throw new ArgumentException("Nhan vien da ton tai");
 
             employeesId.Add(e.Id);
+            e.Department = this;
         }
         public void RemoveEmployee(Employee employee)
         {
@@ -96,6 +90,7 @@ namespace ManagementLogic
                 leaderId = null;                
 
             EmployeesId.Remove(employee.Id);
+            employee.Department = null;
         }
         public bool Find(string keyword)
         {

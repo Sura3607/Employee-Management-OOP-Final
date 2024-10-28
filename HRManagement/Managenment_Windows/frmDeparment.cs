@@ -1,12 +1,7 @@
 ﻿using ManagementLogic;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Managenment_Windows
@@ -14,6 +9,7 @@ namespace Managenment_Windows
     public partial class frmDeparment : Form
     {
         private bool isBack = false;
+        private List<DataGridViewRow> selectedRows = new List<DataGridViewRow>();
         public frmDeparment()
         {
             InitializeComponent();
@@ -43,29 +39,40 @@ namespace Managenment_Windows
 
         private void btnXphDepartment_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void dtgMain_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < Run.Instance.Management.DepartmentList.Count)
+            foreach (DataGridViewRow row in selectedRows)
             {
-                string selected = dtgMain.Rows[e.RowIndex].Cells["Id"].Value.ToString();
-                Department selectDepart = null;
-                foreach(Department department in Run.Instance.Management.DepartmentList)
+                
+                Department department = row.DataBoundItem as Department;
+                if (department != null)
                 {
-                    if(department.Id == selected)
+                    try
                     {
-                        selectDepart = department;
-                        break;
+                        Run.Instance.RemoveDepart(department);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                if (selectDepart != null)
+            }
+            selectedRows.Clear(); 
+            LoadDepartments(Run.Instance.Management.DepartmentList);
+        }
+        private void dtgMain_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dtgMain.Rows.Count)
+            {
+                DataGridViewRow row = dtgMain.Rows[e.RowIndex];
+              
+                if (selectedRows.Contains(row))
                 {
-                    this.Hide();
-                    frmInfoDepartment frmInfoDepartment = new frmInfoDepartment(selectDepart);
-                    frmInfoDepartment.ShowDialog();
-                    this.Show();
+                    row.DefaultCellStyle.BackColor = Color.White;
+                    selectedRows.Remove(row);
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightBlue;
+                    selectedRows.Add(row);
                 }
             }
         }
@@ -75,6 +82,7 @@ namespace Managenment_Windows
             this.Hide();
             frmDAdd frmDAdd = new frmDAdd();
             frmDAdd.ShowDialog();
+            LoadDepartments(Run.Instance.Management.DepartmentList);
             this.Show();
         }
         private void btnHuy_Click(object sender, EventArgs e)
@@ -88,5 +96,31 @@ namespace Managenment_Windows
             if(!isBack) 
                 Application.Exit();
         }
+
+        private void dtgMain_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < Run.Instance.Management.DepartmentList.Count)
+            {
+                string selected = dtgMain.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+                Department selectDepart = null;
+                foreach (Department department in Run.Instance.Management.DepartmentList)
+                {
+                    if (department.Id == selected)
+                    {
+                        selectDepart = department;
+                        break;
+                    }
+                }
+                if (selectDepart != null)
+                {
+                    this.Hide();
+                    frmInfoDepartment frmInfoDepartment = new frmInfoDepartment(selectDepart);
+                    frmInfoDepartment.ShowDialog();
+                    LoadDepartments(Run.Instance.Management.DepartmentList);
+                    this.Show();
+                }
+            }
+        }
+        
     }
 }

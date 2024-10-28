@@ -14,7 +14,7 @@ namespace ManagementLogic
         public int Worktime { get => worktime; set => worktime = value; }
         public ParttimeEmployee():base(){}
         public ParttimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department deparment, uint salary = 25000, int worktime = 0) 
-            : base(id, name, phone, email, address, gender, birthday, beginWork, deparment, salary)
+            : base(id, name, phone, email, address, gender, birthday, beginWork, deparment, 25000)
         {
             this.worktime = worktime;
         }

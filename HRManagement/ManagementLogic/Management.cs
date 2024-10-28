@@ -333,9 +333,9 @@ namespace ManagementLogic
             }
             Data.SaveAccounts(accounts);
         }
-        public void EditInfoProject(string projectId, string newProjectName = null, string newDescription = null, string newLeaderId = null)
+        public void EditInfoProject(Project project, string newProjectName = null, string newDescription = null, string newLeaderId = null,List < Employee > remove = null, List<Employee> add = null)
         {
-            Project project = projectList.Find(p => p.Id == projectId);
+
             if (project == null)
             {
                 throw new ArgumentException("Không tìm thấy dự án.");
@@ -360,10 +360,24 @@ namespace ManagementLogic
                 }
                 project.LeaderId = newLeader.Id;
             }
+            if (remove != null)
+            {
+                foreach (Employee e in remove)
+                {
+                    project.RemoveEmployee(e);
+                }
+            }
+            if (add != null)
+            {
+                foreach (Employee e in add)
+                {
+                    project.AddEmployee(e);
+                }
+            }
+            SaveData();
         }
-        public void EditInfoDepartment(string departmentId, string newName = null, string newLeaderId = null)
+        public void EditInfoDepartment(Department department, string newName = null, string newLeaderId = null,List<Employee> remove = null, List<Employee> add = null)
         {
-            Department department = departmentList.Find(d => d.Id == departmentId);
             if (department == null)
             {
                 throw new ArgumentException("Không tìm thấy phòng ban.");
@@ -383,6 +397,21 @@ namespace ManagementLogic
                 }
                 department.LeaderId = newLeader.Id; 
             }
+            if(remove != null)
+            {
+                foreach (Employee e in remove)
+                {
+                    department.RemoveEmployee(e);
+                }
+            }
+            if(add != null)
+            {
+                foreach(Employee e in add)
+                {
+                    department.AddEmployee(e);
+                }
+            }
+            SaveData();
         }
 
 

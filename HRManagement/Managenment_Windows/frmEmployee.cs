@@ -13,32 +13,6 @@ namespace Managenment_Windows
             InitializeComponent();
             LoadEmployees(Run.Instance.Management.EmployeesList);
         }
-        private void dtgMain_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < Run.Instance.Management.EmployeesList.Count)
-            {
-                
-                string selectedEmployeeId = dtgEmployees.Rows[e.RowIndex].Cells["ID"].Value.ToString();
-
-                Employee selectedEmployee = null;
-                foreach (Employee emp in Run.Instance.Management.EmployeesList)
-                {
-                    if (emp.Id == selectedEmployeeId)
-                    {
-                        selectedEmployee = emp;
-                        break; 
-                    }
-                }
-                if (selectedEmployee != null)
-                {
-                    this.Hide();
-                    frmInfoEmployee frmInfoEmployee = new frmInfoEmployee(selectedEmployee);
-                    frmInfoEmployee.ShowDialog();
-                    LoadEmployees(Run.Instance.Management.EmployeesList);
-                    this.Show();
-                }
-            }
-        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -98,6 +72,33 @@ namespace Managenment_Windows
         {
             if(!isBack)
                 Application.Exit();
+        }
+
+        private void dtgEmployees_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < Run.Instance.Management.EmployeesList.Count)
+            {
+
+                string selectedEmployeeId = dtgEmployees.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+
+                Employee selectedEmployee = null;
+                foreach (Employee emp in Run.Instance.Management.EmployeesList)
+                {
+                    if (emp.Id == selectedEmployeeId)
+                    {
+                        selectedEmployee = emp;
+                        break;
+                    }
+                }
+                if (selectedEmployee != null)
+                {
+                    this.Hide();
+                    frmInfoEmployee frmInfoEmployee = new frmInfoEmployee(selectedEmployee);
+                    frmInfoEmployee.ShowDialog();
+                    LoadEmployees(Run.Instance.Management.EmployeesList);
+                    this.Show();
+                }
+            }
         }
     }
 }

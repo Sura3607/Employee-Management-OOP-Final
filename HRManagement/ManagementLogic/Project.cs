@@ -90,6 +90,7 @@ namespace ManagementLogic
             if (EmployeesId.Contains(e.Id))
                 throw new ArgumentException("Nhan vien da ton tai");
             EmployeesId.Add(e.Id);
+            e.AddProject(this);
 
         }
         public void RemoveEmployee(Employee employee)
@@ -102,6 +103,7 @@ namespace ManagementLogic
                 leaderId = null;
 
             EmployeesId.Remove(employee.Id);
+            employee.Projects.Remove(this);
         }
         public bool Find(string keyword)
         {

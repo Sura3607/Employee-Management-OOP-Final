@@ -33,8 +33,8 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnAddAll = new System.Windows.Forms.Button();
-            this.chklstRight = new System.Windows.Forms.CheckedListBox();
-            this.chklstLeft = new System.Windows.Forms.CheckedListBox();
+            this.chklstSelect = new System.Windows.Forms.CheckedListBox();
+            this.chklstList = new System.Windows.Forms.CheckedListBox();
             this.lblDaThem = new System.Windows.Forms.Label();
             this.lblChuaThem = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
@@ -49,6 +49,7 @@
             this.btnRemoveAll.TabIndex = 11;
             this.btnRemoveAll.Text = "<<";
             this.btnRemoveAll.UseVisualStyleBackColor = true;
+            this.btnRemoveAll.Click += new System.EventHandler(this.btnRemoveAll_Click);
             // 
             // btnRemove
             // 
@@ -58,6 +59,7 @@
             this.btnRemove.TabIndex = 10;
             this.btnRemove.Text = "<";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
@@ -67,6 +69,7 @@
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = ">";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnAddAll
             // 
@@ -76,24 +79,25 @@
             this.btnAddAll.TabIndex = 8;
             this.btnAddAll.Text = ">>";
             this.btnAddAll.UseVisualStyleBackColor = true;
+            this.btnAddAll.Click += new System.EventHandler(this.btnAddAll_Click);
             // 
-            // chklstRight
+            // chklstSelect
             // 
-            this.chklstRight.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklstRight.FormattingEnabled = true;
-            this.chklstRight.Location = new System.Drawing.Point(404, 92);
-            this.chklstRight.Name = "chklstRight";
-            this.chklstRight.Size = new System.Drawing.Size(319, 229);
-            this.chklstRight.TabIndex = 7;
+            this.chklstSelect.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklstSelect.FormattingEnabled = true;
+            this.chklstSelect.Location = new System.Drawing.Point(404, 92);
+            this.chklstSelect.Name = "chklstSelect";
+            this.chklstSelect.Size = new System.Drawing.Size(319, 229);
+            this.chklstSelect.TabIndex = 7;
             // 
-            // chklstLeft
+            // chklstList
             // 
-            this.chklstLeft.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklstLeft.FormattingEnabled = true;
-            this.chklstLeft.Location = new System.Drawing.Point(9, 92);
-            this.chklstLeft.Name = "chklstLeft";
-            this.chklstLeft.Size = new System.Drawing.Size(319, 229);
-            this.chklstLeft.TabIndex = 6;
+            this.chklstList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklstList.FormattingEnabled = true;
+            this.chklstList.Location = new System.Drawing.Point(9, 92);
+            this.chklstList.Name = "chklstList";
+            this.chklstList.Size = new System.Drawing.Size(319, 229);
+            this.chklstList.TabIndex = 6;
             // 
             // lblDaThem
             // 
@@ -124,6 +128,7 @@
             this.btnExit.TabIndex = 24;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnLuu
             // 
@@ -134,6 +139,7 @@
             this.btnLuu.TabIndex = 23;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // frmAddRemoveEmployee
             // 
@@ -149,12 +155,11 @@
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnAddAll);
-            this.Controls.Add(this.chklstRight);
-            this.Controls.Add(this.chklstLeft);
+            this.Controls.Add(this.chklstSelect);
+            this.Controls.Add(this.chklstList);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddRemoveEmployee";
             this.Text = "Quản lý nhân viên";
-            this.Load += new System.EventHandler(this.frmAddRemoveEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,8 +171,8 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnAddAll;
-        private System.Windows.Forms.CheckedListBox chklstRight;
-        private System.Windows.Forms.CheckedListBox chklstLeft;
+        private System.Windows.Forms.CheckedListBox chklstSelect;
+        private System.Windows.Forms.CheckedListBox chklstList;
         private System.Windows.Forms.Label lblDaThem;
         private System.Windows.Forms.Label lblChuaThem;
         private System.Windows.Forms.Button btnExit;

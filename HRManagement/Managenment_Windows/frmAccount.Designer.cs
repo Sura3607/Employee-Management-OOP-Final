@@ -31,13 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccount));
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreateAccount
             // 
             this.btnCreateAccount.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateAccount.Location = new System.Drawing.Point(254, 40);
+            this.btnCreateAccount.Location = new System.Drawing.Point(254, 117);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(224, 93);
             this.btnCreateAccount.TabIndex = 0;
@@ -48,7 +47,7 @@
             // btnChangePassword
             // 
             this.btnChangePassword.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePassword.Location = new System.Drawing.Point(254, 180);
+            this.btnChangePassword.Location = new System.Drawing.Point(254, 278);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(224, 93);
             this.btnChangePassword.TabIndex = 1;
@@ -56,31 +55,18 @@
             this.btnChangePassword.UseVisualStyleBackColor = true;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(254, 320);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(224, 93);
-            this.btnLogOut.TabIndex = 2;
-            this.btnLogOut.Text = "Đăng xuất";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
             // frmAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(732, 453);
-            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.btnCreateAccount);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tài khoản";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAccount_FormClosing);
             this.ResumeLayout(false);
 
         }
@@ -89,6 +75,5 @@
 
         private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.Button btnChangePassword;
-        private System.Windows.Forms.Button btnLogOut;
     }
 }

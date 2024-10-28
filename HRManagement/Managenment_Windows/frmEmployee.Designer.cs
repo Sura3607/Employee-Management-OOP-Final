@@ -78,7 +78,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(453, 471);
+            this.btnThem.Location = new System.Drawing.Point(484, 471);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(218, 35);
             this.btnThem.TabIndex = 17;
@@ -108,7 +108,7 @@
             this.dtgEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgEmployees.Size = new System.Drawing.Size(922, 370);
             this.dtgEmployees.TabIndex = 0;
-            this.dtgEmployees.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellContentDoubleClick);
+            this.dtgEmployees.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEmployees_CellDoubleClick);
             this.dtgEmployees.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgEmployees_CellFormatting);
             // 
             // frmEmployee

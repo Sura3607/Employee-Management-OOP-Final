@@ -12,11 +12,11 @@
       "Department": {
         "Id": "D0001",
         "Name": "IT",
-        "LeaderId": "E0001",
+        "LeaderId": null,
         "EmployeesId": [
-          "E0001",
           "E0006",
-          "E0009"
+          "E0009",
+          "E0001"
         ]
       },
       "Salary": 10000000,
@@ -64,6 +64,28 @@
         ]
       },
       "Salary": 5000000,
+      "Projects": []
+    },
+    {
+      "Id": "E0007",
+      "Name": "Asd",
+      "Phone": "0123654789",
+      "Email": "a@gmail.com",
+      "Address": "sdasd",
+      "Gender": true,
+      "Birthday": "1990-06-06T22:19:55",
+      "BeginWork": "2024-10-28T22:19:55.4627917+07:00",
+      "Department": {
+        "Id": "D0001",
+        "Name": "IT",
+        "LeaderId": "E0001",
+        "EmployeesId": [
+          "E0006",
+          "E0009",
+          "E0001"
+        ]
+      },
+      "Salary": 10000000,
       "Projects": []
     },
     {
@@ -86,9 +108,9 @@
       "Name": "IT",
       "LeaderId": "E0001",
       "EmployeesId": [
-        "E0001",
         "E0006",
-        "E0009"
+        "E0009",
+        "E0001"
       ]
     }
   ],
@@ -107,11 +129,11 @@
       "Department": {
         "Id": "D0001",
         "Name": "IT",
-        "LeaderId": "E0001",
+        "LeaderId": null,
         "EmployeesId": [
-          "E0001",
           "E0006",
-          "E0009"
+          "E0009",
+          "E0001"
         ]
       },
       "Salary": 10000000,
@@ -161,6 +183,29 @@
         ]
       },
       "Salary": 5000000,
+      "Projects": []
+    },
+    {
+      "Senority": 0,
+      "Id": "E0007",
+      "Name": "Asd",
+      "Phone": "0123654789",
+      "Email": "a@gmail.com",
+      "Address": "sdasd",
+      "Gender": true,
+      "Birthday": "1990-06-06T22:19:55",
+      "BeginWork": "2024-10-28T22:19:55.4627917+07:00",
+      "Department": {
+        "Id": "D0001",
+        "Name": "IT",
+        "LeaderId": "E0001",
+        "EmployeesId": [
+          "E0006",
+          "E0009",
+          "E0001"
+        ]
+      },
+      "Salary": 10000000,
       "Projects": []
     }
   ],

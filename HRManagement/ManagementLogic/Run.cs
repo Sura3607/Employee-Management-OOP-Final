@@ -134,13 +134,13 @@ namespace ManagementLogic
         {
             management.ChangePasssword(password, newPassword);
         }
-        public void ChangeProjectInfo(string projectId, string newName, string newDescription, string newLeader)
+        public void EditProject(Project project, string newName, string newDescription, string newLeader, List<Employee> remove, List<Employee> add)
         {
-            management.EditInfoProject(projectId, newName, newDescription, newLeader);
+            management.EditInfoProject(project, newName, newDescription, newLeader, remove, add);
         }
-        public void ChangeDepartmentInfo(string departmentId, string newName, string newLeader)
+        public void EditDepartment(Department department, string newName, string newLeader, List<Employee> remove, List<Employee> add)
         {
-            management.EditInfoDepartment(departmentId, newName, newLeader);
+            management.EditInfoDepartment(department, newName, newLeader,remove,add);
         }
         public void IncreaseEmployeeSalary(Employee e)
         {

@@ -108,16 +108,8 @@ namespace ManagementLogic
         public DateTime BeginWork { get => beginWork; set => beginWork = value; }
         public Department Department { get => department; set => department = value; }
         
-        public uint Salary
-        {
-            get => salary;
-            set
-            {
-                if (value <= 2340000)
-                    throw new ArgumentException($"Lương không được thấp hơn mức lương cơ bản là 2340000 VND.");
-                salary = value;
-            } 
-        }
+        public uint Salary { get => salary; set => salary = value; }
+        
         public List<Project> Projects { get => projects; set => projects = value; }
 
         protected Employee() { }

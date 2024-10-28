@@ -32,13 +32,13 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtLeader = new System.Windows.Forms.TextBox();
+            this.dtgEmployees = new System.Windows.Forms.DataGridView();
             this.txtDepartment = new System.Windows.Forms.TextBox();
             this.lblLeader = new System.Windows.Forms.Label();
             this.lblDepartment = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cbLeader = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmployees)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXphDepartment
@@ -62,6 +62,7 @@
             this.btnAdd.TabIndex = 46;
             this.btnAdd.Text = "Thêm/Xóa nhân viên";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnLuu
             // 
@@ -72,6 +73,7 @@
             this.btnLuu.TabIndex = 45;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnBack
             // 
@@ -84,22 +86,15 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // dataGridView1
+            // dtgEmployees
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 156);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(665, 242);
-            this.dataGridView1.TabIndex = 43;
-            // 
-            // txtLeader
-            // 
-            this.txtLeader.Location = new System.Drawing.Point(195, 115);
-            this.txtLeader.Name = "txtLeader";
-            this.txtLeader.Size = new System.Drawing.Size(248, 22);
-            this.txtLeader.TabIndex = 42;
+            this.dtgEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmployees.Location = new System.Drawing.Point(36, 156);
+            this.dtgEmployees.Name = "dtgEmployees";
+            this.dtgEmployees.RowHeadersWidth = 51;
+            this.dtgEmployees.RowTemplate.Height = 24;
+            this.dtgEmployees.Size = new System.Drawing.Size(665, 242);
+            this.dtgEmployees.TabIndex = 43;
             // 
             // txtDepartment
             // 
@@ -138,25 +133,33 @@
             this.lblID.TabIndex = 38;
             this.lblID.Text = "ID:";
             // 
+            // cbLeader
+            // 
+            this.cbLeader.FormattingEnabled = true;
+            this.cbLeader.Location = new System.Drawing.Point(195, 113);
+            this.cbLeader.Name = "cbLeader";
+            this.cbLeader.Size = new System.Drawing.Size(247, 24);
+            this.cbLeader.TabIndex = 48;
+            // 
             // frmInfoDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(732, 453);
+            this.Controls.Add(this.cbLeader);
             this.Controls.Add(this.btnXphDepartment);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtLeader);
+            this.Controls.Add(this.dtgEmployees);
             this.Controls.Add(this.txtDepartment);
             this.Controls.Add(this.lblLeader);
             this.Controls.Add(this.lblDepartment);
             this.Controls.Add(this.lblID);
             this.Name = "frmInfoDepartment";
             this.Text = "frmInfoDepartment";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmployees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,11 +171,11 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtLeader;
+        private System.Windows.Forms.DataGridView dtgEmployees;
         private System.Windows.Forms.TextBox txtDepartment;
         private System.Windows.Forms.Label lblLeader;
         private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.ComboBox cbLeader;
     }
 }
