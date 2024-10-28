@@ -89,16 +89,16 @@
       "Projects": []
     },
     {
-      "Id": "E0005",
-      "Name": "Le Thu",
-      "Phone": "0254789412",
-      "Email": "thu@gmail.com",
-      "Address": "An Giang",
-      "Gender": false,
-      "Birthday": "2000-02-02T02:11:12",
-      "BeginWork": "2024-10-27T02:11:12.2132366+07:00",
+      "Id": "E0006",
+      "Name": "Nguyen Minh",
+      "Phone": "0123456785",
+      "Email": "minh@gmail.com",
+      "Address": "asddas",
+      "Gender": true,
+      "Birthday": "2000-02-02T22:32:40",
+      "BeginWork": "2024-10-28T22:32:40.6776142+07:00",
       "Department": null,
-      "Salary": 10000000,
+      "Salary": 25000,
       "Projects": []
     }
   ],
@@ -212,16 +212,16 @@
   "EmployeesList_PartTime": [
     {
       "Worktime": 15,
-      "Id": "E0005",
-      "Name": "Le Thu",
-      "Phone": "0254789412",
-      "Email": "thu@gmail.com",
-      "Address": "An Giang",
-      "Gender": false,
-      "Birthday": "2000-02-02T02:11:12",
-      "BeginWork": "2024-10-27T02:11:12.2132366+07:00",
+      "Id": "E0006",
+      "Name": "Nguyen Minh",
+      "Phone": "0123456785",
+      "Email": "minh@gmail.com",
+      "Address": "asddas",
+      "Gender": true,
+      "Birthday": "2000-02-02T22:32:40",
+      "BeginWork": "2024-10-28T22:32:40.6776142+07:00",
       "Department": null,
-      "Salary": 10000000,
+      "Salary": 25000,
       "Projects": []
     }
   ]

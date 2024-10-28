@@ -31,7 +31,7 @@ namespace Managenment_Windows
         private void LoadInfo()
         {
             lblID.Text += $" {_employee.Id}";
-            txtName.Text = _employee.Name ;
+            txtName.Text = _employee.Name;
             txtPhone.Text = _employee.Phone ;
             txtAddress.Text = _employee.Address ;
             txtEmail.Text = _employee.Email ;
@@ -40,7 +40,7 @@ namespace Managenment_Windows
             {
                 cbDepart.DataSource = Run.Instance.Management.DepartmentList;
                 int pos = cbDepart.Items.IndexOf(_employee.Department);
-                cbDepart.SelectedIndex = pos >= 0 ? pos : 0; // Đặt chỉ mục mặc định nếu không tìm thấy
+                cbDepart.SelectedIndex = pos >= 0 ? pos : -1; // Đặt chỉ mục mặc định nếu không tìm thấy
             }
             LoadProject();
         }
