@@ -68,7 +68,7 @@
     },
     {
       "Id": "E0007",
-      "Name": "Asd",
+      "Name": "Asd thi\u1EC7n",
       "Phone": "0123654789",
       "Email": "a@gmail.com",
       "Address": "sdasd",
@@ -188,7 +188,7 @@
     {
       "Senority": 0,
       "Id": "E0007",
-      "Name": "Asd",
+      "Name": "Asd thi\u1EC7n",
       "Phone": "0123654789",
       "Email": "a@gmail.com",
       "Address": "sdasd",

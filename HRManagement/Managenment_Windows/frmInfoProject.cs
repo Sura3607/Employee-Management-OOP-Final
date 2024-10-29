@@ -24,7 +24,7 @@ namespace Managenment_Windows
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

@@ -60,6 +60,7 @@
             this.btnThem.TabIndex = 27;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTimKiem
             // 
@@ -70,6 +71,7 @@
             this.btnTimKiem.TabIndex = 26;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTuKhoa
             // 
@@ -120,6 +122,7 @@
             this.btnXoaProject.TabIndex = 38;
             this.btnXoaProject.Text = "Xóa dự án";
             this.btnXoaProject.UseVisualStyleBackColor = true;
+            this.btnXoaProject.Click += new System.EventHandler(this.btnXoaProject_Click);
             // 
             // frmProject
             // 
