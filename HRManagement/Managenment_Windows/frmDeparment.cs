@@ -16,5 +16,10 @@ namespace Managenment_Windows
         {
             InitializeComponent();
         }
+
+        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

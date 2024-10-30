@@ -26,5 +26,10 @@ namespace Managenment_Windows
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

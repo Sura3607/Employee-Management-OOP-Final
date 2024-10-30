@@ -42,5 +42,20 @@ namespace Managenment_Windows
         {
             
         }
+
+        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTuKhoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

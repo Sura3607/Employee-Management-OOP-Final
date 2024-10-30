@@ -51,5 +51,10 @@ namespace Managenment_Windows
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

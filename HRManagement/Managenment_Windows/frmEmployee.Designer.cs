@@ -58,6 +58,7 @@
             this.lblTuKhoa.Size = new System.Drawing.Size(96, 26);
             this.lblTuKhoa.TabIndex = 2;
             this.lblTuKhoa.Text = "Từ khóa:";
+            this.lblTuKhoa.Click += new System.EventHandler(this.lblTuKhoa_Click);
             // 
             // txtTuKhoa
             // 
@@ -65,6 +66,7 @@
             this.txtTuKhoa.Name = "txtTuKhoa";
             this.txtTuKhoa.Size = new System.Drawing.Size(378, 34);
             this.txtTuKhoa.TabIndex = 3;
+            this.txtTuKhoa.TextChanged += new System.EventHandler(this.txtTuKhoa_TextChanged);
             // 
             // btnTimKiem
             // 
@@ -74,6 +76,7 @@
             this.btnTimKiem.TabIndex = 4;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnThem
             // 
