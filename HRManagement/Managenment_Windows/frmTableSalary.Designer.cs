@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTableSalary));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Senority = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Worktime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BaseSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,11 +46,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightCyan;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EmployeeID,
-            this.Name,
+            this.NameEmployee,
             this.Senority,
             this.Worktime,
             this.BaseSalary,
@@ -58,31 +59,34 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridView1.Location = new System.Drawing.Point(12, 73);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(777, 259);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // EmployeeID
             // 
             this.EmployeeID.HeaderText = "ID";
             this.EmployeeID.MinimumWidth = 6;
             this.EmployeeID.Name = "EmployeeID";
+            this.EmployeeID.ReadOnly = true;
             this.EmployeeID.Width = 125;
             // 
-            // Name
+            // NameEmployee
             // 
-            this.Name.HeaderText = "Tên";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            this.Name.Width = 125;
+            this.NameEmployee.HeaderText = "Tên";
+            this.NameEmployee.MinimumWidth = 6;
+            this.NameEmployee.Name = "NameEmployee";
+            this.NameEmployee.ReadOnly = true;
+            this.NameEmployee.Width = 125;
             // 
             // Senority
             // 
             this.Senority.HeaderText = "Thâm niên";
             this.Senority.MinimumWidth = 6;
             this.Senority.Name = "Senority";
+            this.Senority.ReadOnly = true;
             this.Senority.Width = 125;
             // 
             // Worktime
@@ -90,6 +94,7 @@
             this.Worktime.HeaderText = "Giờ làm";
             this.Worktime.MinimumWidth = 6;
             this.Worktime.Name = "Worktime";
+            this.Worktime.ReadOnly = true;
             this.Worktime.Width = 125;
             // 
             // BaseSalary
@@ -97,6 +102,7 @@
             this.BaseSalary.HeaderText = "Lương cơ bản";
             this.BaseSalary.MinimumWidth = 6;
             this.BaseSalary.Name = "BaseSalary";
+            this.BaseSalary.ReadOnly = true;
             this.BaseSalary.Width = 125;
             // 
             // CalculatedSalary
@@ -104,6 +110,7 @@
             this.CalculatedSalary.HeaderText = "Lương";
             this.CalculatedSalary.MinimumWidth = 6;
             this.CalculatedSalary.Name = "CalculatedSalary";
+            this.CalculatedSalary.ReadOnly = true;
             this.CalculatedSalary.Width = 125;
             // 
             // btnTroLai
@@ -143,7 +150,6 @@
             this.cbboxLoaiNv.Name = "cbboxLoaiNv";
             this.cbboxLoaiNv.Size = new System.Drawing.Size(121, 24);
             this.cbboxLoaiNv.TabIndex = 4;
-            this.cbboxLoaiNv.SelectedIndexChanged += new System.EventHandler(this.cbboxLoaiNv_SelectedIndexChanged);
             // 
             // lblSearch
             // 
@@ -153,7 +159,6 @@
             this.lblSearch.Size = new System.Drawing.Size(56, 16);
             this.lblSearch.TabIndex = 5;
             this.lblSearch.Text = "Từ khóa";
-            this.lblSearch.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtboxSearch
             // 
@@ -161,7 +166,6 @@
             this.txtboxSearch.Name = "txtboxSearch";
             this.txtboxSearch.Size = new System.Drawing.Size(271, 22);
             this.txtboxSearch.TabIndex = 6;
-            this.txtboxSearch.TextChanged += new System.EventHandler(this.txtboxSearch_TextChanged);
             // 
             // frmTableSalary
             // 
@@ -178,7 +182,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTableSalary";
             this.Text = "Bảng lương";
-            this.Load += new System.EventHandler(this.frmTableSalary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,7 +193,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameEmployee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Senority;
         private System.Windows.Forms.DataGridViewTextBoxColumn Worktime;
         private System.Windows.Forms.DataGridViewTextBoxColumn BaseSalary;
