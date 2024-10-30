@@ -21,6 +21,7 @@ namespace Managenment_Windows
         {
             InitializeComponent();
             _project = project;
+            LoadInfo();
         }
         private void LoadInfo()
         {
@@ -90,13 +91,30 @@ namespace Managenment_Windows
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            //this.Hide();
+            //frmAddRemoveEmployee frmAddRemoveEmployee = new frmAddRemoveEmployee(, _employees);
+            //frmAddRemoveEmployee.ShowDialog();
+            //LoadInfo();
+            //this.Show();
         }
 
-        private void frmInfoProject_Load(object sender, EventArgs e)
+        private void btnXoaProject_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Run.Instance.RemoveProject(_project);
+                MessageBox.Show($"Đã xóa phòng ban {_project.ProjectName}");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dtgProjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
     }
 }

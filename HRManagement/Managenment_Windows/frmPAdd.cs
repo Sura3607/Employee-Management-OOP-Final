@@ -1,14 +1,8 @@
 ﻿using ManagementLogic;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Managenment_Windows
 {
@@ -28,7 +22,7 @@ namespace Managenment_Windows
 
             foreach (Employee e in Run.Instance.Management.EmployeesList)
             {
-                if (e.Department == null)
+                if (e.Projects == null)
                 {
                     list.Add(e);
                     chklstList.Items.Add(e);
@@ -51,8 +45,8 @@ namespace Managenment_Windows
 
             try
             {
-                Run.Instance.CreateDepart(name, leader, selectList);
-                MessageBox.Show($"Phòng ban {name} được tạo thành công");
+                Run.Instance.CreateProject(name, leader, selectList);
+                MessageBox.Show($"Dự án {name} được tạo thành công");
                 Reset();
             }
             catch (Exception ex)
@@ -75,7 +69,7 @@ namespace Managenment_Windows
 
             foreach (Employee e in Run.Instance.Management.EmployeesList)
             {
-                if (e.Department == null)
+                if (e.Projects == null)
                 {
                     list.Add(e);
                     chklstList.Items.Add(e);

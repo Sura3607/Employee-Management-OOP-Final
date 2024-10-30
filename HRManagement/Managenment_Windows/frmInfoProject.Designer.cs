@@ -77,7 +77,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(125, 57);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(203, 20);
             this.textBox2.TabIndex = 4;
@@ -85,27 +85,28 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(125, 93);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(203, 20);
             this.textBox3.TabIndex = 5;
             // 
-            // dataGridView1
+            // dtgProjects
             // 
             this.dtgProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProjects.Location = new System.Drawing.Point(33, 127);
-            this.dtgProjects.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtgProjects.Name = "dataGridView1";
+            this.dtgProjects.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgProjects.Name = "dtgProjects";
             this.dtgProjects.RowHeadersWidth = 51;
-            this.dtgProjects    .RowTemplate.Height = 24;
+            this.dtgProjects.RowTemplate.Height = 24;
             this.dtgProjects.Size = new System.Drawing.Size(488, 197);
             this.dtgProjects.TabIndex = 6;
+            this.dtgProjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProjects_CellContentClick);
             // 
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Location = new System.Drawing.Point(350, 17);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(171, 26);
             this.btnLuu.TabIndex = 35;
@@ -117,7 +118,7 @@
             // 
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(350, 87);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(171, 26);
             this.btnBack.TabIndex = 34;
@@ -129,7 +130,7 @@
             // 
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(350, 52);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnAdd.Size = new System.Drawing.Size(171, 26);
@@ -142,12 +143,13 @@
             // 
             this.btnXoaProject.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaProject.Location = new System.Drawing.Point(350, 328);
-            this.btnXoaProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaProject.Name = "btnXoaProject";
             this.btnXoaProject.Size = new System.Drawing.Size(171, 26);
             this.btnXoaProject.TabIndex = 37;
             this.btnXoaProject.Text = "Xóa dự án";
             this.btnXoaProject.UseVisualStyleBackColor = true;
+            this.btnXoaProject.Click += new System.EventHandler(this.btnXoaProject_Click);
             // 
             // frmInfoProject
             // 
@@ -165,10 +167,9 @@
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblProjectName);
             this.Controls.Add(this.lblID);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInfoProject";
             this.Text = "frmInfoProject";
-            this.Load += new System.EventHandler(this.frmInfoProject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProjects)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

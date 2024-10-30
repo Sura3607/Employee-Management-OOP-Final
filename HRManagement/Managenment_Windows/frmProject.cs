@@ -81,8 +81,8 @@ namespace Managenment_Windows
         private void btnThem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmDAdd frmDAdd = new frmDAdd();
-            frmDAdd.ShowDialog();
+            frmPAdd frmPAdd = new frmPAdd();
+            frmPAdd.ShowDialog();
             LoadProjects(Run.Instance.Management.ProjectList);
             this.Show();
         }
