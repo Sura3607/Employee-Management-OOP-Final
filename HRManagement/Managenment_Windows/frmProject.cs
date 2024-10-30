@@ -14,6 +14,7 @@ namespace Managenment_Windows
     public partial class frmProject : Form
     {
         private bool isBack = false;
+        private List<DataGridViewRow> selectedRows = new List<DataGridViewRow>();
         public frmProject()
         {
             InitializeComponent();
@@ -23,11 +24,7 @@ namespace Managenment_Windows
         private void LoadProjects(List<Project> projects)
         {
             dtgMain.Columns.Clear();
-            dtgMain.AutoGenerateColumns = false;
-
-            dtgMain.Columns.Add(new DataGridViewTextBoxColumn { Name = "ID" , DataPropertyName = "Id"});
-            dtgMain.Columns.Add(new DataGridViewTextBoxColumn { Name = "Name", DataPropertyName = "Name" });
-            dtgMain.Columns.Add(new DataGridViewTextBoxColumn { Name = "Description", DataPropertyName = "Description" });
+            dtgMain.AutoGenerateColumns = true;
             dtgMain.DataSource = projects;
         }
 
@@ -59,17 +56,54 @@ namespace Managenment_Windows
 
         }
 
+        private void btnXoaProject_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in selectedRows)
+            {
+
+                Project project  = row.DataBoundItem as Project;
+                if (project != null)
+                {
+                    try
+                    {
+                        Run.Instance.RemoveProject(project);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            selectedRows.Clear();
+            LoadProjects(Run.Instance.Management.ProjectList);
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmEAdd frmEAdd = new frmEAdd();
-            frmEAdd.ShowDialog();
+            frmDAdd frmDAdd = new frmDAdd();
+            frmDAdd.ShowDialog();
             LoadProjects(Run.Instance.Management.ProjectList);
             this.Show();
         }
 
-        private void btnXoaProject_Click(object sender, EventArgs e)
+        private void dtgMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0 && e.RowIndex < dtgMain.Rows.Count)
+            {
+                DataGridViewRow row = dtgMain.Rows[e.RowIndex];
+
+                if (selectedRows.Contains(row))
+                {
+                    row.DefaultCellStyle.BackColor = Color.White;
+                    selectedRows.Remove(row);
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightBlue;
+                    selectedRows.Add(row);
+                }
+            }
 
         }
     }
