@@ -20,7 +20,29 @@
         ]
       },
       "Salary": 10000000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0001",
+          "ProjectName": "P0002",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006"
+          ],
+          "LeaderId": "E0001"
+        },
+        {
+          "Id": "P0002",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006",
+            "E0009"
+          ],
+          "LeaderId": "E0001"
+        }
+      ]
     },
     {
       "Id": "E0006",
@@ -42,7 +64,29 @@
         ]
       },
       "Salary": 12000000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0001",
+          "ProjectName": "P0002",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006"
+          ],
+          "LeaderId": "E0001"
+        },
+        {
+          "Id": "P0002",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006",
+            "E0009"
+          ],
+          "LeaderId": "E0001"
+        }
+      ]
     },
     {
       "Id": "E0009",
@@ -64,7 +108,19 @@
         ]
       },
       "Salary": 5000000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0002",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006",
+            "E0009"
+          ],
+          "LeaderId": "E0001"
+        }
+      ]
     },
     {
       "Id": "E0007",
@@ -86,7 +142,18 @@
         ]
       },
       "Salary": 10000000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0003",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "EmployeesId": [
+            "E0007",
+            "E0006"
+          ],
+          "LeaderId": "E0007"
+        }
+      ]
     },
     {
       "Id": "E0006",
@@ -99,7 +166,18 @@
       "BeginWork": "2024-10-28T22:32:40.6776142+07:00",
       "Department": null,
       "Salary": 25000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0003",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "EmployeesId": [
+            "E0007",
+            "E0006"
+          ],
+          "LeaderId": "E0007"
+        }
+      ]
     }
   ],
   "DepartmentList": [
@@ -114,7 +192,39 @@
       ]
     }
   ],
-  "ProjectList": [],
+  "ProjectList": [
+    {
+      "Id": "P0001",
+      "ProjectName": "Qu\u1EA3n l\u00FD nh\u00E2n vi\u00EAn",
+      "Description": "",
+      "EmployeesId": [
+        "E0001",
+        "E0006"
+      ],
+      "LeaderId": "E0001"
+    },
+    {
+      "Id": "P0002",
+      "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+      "Description": "",
+      "EmployeesId": [
+        "E0001",
+        "E0006",
+        "E0009"
+      ],
+      "LeaderId": "E0001"
+    },
+    {
+      "Id": "P0003",
+      "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+      "Description": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+      "EmployeesId": [
+        "E0007",
+        "E0006"
+      ],
+      "LeaderId": "E0007"
+    }
+  ],
   "EmployeesList_FullTime": [
     {
       "Senority": 0,
@@ -137,7 +247,29 @@
         ]
       },
       "Salary": 10000000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0001",
+          "ProjectName": "P0002",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006"
+          ],
+          "LeaderId": "E0001"
+        },
+        {
+          "Id": "P0002",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006",
+            "E0009"
+          ],
+          "LeaderId": "E0001"
+        }
+      ]
     },
     {
       "Senority": 0,
@@ -160,7 +292,29 @@
         ]
       },
       "Salary": 12000000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0001",
+          "ProjectName": "P0002",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006"
+          ],
+          "LeaderId": "E0001"
+        },
+        {
+          "Id": "P0002",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006",
+            "E0009"
+          ],
+          "LeaderId": "E0001"
+        }
+      ]
     },
     {
       "Senority": 0,
@@ -183,7 +337,19 @@
         ]
       },
       "Salary": 5000000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0002",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "",
+          "EmployeesId": [
+            "E0001",
+            "E0006",
+            "E0009"
+          ],
+          "LeaderId": "E0001"
+        }
+      ]
     },
     {
       "Senority": 0,
@@ -206,7 +372,18 @@
         ]
       },
       "Salary": 10000000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0003",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "EmployeesId": [
+            "E0007",
+            "E0006"
+          ],
+          "LeaderId": "E0007"
+        }
+      ]
     }
   ],
   "EmployeesList_PartTime": [
@@ -222,7 +399,18 @@
       "BeginWork": "2024-10-28T22:32:40.6776142+07:00",
       "Department": null,
       "Salary": 25000,
-      "Projects": []
+      "Projects": [
+        {
+          "Id": "P0003",
+          "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "Description": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
+          "EmployeesId": [
+            "E0007",
+            "E0006"
+          ],
+          "LeaderId": "E0007"
+        }
+      ]
     }
   ]
 }

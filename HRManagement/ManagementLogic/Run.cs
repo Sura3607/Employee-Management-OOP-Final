@@ -98,12 +98,12 @@ namespace ManagementLogic
             Department department = new Department(GenerateId(0), name, leader,employees);
             management.Add(department,employees);
         }
-        public void CreateProject(string name, Employee leader, List<Employee> employees = null, string scrip = "")
+        public void CreateProject(string name, Employee leader, List<Employee> employees = null, string description = "")
         {
             if (leader == null)
                 throw new Exception("Leader không được để trống");
 
-            Project project = new Project(GenerateId(-1), name, leader,employees, scrip);
+            Project project = new Project(GenerateId(-1), name, leader,employees, description);
             management.Add(project,employees);
         }
         public void RemoveEmployee(Employee employee)

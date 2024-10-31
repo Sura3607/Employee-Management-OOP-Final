@@ -86,8 +86,7 @@ namespace Managenment_Windows
             LoadProjects(Run.Instance.Management.ProjectList);
             this.Show();
         }
-
-        private void dtgMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgMain_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < dtgMain.Rows.Count)
             {
@@ -104,7 +103,30 @@ namespace Managenment_Windows
                     selectedRows.Add(row);
                 }
             }
-
+        }
+        private void dtgMain_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < Run.Instance.Management.ProjectList.Count)
+            {
+                string selected = dtgMain.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+                Project selectProject = null;
+                foreach (Project p in Run.Instance.Management.ProjectList)
+                {
+                    if (p.Id == selected)
+                    {
+                        selectProject = p;
+                        break;
+                    }
+                }
+                if (selectProject != null)
+                {
+                    this.Hide();
+                    frmInfoProject frmInfoProject = new frmInfoProject(selectProject);
+                    frmInfoProject.ShowDialog();
+                    LoadProjects(Run.Instance.Management.ProjectList);
+                    this.Show();
+                }
+            }
         }
     }
 }

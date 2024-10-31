@@ -27,6 +27,7 @@ namespace Managenment_Windows
         {
             lblID.Text += $"\t\t{_project.Id}";
             textBox2.Text = _project.ProjectName;
+            textBox3.Text = _project.Description;
             posLeader = -1;
             _employees.Clear();
 
@@ -92,7 +93,7 @@ namespace Managenment_Windows
         private void btnAdd_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            //frmAddRemoveEmployee frmAddRemoveEmployee = new frmAddRemoveEmployee(, _employees);
+            //frmAddRemoveEmployee frmAddRemoveEmployee = new frmAddRemoveEmployee(department, _employees);
             //frmAddRemoveEmployee.ShowDialog();
             //LoadInfo();
             //this.Show();
@@ -103,18 +104,13 @@ namespace Managenment_Windows
             try
             {
                 Run.Instance.RemoveProject(_project);
-                MessageBox.Show($"Đã xóa phòng ban {_project.ProjectName}");
+                MessageBox.Show($"Đã xóa dự án {_project.ProjectName}");
                 this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void dtgProjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

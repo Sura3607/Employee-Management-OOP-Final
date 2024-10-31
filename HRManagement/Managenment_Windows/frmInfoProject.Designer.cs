@@ -100,7 +100,6 @@
             this.dtgProjects.RowTemplate.Height = 24;
             this.dtgProjects.Size = new System.Drawing.Size(488, 197);
             this.dtgProjects.TabIndex = 6;
-            this.dtgProjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProjects_CellContentClick);
             // 
             // btnLuu
             // 

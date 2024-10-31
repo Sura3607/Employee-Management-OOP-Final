@@ -22,11 +22,8 @@ namespace Managenment_Windows
 
             foreach (Employee e in Run.Instance.Management.EmployeesList)
             {
-                if (e.Projects.Count == 0)
-                {
-                    list.Add(e);
-                    chklstList.Items.Add(e);
-                }
+                list.Add(e);
+                chklstList.Items.Add(e);
 
             }
             LoadLeader(selectList);
@@ -40,12 +37,13 @@ namespace Managenment_Windows
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string name = textBox1.Text;
+            string name = ProjectName.Text;
+            string description = Description.Text;
             Employee leader = (Employee)cbLeader.SelectedItem;
 
             try
             {
-                Run.Instance.CreateProject(name, leader, selectList);
+                Run.Instance.CreateProject(name, leader, selectList,description);
                 MessageBox.Show($"Dự án {name} được tạo thành công");
                 Reset();
             }
@@ -57,7 +55,7 @@ namespace Managenment_Windows
 
         private void Reset()
         {
-            textBox1.Text = string.Empty;
+            ProjectName.Text = string.Empty;
 
             chklstSelect.Items.Clear();
             selectList.Clear();
@@ -69,11 +67,8 @@ namespace Managenment_Windows
 
             foreach (Employee e in Run.Instance.Management.EmployeesList)
             {
-                if (e.Projects == null)
-                {
-                    list.Add(e);
-                    chklstList.Items.Add(e);
-                }
+                list.Add(e);
+                chklstList.Items.Add(e);
             }
 
             LoadLeader(selectList);
