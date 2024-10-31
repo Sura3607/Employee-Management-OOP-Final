@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblID = new System.Windows.Forms.Label();
+            this.cbLeader = new System.Windows.Forms.ComboBox();
             this.lblProjectName = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -149,6 +150,14 @@
             this.btnXoaProject.Text = "Xóa dự án";
             this.btnXoaProject.UseVisualStyleBackColor = true;
             this.btnXoaProject.Click += new System.EventHandler(this.btnXoaProject_Click);
+            // 
+            // cbLeader
+            // 
+            this.cbLeader.FormattingEnabled = true;
+            this.cbLeader.Location = new System.Drawing.Point(195, 113);
+            this.cbLeader.Name = "cbLeader";
+            this.cbLeader.Size = new System.Drawing.Size(247, 24);
+            this.cbLeader.TabIndex = 48;
             // 
             // frmInfoProject
             // 
