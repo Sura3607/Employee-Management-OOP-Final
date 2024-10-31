@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
@@ -9,7 +10,7 @@ namespace ManagementLogic
     {
         private string username;
         private string password;
-        private const string FilePath = "Data.json";
+        private const string FileName = "Data.json";
         public string UserName { get => username; }
         public string Password { get => password; }
 
@@ -39,8 +40,23 @@ namespace ManagementLogic
         }
         public string GetFilePath()
         {
-            return FilePath;
+            string localPath = Path.Combine(AppContext.BaseDirectory, FileName);
+            string debugPath = Path.Combine(Directory.GetParent(AppContext.BaseDirectory)?.FullName ?? string.Empty,
+                                            @"HRManagement\Managenment_Windows\bin\Debug\", FileName);
+
+            // Kiểm tra nếu file tồn tại ở đường dẫn hiện tại hoặc đường dẫn debug
+            if (File.Exists(localPath))
+            {
+                return localPath;
+            }
+            else if (File.Exists(debugPath))
+            {
+                return debugPath;
+            }
+
+            return localPath;
         }
+
         public bool IsValidUsername(string username)
         {
             return this.username == username;

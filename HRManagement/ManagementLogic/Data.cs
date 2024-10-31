@@ -8,7 +8,30 @@ namespace ManagementLogic
     [Serializable]
     public class Data
     {
-        static private string accountFilePath = "accounts.json";
+        static private string accountFilePath = GetAccountFilePath();
+
+        private static string GetAccountFilePath()
+        {
+            // Đường dẫn trong thư mục hiện tại
+            string localPath = Path.Combine(AppContext.BaseDirectory, "accounts.json");
+
+            // Đường dẫn tương đối từ thư mục chứa shortcut (.exe ở /HR_Management)
+            string debugPath = Path.Combine(Directory.GetParent(AppContext.BaseDirectory)?.FullName ?? string.Empty,
+                                            @"HRManagement\Managenment_Windows\bin\Debug\accounts.json");
+
+            // Kiểm tra nếu file tồn tại tại localPath
+            if (File.Exists(localPath))
+            {
+                return localPath;
+            }
+            // Nếu không tìm thấy ở localPath, kiểm tra debugPath
+            else if (File.Exists(debugPath))
+            {
+                return debugPath;
+            }
+
+            return localPath;
+        }
 
         //D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug
         public void SaveData(Management management,string FilePath)
