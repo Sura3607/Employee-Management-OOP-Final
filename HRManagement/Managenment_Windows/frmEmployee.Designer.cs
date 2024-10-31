@@ -65,6 +65,7 @@
             this.txtTuKhoa.Name = "txtTuKhoa";
             this.txtTuKhoa.Size = new System.Drawing.Size(378, 34);
             this.txtTuKhoa.TabIndex = 3;
+            this.txtTuKhoa.TextChanged += new System.EventHandler(this.txtTuKhoa_TextChanged);
             // 
             // btnTimKiem
             // 
@@ -108,6 +109,7 @@
             this.dtgEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgEmployees.Size = new System.Drawing.Size(922, 370);
             this.dtgEmployees.TabIndex = 0;
+            this.dtgEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEmployees_CellContentClick);
             this.dtgEmployees.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEmployees_CellDoubleClick);
             this.dtgEmployees.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgEmployees_CellFormatting);
             // 
