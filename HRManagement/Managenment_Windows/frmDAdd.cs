@@ -1,12 +1,6 @@
 ﻿using ManagementLogic;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Managenment_Windows
@@ -84,7 +78,15 @@ namespace Managenment_Windows
         }
         private void btnAddAll_Click(object sender, EventArgs e)
         {
-            List<Employee> listSelected = chklstList.Items.OfType<Employee>().ToList();
+            List<Employee> listSelected = new List<Employee>();
+
+            foreach (object item in chklstList.Items)
+            {
+                if (item is Employee employee)
+                {
+                    listSelected.Add(employee);
+                }
+            }
             foreach (Employee employee in listSelected)
             {
                 selectList.Add(employee);
@@ -97,7 +99,15 @@ namespace Managenment_Windows
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            List<Employee> listSelected = chklstList.CheckedItems.OfType<Employee>().ToList(); 
+            List<Employee> listSelected = new List<Employee>();
+
+            foreach (object item in chklstList.CheckedItems)
+            {
+                if (item is Employee employee)
+                {
+                    listSelected.Add(employee);
+                }
+            }
             foreach (Employee employee in listSelected)
             {
                 if(employee != null)
@@ -114,8 +124,16 @@ namespace Managenment_Windows
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            List<Employee> listSelected = chklstSelect.CheckedItems.OfType<Employee>().ToList();
-            foreach(Employee employee in listSelected)
+            List<Employee> listSelected = new List<Employee>();
+
+            foreach (object item in chklstList.CheckedItems)
+            {
+                if (item is Employee employee)
+                {
+                    listSelected.Add(employee);
+                }
+            }
+            foreach (Employee employee in listSelected)
             {
                 if(employee != null)
                 {
@@ -131,8 +149,16 @@ namespace Managenment_Windows
 
         private void btnRemoveAll_Click(object sender, EventArgs e)
         {
-            List<Employee> listSelected = chklstSelect.Items.OfType<Employee>().ToList();
-            foreach(Employee employee in listSelected)
+            List<Employee> listSelected = new List<Employee>();
+
+            foreach (object item in chklstList.Items)
+            {
+                if (item is Employee employee)
+                {
+                    listSelected.Add(employee);
+                }
+            }
+            foreach (Employee employee in listSelected)
             {
                 selectList.Remove(employee);
                 chklstSelect.Items.Remove(employee);

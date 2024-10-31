@@ -1,12 +1,7 @@
 ﻿using ManagementLogic;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Managenment_Windows
@@ -123,6 +118,7 @@ namespace Managenment_Windows
                     this.Hide();
                     frmInfoProject frmInfoProject = new frmInfoProject(selectProject);
                     frmInfoProject.ShowDialog();
+                    dtgMain.DataSource = null;
                     LoadProjects(Run.Instance.Management.ProjectList);
                     this.Show();
                 }

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
@@ -34,7 +29,7 @@ namespace ManagementLogic
         }
         public double CalculateSalary()
         {
-            return Salary * (senority / 5) * 1.1;
+            return Salary + (senority / 5) * 0.2;
         }
         public override bool Find(string keyword)
         {

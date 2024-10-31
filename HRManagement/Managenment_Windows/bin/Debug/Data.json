@@ -204,17 +204,6 @@
       "LeaderId": "E0001"
     },
     {
-      "Id": "P0002",
-      "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
-      "Description": "",
-      "EmployeesId": [
-        "E0001",
-        "E0006",
-        "E0009"
-      ],
-      "LeaderId": "E0001"
-    },
-    {
       "Id": "P0003",
       "ProjectName": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",
       "Description": "Qu\u1EA3n l\u00FD th\u01B0 vi\u1EC7n",

@@ -76,11 +76,17 @@
     <Compile Include="frmAccount.Designer.cs">
       <DependentUpon>frmAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddRemoveEmployee.cs">
+    <Compile Include="frmAddRemoveEmployee_Project.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddRemoveEmployee.Designer.cs">
-      <DependentUpon>frmAddRemoveEmployee.cs</DependentUpon>
+    <Compile Include="frmAddRemoveEmployee_Project.Designer.cs">
+      <DependentUpon>frmAddRemoveEmployee_Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Depart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Depart.Designer.cs">
+      <DependentUpon>frmAddRemoveEmployee_Depart.cs</DependentUpon>
     </Compile>
     <Compile Include="frmChangePassword.cs">
       <SubType>Form</SubType>
@@ -171,8 +177,11 @@
     <EmbeddedResource Include="frmAccount.resx">
       <DependentUpon>frmAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddRemoveEmployee.resx">
-      <DependentUpon>frmAddRemoveEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddRemoveEmployee_Project.resx">
+      <DependentUpon>frmAddRemoveEmployee_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRemoveEmployee_Depart.resx">
+      <DependentUpon>frmAddRemoveEmployee_Depart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
@@ -226,7 +235,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

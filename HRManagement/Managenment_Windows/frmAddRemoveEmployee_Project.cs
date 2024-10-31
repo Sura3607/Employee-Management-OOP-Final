@@ -5,77 +5,38 @@ using System.Windows.Forms;
 
 namespace Managenment_Windows
 {
-    public partial class frmPAdd : Form
+    public partial class frmAddRemoveEmployee_Project : Form
     {
+        private Project _project;
         private List<Employee> list;
         private List<Employee> selectList;
-        public frmPAdd()
+        private List<Employee> initialSelectList;
+        public frmAddRemoveEmployee_Project(Project project,List<Employee>select)
         {
             InitializeComponent();
+            _project = project;
+            initialSelectList = new List<Employee>(select);
+            selectList = select;
             LoadList();
         }
         private void LoadList()
         {
-            list = new List<Employee>();
-            selectList = new List<Employee>();
-
-            foreach (Employee e in Run.Instance.Management.EmployeesList)
-            {
-                list.Add(e);
-                chklstList.Items.Add(e);
-
-            }
-            LoadLeader(selectList);
-        }
-        private void LoadLeader(List<Employee> list)
-        {
-            cbLeader.Items.Clear();
-            foreach (Employee e in list)
-                cbLeader.Items.Add(e);
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            string name = ProjectName.Text;
-            string description = Description.Text;
-            Employee leader = (Employee)cbLeader.SelectedItem;
-
-            try
-            {
-                Run.Instance.CreateProject(name, leader, selectList,description);
-                MessageBox.Show($"Dự án {name} được tạo thành công");
-                Reset();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void Reset()
-        {
-            ProjectName.Text = string.Empty;
-
-            chklstSelect.Items.Clear();
-            selectList.Clear();
-
-            cbLeader.SelectedIndex = -1;
-
             chklstList.Items.Clear();
-            list.Clear();
+            chklstSelect.Items.Clear();
+            list = new List<Employee>();
 
             foreach (Employee e in Run.Instance.Management.EmployeesList)
             {
-                list.Add(e);
-                chklstList.Items.Add(e);
+                if (!e.Projects.Contains(_project))
+                {
+                    list.Add(e);
+                    chklstList.Items.Add(e);
+                }
             }
-
-            LoadLeader(selectList);
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            foreach (Employee e in selectList)
+            {
+                chklstSelect.Items.Add(e);
+            }
         }
 
         private void btnAddAll_Click(object sender, EventArgs e)
@@ -97,7 +58,6 @@ namespace Managenment_Windows
                 list.Remove(employee);
                 chklstList.Items.Remove(employee);
             }
-            LoadLeader(selectList);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -122,7 +82,6 @@ namespace Managenment_Windows
                     chklstList.Items.Remove(employee);
                 }
             }
-            LoadLeader(selectList);
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -147,9 +106,7 @@ namespace Managenment_Windows
                     chklstList.Items.Add(employee);
                 }
             }
-            LoadLeader(selectList);
         }
-
         private void btnRemoveAll_Click(object sender, EventArgs e)
         {
             List<Employee> listSelected = new List<Employee>();
@@ -169,7 +126,43 @@ namespace Managenment_Windows
                 list.Add(employee);
                 chklstList.Items.Add(employee);
             }
-            LoadLeader(selectList);
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            List<Employee> addedEmployees = new List<Employee>();
+            List<Employee> removedEmployees = new List<Employee>();
+            foreach (Employee employee in selectList)
+            {
+                if (!initialSelectList.Contains(employee))
+                {
+                    addedEmployees.Add(employee);
+                }
+            }
+
+            foreach (Employee initialEmployee in initialSelectList)
+            {
+                if (!selectList.Contains(initialEmployee))
+                {
+                    removedEmployees.Add(initialEmployee);
+                }
+            }
+            try
+            {
+                Run.Instance.EditProject(_project,null,null,null,removedEmployees,addedEmployees);
+                MessageBox.Show("Nhân viên trong phòng ban đã được chỉnh sửa");
+                initialSelectList = new List<Employee>(selectList);
+                LoadList();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

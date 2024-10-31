@@ -116,6 +116,7 @@ namespace Managenment_Windows
                     this.Hide();
                     frmInfoDepartment frmInfoDepartment = new frmInfoDepartment(selectDepart);
                     frmInfoDepartment.ShowDialog();
+                    dtgMain.DataSource = null;
                     LoadDepartments(Run.Instance.Management.DepartmentList);
                     this.Show();
                 }

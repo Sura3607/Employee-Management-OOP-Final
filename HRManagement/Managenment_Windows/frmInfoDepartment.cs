@@ -18,7 +18,7 @@ namespace Managenment_Windows
         }
         private void LoadInfo()
         {
-            lblID.Text += $"\t\t{_department.Id}";
+            lblID.Text = $"ID:\t\t{_department.Id}";
             txtDepartment.Text = _department.Name;
             posLeader = -1;
             _employees.Clear();
@@ -83,7 +83,7 @@ namespace Managenment_Windows
         private void btnAdd_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAddRemoveEmployee frmAddRemoveEmployee = new frmAddRemoveEmployee(_department,_employees);
+            frmAddRemoveEmployee_Depart frmAddRemoveEmployee = new frmAddRemoveEmployee_Depart(_department,_employees);
             frmAddRemoveEmployee.ShowDialog();
             LoadInfo();
             this.Show();

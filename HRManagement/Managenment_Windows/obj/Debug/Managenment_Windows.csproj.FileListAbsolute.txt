@@ -1,4 +1,4 @@
-﻿D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe.config
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe.config
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.pdb
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\ManagementLogic.dll
@@ -150,7 +150,6 @@ C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEAdd.resources
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAccount.resources
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee.resources
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmChangePassword.resources
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmCreateAccount.resources
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDAdd.resources
@@ -201,3 +200,5 @@ C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManageme
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CoreCompileInputs.cache
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee_Project.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee_Depart.resources

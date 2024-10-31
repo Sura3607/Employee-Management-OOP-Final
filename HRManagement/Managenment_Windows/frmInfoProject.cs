@@ -1,12 +1,6 @@
 ﻿using ManagementLogic;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Managenment_Windows
@@ -25,7 +19,7 @@ namespace Managenment_Windows
         }
         private void LoadInfo()
         {
-            lblID.Text += $"\t\t{_project.Id}";
+            lblID.Text = $"ID:\t\t{_project.Id}";
             textBox2.Text = _project.ProjectName;
             textBox3.Text = _project.Description;
             posLeader = -1;
@@ -92,11 +86,11 @@ namespace Managenment_Windows
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //frmAddRemoveEmployee frmAddRemoveEmployee = new frmAddRemoveEmployee(department, _employees);
-            //frmAddRemoveEmployee.ShowDialog();
-            //LoadInfo();
-            //this.Show();
+            this.Hide();
+            frmAddRemoveEmployee_Project frmAddRemoveEmployee_Project = new frmAddRemoveEmployee_Project(_project, _employees);
+            frmAddRemoveEmployee_Project.ShowDialog();
+            LoadInfo();
+            this.Show();
         }
 
         private void btnXoaProject_Click(object sender, EventArgs e)
