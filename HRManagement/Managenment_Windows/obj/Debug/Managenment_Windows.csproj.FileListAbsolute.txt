@@ -1,4 +1,4 @@
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe.config
+﻿D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe.config
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.pdb
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\ManagementLogic.dll
@@ -163,7 +163,6 @@ C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDAdd.resources
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmPAdd.resources
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmTableSalary.resources
-<<<<<<< HEAD
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAccount.resources
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee.resources
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmChangePassword.resources
@@ -180,7 +179,6 @@ C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenme
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmProject.resources
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoEmployee.resources
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmTableSalary.resources
-=======
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.AssemblyReference.cache
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAccount.resources
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee.resources
@@ -203,4 +201,3 @@ C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManageme
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CoreCompileInputs.cache
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
->>>>>>> a41d389130dc39470e1c63631a018c9793d57329

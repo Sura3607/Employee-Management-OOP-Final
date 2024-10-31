@@ -22,7 +22,7 @@ namespace Managenment_Windows
 
             foreach (Employee e in Run.Instance.Management.EmployeesList)
             {
-                if (e.Projects == null)
+                if (e.Projects.Count == 0)
                 {
                     list.Add(e);
                     chklstList.Items.Add(e);
