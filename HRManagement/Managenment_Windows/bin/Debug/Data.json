@@ -1,5 +1,7 @@
 {
   "EmployeesList": [],
   "DepartmentList": [],
-  "ProjectList": []
+  "ProjectList": [],
+  "EmployeesList_FullTime": [],
+  "EmployeesList_PartTime": []
 }

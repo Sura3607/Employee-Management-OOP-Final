@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
-using System.IO;
-using System.Runtime.Remoting.Messaging;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Text.Json.Serialization;
 
 namespace ManagementLogic
 {
@@ -33,7 +28,7 @@ namespace ManagementLogic
                 //Kiểm tra xem có rỗng hoặc null không?
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Id không được để trống");
-                id = value; 
+                this.id = value; 
             } 
         }
         public string Name
@@ -106,59 +101,26 @@ namespace ManagementLogic
             }
         }
         public DateTime BeginWork { get => beginWork; set => beginWork = value; }
-        public Department Department 
-        { 
-            get => department; 
-            set
-            {
-                if (department != null && value != null)
-                    throw new ArgumentException("Nhân viên này đang ở trong một phòng ban khác");
-                department = value;
-            } 
-        }
-        public uint Salary
-        {
-            get => salary;
-            set
-            {
-                if (value <= 2340000)
-                    throw new ArgumentException($"Lương không được thấp hơn mức lương cơ bản là 2340000 VND.");
-                salary = value;
-            } 
-        }
-        public List<Project> Projects { get => projects;}
+        public Department Department { get => department; set => department = value; }
+        
+        public uint Salary { get => salary; set => salary = value; }
+        
+        public List<Project> Projects { get => projects; set => projects = value; }
 
         protected Employee() { }
-
-        protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary)
-        {
-            this.id = id;
-            this.name = name;
-            this.phone = phone;
-            this.email = email;
-            this.address = address;
-            this.gender = gender;
-            this.birthday = birthday;
-            this.beginWork = beginWork;
-            this.department = department;
-            this.projects = new List<Project>();
-            this.salary = salary;
-        }
-
-        [JsonConstructor]
         protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary, List<Project> projects = null)
         {
             this.id = id;
-            this.name = name;
-            this.phone = phone;
-            this.email = email;
+            Name = name;
+            Phone = phone;
+            Email = email;
             this.address = address;
             this.gender = gender;
-            this.birthday = birthday;
-            this.beginWork = beginWork;
-            this.department = department;
-            this.projects = projects ?? new List<Project>(); // Nếu projects null thì khởi tạo mới
-            this.salary = salary;
+            Birthday = birthday;
+            BeginWork = beginWork;
+            Department = department;
+            this.projects = projects ?? new List<Project>();
+            Salary = salary;
         }
         protected Employee(SerializationInfo info, StreamingContext context)
         {
@@ -171,7 +133,7 @@ namespace ManagementLogic
             birthday = info.GetDateTime("Birthday");
             beginWork = info.GetDateTime("BeginWork");
             department = (Department)info.GetValue("Department",typeof(Department));
-            projects = (List<Project>)info.GetValue("Project",typeof (List<Project>));
+            projects = (List<Project>)info.GetValue("Projects",typeof (List<Project>));
             salary = info.GetUInt32("Salary");
         }
         public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
@@ -182,7 +144,7 @@ namespace ManagementLogic
             info.AddValue("Email",Email);
             info.AddValue("Gender",Gender);
             info.AddValue("Birthday", Birthday);
-            info.AddValue("BeginWord",BeginWork);
+            info.AddValue("BeginWork",BeginWork);
             info.AddValue("Department", Department);
             info.AddValue("Projects", Projects);
             info.AddValue("Salary",Salary);
@@ -191,5 +153,10 @@ namespace ManagementLogic
         //tạo abstract void RemoveProject
         public abstract bool Find(string keyword);
         public abstract string GetInfo();
+
+        public override string ToString()
+        {
+            return $"{Id} - {Name}";
+        }
     }
 }

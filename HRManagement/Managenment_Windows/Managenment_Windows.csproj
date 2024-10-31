@@ -70,11 +70,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAdd.cs">
+    <Compile Include="frmAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdd.Designer.cs">
-      <DependentUpon>frmAdd.cs</DependentUpon>
+    <Compile Include="frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Project.Designer.cs">
+      <DependentUpon>frmAddRemoveEmployee_Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Depart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Depart.Designer.cs">
+      <DependentUpon>frmAddRemoveEmployee_Depart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateAccount.Designer.cs">
+      <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDAdd.Designer.cs">
+      <DependentUpon>frmDAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEAdd.Designer.cs">
+      <DependentUpon>frmEAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDeparment.cs">
       <SubType>Form</SubType>
@@ -112,6 +148,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPAdd.Designer.cs">
+      <DependentUpon>frmPAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,10 +166,34 @@
     <Compile Include="frmInfoEmployee.Designer.cs">
       <DependentUpon>frmInfoEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTableSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTableSalary.Designer.cs">
+      <DependentUpon>frmTableSalary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAdd.resx">
-      <DependentUpon>frmAdd.cs</DependentUpon>
+    <EmbeddedResource Include="frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRemoveEmployee_Project.resx">
+      <DependentUpon>frmAddRemoveEmployee_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRemoveEmployee_Depart.resx">
+      <DependentUpon>frmAddRemoveEmployee_Depart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateAccount.resx">
+      <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDAdd.resx">
+      <DependentUpon>frmDAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEAdd.resx">
+      <DependentUpon>frmEAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeparment.resx">
       <DependentUpon>frmDeparment.cs</DependentUpon>
@@ -147,11 +213,17 @@
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPAdd.resx">
+      <DependentUpon>frmPAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProject.resx">
       <DependentUpon>frmProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInfoEmployee.resx">
       <DependentUpon>frmInfoEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTableSalary.resx">
+      <DependentUpon>frmTableSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

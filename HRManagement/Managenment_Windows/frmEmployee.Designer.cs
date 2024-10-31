@@ -35,8 +35,8 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.dtgMain = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).BeginInit();
+            this.dtgEmployees = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmployees)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTongSo
@@ -65,6 +65,7 @@
             this.txtTuKhoa.Name = "txtTuKhoa";
             this.txtTuKhoa.Size = new System.Drawing.Size(378, 34);
             this.txtTuKhoa.TabIndex = 3;
+            this.txtTuKhoa.TextChanged += new System.EventHandler(this.txtTuKhoa_TextChanged);
             // 
             // btnTimKiem
             // 
@@ -74,15 +75,17 @@
             this.btnTimKiem.TabIndex = 4;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(453, 471);
+            this.btnThem.Location = new System.Drawing.Point(484, 471);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(218, 35);
             this.btnThem.TabIndex = 17;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnHuy
             // 
@@ -92,19 +95,23 @@
             this.btnHuy.TabIndex = 21;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.button6_Click);
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // dtgMain
+            // dtgEmployees
             // 
-            this.dtgMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgMain.Location = new System.Drawing.Point(22, 95);
-            this.dtgMain.Name = "dtgMain";
-            this.dtgMain.RowHeadersWidth = 51;
-            this.dtgMain.RowTemplate.Height = 24;
-            this.dtgMain.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgMain.Size = new System.Drawing.Size(922, 370);
-            this.dtgMain.TabIndex = 0;
-            this.dtgMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellContentClick);
+            this.dtgEmployees.AllowUserToResizeColumns = false;
+            this.dtgEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmployees.Location = new System.Drawing.Point(22, 95);
+            this.dtgEmployees.Name = "dtgEmployees";
+            this.dtgEmployees.ReadOnly = true;
+            this.dtgEmployees.RowHeadersWidth = 51;
+            this.dtgEmployees.RowTemplate.Height = 24;
+            this.dtgEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgEmployees.Size = new System.Drawing.Size(922, 370);
+            this.dtgEmployees.TabIndex = 0;
+            this.dtgEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEmployees_CellContentClick);
+            this.dtgEmployees.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEmployees_CellDoubleClick);
+            this.dtgEmployees.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgEmployees_CellFormatting);
             // 
             // frmEmployee
             // 
@@ -118,14 +125,15 @@
             this.Controls.Add(this.txtTuKhoa);
             this.Controls.Add(this.lblTuKhoa);
             this.Controls.Add(this.lblTongSo);
-            this.Controls.Add(this.dtgMain);
+            this.Controls.Add(this.dtgEmployees);
             this.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hồ sơ nhân sự";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEmployee_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmployees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +146,6 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.DataGridView dtgMain;
+        private System.Windows.Forms.DataGridView dtgEmployees;
     }
 }

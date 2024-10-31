@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
@@ -13,8 +10,8 @@ namespace ManagementLogic
         private string id;
         private string projectName;
         private string description;
-        List<Employee> employees;
-        Employee leader;
+        private string leaderId;
+        private List<string> employeesId;
 
         //Tạo các logic cho viêccj set của các property dưới đây , ví dụ description ko đuocwj quá 250 kí tự 
         public string Id
@@ -47,84 +44,90 @@ namespace ManagementLogic
                 description = value;
             }
         }
-        public List<Employee> Employees { get => employees; }
-        public Employee Leader { get => leader; }
+        
+        public List<string> EmployeesId { get => employeesId; set => employeesId = value; }
+        
+        public string LeaderId { get => leaderId; set => leaderId = value; }
 
         public Project() { }
-        [JsonConstructor]
-        public Project(string id, string projectName, Employee leader = null, List<Employee> employees= default, string description = "")
+        public Project(string id, string projectName, Employee leader, List<Employee> employees = null,string description = "")
         {
             Id = id;
             ProjectName = projectName;
             Description = description;
-            this.employees = employees ?? new List<Employee>();
-            this.leader = leader;
+            LeaderId = leader.Id;
+
+            EmployeesId = new List<string>();
+            if(employees != null)
+            {
+                foreach(Employee employee in employees)
+                    EmployeesId.Add(employee.Id);
+            }
         }
         public Project(SerializationInfo info, StreamingContext context)
         {
             Id = info.GetString("Id");
             ProjectName = info.GetString("ProjectName");
             Description = info.GetString("Description");
-            employees = (List<Employee>)info.GetValue("Employees",typeof(List<Employee>));
-            leader = (Employee)info.GetValue("Leader", typeof(Employee));
+            leaderId = info.GetString("Leader");
+            EmployeesId = (List<string>)info.GetValue("Employees", typeof(List<string>));
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("Id", Id);
             info.AddValue("ProjectName", ProjectName);
             info.AddValue("Description", Description);
-            info.AddValue("Employees", employees);
-            info.AddValue("Leader",leader);
+            info.AddValue("Leader",leaderId);
+            info.AddValue("Employees",EmployeesId);
         }
-        //Thêm logic chỉ khi leader la null mới được addd nếu ko sẽ trả về ngoại lệ 
-        public void AddLeader(Employee leader)
+        public void AddEmployee(Employee e)
         {
-            if (this.leader != null)
-                throw new InvalidOperationException("Da co leader cho project nay");
-            this.leader = leader;
-        }
-
-        public void AddEmployee(Employee employee)
-        {
-            if (leader == employee)
-                leader = null;
-            if (employees == null)
+            if (e == null)
                 throw new ArgumentException("Them nhan vien that bai");
-            employees.Add(employee);
+            if (EmployeesId.Contains(e.Id))
+                throw new ArgumentException("Nhan vien da ton tai");
+            EmployeesId.Add(e.Id);
+            e.AddProject(this);
+
         }
         public void RemoveEmployee(Employee employee)
         {
-            if (employees.Contains(employee))
-                employees.Remove(employee);
-            throw new ArgumentException("Project khong co nhan vien nay");
+
+            if (!EmployeesId.Contains(employee.Id))
+                throw new ArgumentException("Khong tim thay nhan vien nay");
+
+            if (leaderId == employee.Id)
+                leaderId = null;
+
+            EmployeesId.Remove(employee.Id);
+            employee.Projects.Remove(this);
         }
-        //Xử lí việc tìm nếu có tồn tại keyword trong tên project
         public bool Find(string keyword)
         {
             if (ProjectName.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0) // keyword ko phan biet in hoa hay thuong
                 return true;
             throw new ArgumentException($"Khong tim thay {keyword} trong project");
         }
-        public string GetInfo()
-        {
-            string employeeNames = "Không có nhân viên";
-            string leaderName = "";
-            if (employees.Count > 0)
-            {
-                employeeNames = "";
-                foreach (Employee employee in employees)
-                {
-                    employeeNames += employee.Name + ", ";
-                }
-                // Xóa dấu phẩy và khoảng trắng cuối cùng
-                employeeNames = employeeNames.TrimEnd(',', ' ');
-            }
-            if (leader != null)
-            {
-                leaderName = leader.Name;
-            }
+        //public string GetInfo()
+        //{
+        //    string employeeNames = "Không có nhân viên";
+        //    string leaderName = "";
+        //    if (EmployeesId.Count > 0)
+        //    {
+        //        employeeNames = "";
+        //        foreach (Employee employee in EmployeesId)
+        //        {
+        //            employeeNames += employee.Name + ", ";
+        //        }
+        //        // Xóa dấu phẩy và khoảng trắng cuối cùng
+        //        employeeNames = employeeNames.TrimEnd(',', ' ');
+        //    }
+        //    if (leaderId != null)
+        //    {
+        //        leaderName = leaderId.Name;
+        //    }
 
-            return $"\n Ten project: {ProjectName} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} \n Description: {Description} ";
-        }
+        //    return $"\n Ten project: {ProjectName} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} \n Description: {Description} ";
+        //}
     }
 }

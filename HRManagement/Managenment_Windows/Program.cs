@@ -17,7 +17,7 @@ namespace Managenment_Windows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInfoEmployee());
+            Application.Run(new frmLogin());
         }
     }
 }

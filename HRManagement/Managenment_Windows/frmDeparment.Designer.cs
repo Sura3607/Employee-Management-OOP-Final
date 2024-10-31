@@ -36,38 +36,42 @@
             this.lblTuKhoa = new System.Windows.Forms.Label();
             this.lblTongSo = new System.Windows.Forms.Label();
             this.dtgMain = new System.Windows.Forms.DataGridView();
+            this.btnXphDepartment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuy
             // 
-            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(725, 471);
+            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(716, 471);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(219, 35);
+            this.btnHuy.Size = new System.Drawing.Size(228, 37);
             this.btnHuy.TabIndex = 28;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(453, 471);
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(244, 471);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(218, 35);
+            this.btnThem.Size = new System.Drawing.Size(228, 37);
             this.btnThem.TabIndex = 27;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.Location = new System.Drawing.Point(553, 55);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(118, 34);
             this.btnTimKiem.TabIndex = 26;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTuKhoa
             // 
@@ -104,10 +108,24 @@
             this.dtgMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMain.Location = new System.Drawing.Point(22, 95);
             this.dtgMain.Name = "dtgMain";
+            this.dtgMain.ReadOnly = true;
             this.dtgMain.RowHeadersWidth = 51;
             this.dtgMain.RowTemplate.Height = 24;
             this.dtgMain.Size = new System.Drawing.Size(922, 370);
             this.dtgMain.TabIndex = 22;
+            this.dtgMain.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellClick);
+            this.dtgMain.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellDoubleClick);
+            // 
+            // btnXphDepartment
+            // 
+            this.btnXphDepartment.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXphDepartment.Location = new System.Drawing.Point(480, 469);
+            this.btnXphDepartment.Name = "btnXphDepartment";
+            this.btnXphDepartment.Size = new System.Drawing.Size(228, 37);
+            this.btnXphDepartment.TabIndex = 48;
+            this.btnXphDepartment.Text = "Xóa phòng ban";
+            this.btnXphDepartment.UseVisualStyleBackColor = true;
+            this.btnXphDepartment.Click += new System.EventHandler(this.btnXphDepartment_Click);
             // 
             // frmDeparment
             // 
@@ -115,6 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(982, 553);
+            this.Controls.Add(this.btnXphDepartment);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTimKiem);
@@ -125,6 +144,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDeparment";
             this.Text = "Danh sách phòng ban";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDeparment_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,5 +160,6 @@
         private System.Windows.Forms.Label lblTuKhoa;
         private System.Windows.Forms.Label lblTongSo;
         private System.Windows.Forms.DataGridView dtgMain;
+        private System.Windows.Forms.Button btnXphDepartment;
     }
 }

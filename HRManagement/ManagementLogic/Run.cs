@@ -11,6 +11,7 @@ namespace ManagementLogic
         private uint nextId_D;
         private uint nextId_P;
         private Run() { }
+        public Management Management { get => management; }
 
         //singleton design patten
         public static Run Instance 
@@ -51,15 +52,24 @@ namespace ManagementLogic
         public string GenerateId(int who = 1)
         {
             char c;
+            uint id;
             if (who == 1)
-                c = 'P';
+            {
+                c = 'E';
+                id = nextId_E++;
+            }
             else if (who == 0)
+            {
                 c = 'D';
+                id = nextId_D++;
+            }
             else
+            {
                 c = 'P';
-            string id = $"{c}{nextId_D.ToString("D4")}";
-            nextId_D++;
-            return id;
+                id = nextId_P++;
+            }         
+            string s = $"{c}{id.ToString("D4")}";
+            return s;
         }
         public void CreateEmployee(string name, string phone, string email, 
                                    string address, bool gender, DateTime birthday, 
@@ -68,20 +78,33 @@ namespace ManagementLogic
         {
             if(isFullTime)
             {
-                FulltimeEmployee employee = new FulltimeEmployee(GenerateId(1),name,phone,email,address,gender,
+                FulltimeEmployee fulltimeEmployee = new FulltimeEmployee(GenerateId(1),name,phone,email,address,gender,
                                                                  birthday,beginWork,deparment,salary);
-                management.Add(employee);
+                management.Add(fulltimeEmployee);
+                return;
             }
+            ParttimeEmployee parttimeEmployee = new ParttimeEmployee(GenerateId(1), name, phone, email, address, gender,
+                                                                birthday, beginWork, deparment, salary);
+            management.Add(parttimeEmployee);
         }
-        public void CreateDepart(string name, Employee leader = null)
+        public void CreateDepart(string name, Employee leader, List<Employee> employees = null)
         {
-            Department department = new Department(GenerateId(0), name, leader, new List<Employee>());
-            management.Add(department);
+            if(string.IsNullOrEmpty(name))
+                throw new Exception("Tên không được để trống");
+            if (leader == null)
+                throw new Exception("Leader không được để trống");
+
+
+            Department department = new Department(GenerateId(0), name, leader,employees);
+            management.Add(department,employees);
         }
-        public void CreateProject(string name, Employee leader = null, string scrip = "")
+        public void CreateProject(string name, Employee leader, List<Employee> employees = null, string description = "")
         {
-            Project project = new Project(GenerateId(-1), name, leader, new List<Employee>(), scrip);
-            management.Add(project);
+            if (leader == null)
+                throw new Exception("Leader không được để trống");
+
+            Project project = new Project(GenerateId(-1), name, leader,employees, description);
+            management.Add(project,employees);
         }
         public void RemoveEmployee(Employee employee)
         {
@@ -98,9 +121,9 @@ namespace ManagementLogic
         public void EditEmployee(Employee employee, string name = null, string phone = null,
                                  string email = null, string address = null,
                                  bool? gender = null, DateTime? birthday = null,
-                                 uint? salary = null)
+                                 uint? salary = null,Department department = null)
         {
-            management.EditEmployee(employee, name, phone, email, address, gender, birthday, salary);
+            management.EditEmployee(employee, name, phone, email, address, gender, birthday, salary,department);
         }
 
         public void AddADMIN(string username, string password)
@@ -111,13 +134,13 @@ namespace ManagementLogic
         {
             management.ChangePasssword(password, newPassword);
         }
-        public void ChangeProjectInfo(string projectId, string newName, string newDescription, string newLeader)
+        public void EditProject(Project project, string newName, string newDescription, string newLeader, List<Employee> remove, List<Employee> add)
         {
-            management.ChangeInfoProject(projectId, newName, newDescription, newLeader);
+            management.EditInfoProject(project, newName, newDescription, newLeader, remove, add);
         }
-        public void ChangeDepartmentInfo(string departmentId, string newName, string newLeader)
+        public void EditDepartment(Department department, string newName, string newLeader, List<Employee> remove, List<Employee> add)
         {
-            management.ChangeInfoDepartment(departmentId, newName, newLeader);
+            management.EditInfoDepartment(department, newName, newLeader,remove,add);
         }
         public void IncreaseEmployeeSalary(Employee e)
         {

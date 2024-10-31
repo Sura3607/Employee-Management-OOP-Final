@@ -11,9 +11,8 @@ namespace ManagementLogic
     {
         private string id;
         private string name;
-        private Employee leader ;
-        private List<Employee> employees ;
-        //Thêm điều kiện khi set cho các thuộc tính -Leader ko phải parttime-
+        private string leaderId;
+        private List<string> employeesId;
         public string Id 
         {
             get => id;
@@ -34,55 +33,64 @@ namespace ManagementLogic
                 name = value;
             }
         }
-        public Employee Leader
-        {
-            get => leader;
-            set
-            {
-                if (value is ParttimeEmployee)
-                    throw new ArgumentException("Leader khong duoc la nhan vien part time");
-                leader = value;
-            }
-        }
-        public List<Employee> Employees { get => employees; }
+        public string LeaderId { get => leaderId; set => leaderId = value; }
+        
+        public List<string> EmployeesId { get => employeesId; set => employeesId = value; }
+      
         public Department() { }
 
-        [JsonConstructor]
-        public Department(string id, string name, Employee leader, List<Employee> employees = default)
+        public Department(string id, string name, Employee leader, List<Employee> employees = null) 
         {
+            if (leader is ParttimeEmployee)
+                throw new Exception("Leader không được là nhân viên partime");
             Id = id;
             Name = name;
-            Leader = leader;
-            this.employees = employees ?? new List<Employee>();
+            LeaderId = leader.Id;
+
+            EmployeesId = new List<string>();
+            if(employees != null)
+            {
+                foreach (Employee e in employees)
+                {
+                    EmployeesId.Add(e.Id);
+                }
+            }              
         }
         public Department(SerializationInfo info, StreamingContext context)
         {
-            Id = info.GetString("id");
-            Name = info.GetString("name");
-            Leader = (Employee)info.GetValue("Leader",typeof(Employee));
-            employees = (List<Employee>)info.GetValue("Employees",typeof (List<Employee>));
+            Id = info.GetString("Id");
+            Name = info.GetString("Name");
+            LeaderId = info.GetString("Leader");
+            EmployeesId = (List<string>)info.GetValue("Employees", typeof(List<string>));
+            
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("Id", Id);
             info.AddValue("Name", Name);
-            info.AddValue("Leader",Leader);
-            info.AddValue("Employees", Employees);
+            info.AddValue("Leader",LeaderId);
+            info.AddValue("Employees",EmployeesId);
         }
-        //Sử bắt ngoiaj lệ nếu ko thnhf cocng
-        public void AddEmployee(Employee employee)
+        public void AddEmployee(Employee e)
         {
-            if (employees == null)
+            if (e == null)
                 throw new ArgumentException("Them nhan vien that bai");
-            employees.Add(employee);
+            if (EmployeesId.Contains(e.Id))
+                throw new ArgumentException("Nhan vien da ton tai");
+
+            employeesId.Add(e.Id);
+            e.Department = this;
         }
         public void RemoveEmployee(Employee employee)
         {
-            if (leader == employee) 
-                leader = null;
-            if (employees.Contains(employee))
-                employees.Remove(employee);
-            throw new ArgumentException("Khong tim thay nhan vien nay");
+            if (!EmployeesId.Contains(employee.Id))
+                throw new ArgumentException("Khong tim thay nhan vien nay");
+
+            if (leaderId == employee.Id)            
+                leaderId = null;                
+
+            EmployeesId.Remove(employee.Id);
+            employee.Department = null;
         }
         public bool Find(string keyword)
         {
@@ -90,25 +98,29 @@ namespace ManagementLogic
                 return true;
             throw new ArgumentException($"Khong tim thay {keyword}");
         }
-        public string GetInfo()
-        {
-            string employeeNames = "Không có nhân viên";
-            string leaderName = "Không có leader";
-            if (employees.Count > 0)
-            {
-                employeeNames = "";
-                foreach (Employee employee in employees)
-                {
-                    employeeNames += employee.Name + ", ";
-                }
-                employeeNames = employeeNames.TrimEnd(',', ' ');
-            }
-            if (leader != null)
-            {
-                leaderName = leader.Name;
-            }
-            return $"\n Ten phong bam: {Name} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} ";
-        }
+        //public string GetInfo()
+        //{
+        //    string employeeNames = "Không có nhân viên";
+        //    string leaderName = "Không có leader";
+        //    if (EmployeesId.Count > 0)
+        //    {
+        //        employeeNames = "";
+        //        foreach (string Id in EmployeesId)
+        //        {
+        //            employeeNames += employee.Name + ", ";
+        //        }
+        //        employeeNames = employeeNames.TrimEnd(',', ' ');
+        //    }
+        //    if (leaderId != null)
+        //    {
+        //        leaderName = leaderId;
+        //    }
+        //    return $"\n Ten phong bam: {Name} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} ";
+        //}
 
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

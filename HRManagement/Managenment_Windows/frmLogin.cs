@@ -1,12 +1,5 @@
 ﻿using ManagementLogic;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Managenment_Windows
@@ -28,9 +21,9 @@ namespace Managenment_Windows
                 Run.Instance.Login(username, password);
                 MessageBox.Show("Đăng nhập thành công","Chú ý" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                frmMainMenu mainMenu = new frmMainMenu();
+                frmMainMenu mainMenu = new frmMainMenu(this);
                 mainMenu.ShowDialog();
-                this.Close();
+                Reset();
             }
             catch(Exception ex)
             {
@@ -56,10 +49,15 @@ namespace Managenment_Windows
 
             isPasswordHidden = !isPasswordHidden;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Reset()
         {
+            txtTenTaiKhoan.Text = string.Empty;
+            txtMatKhau.Text = string.Empty;
+        }
 
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

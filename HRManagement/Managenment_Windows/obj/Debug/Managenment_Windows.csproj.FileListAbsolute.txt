@@ -11,7 +11,6 @@ D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\M
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenm.91DEFA3C.Up2Date
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Form1.resources
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Json.dll
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Memory.dll
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.ValueTuple.dll
@@ -31,7 +30,6 @@ D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\M
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.xml
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.AssemblyReference.cache
-C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Form1.resources
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Properties.Resources.resources
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.GenerateResource.cache
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CoreCompileInputs.cache
@@ -62,12 +60,6 @@ C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenme
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.xml
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CopyComplete
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Login.resources
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.HoSoNhanSu.resources
-D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.MainMenu.resources
-C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.HoSoNhanSu.resources
-C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Login.resources
-C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.MainMenu.resources
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe.config
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.pdb
@@ -93,7 +85,6 @@ D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\bin\Debu
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.xml
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.AssemblyReference.cache
-D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAdd.resources
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDeparment.resources
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEmployee.resources
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoDepartment.resources
@@ -108,3 +99,106 @@ D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debu
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenm.91DEFA3C.Up2Date
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
 D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEAdd.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDeparment.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEmployee.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoDepartment.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoProject.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmLogin.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmMainMenu.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmProject.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoEmployee.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe.config
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.exe
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Managenment_Windows.pdb
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\ManagementLogic.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Json.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Memory.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.ValueTuple.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\ManagementLogic.pdb
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\ManagementLogic.dll.config
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Json.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Memory.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.ValueTuple.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Buffers.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEAdd.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDeparment.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEmployee.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoDepartment.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoProject.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmLogin.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmMainMenu.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmProject.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoEmployee.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Properties.Resources.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.GenerateResource.cache
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CopyComplete
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
+D:\UEH\Năm 2\Kỳ I\OOP\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEAdd.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAccount.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmChangePassword.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmCreateAccount.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDAdd.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmPAdd.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmTableSalary.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAccount.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmChangePassword.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmCreateAccount.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDAdd.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmPAdd.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmTableSalary.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAccount.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmChangePassword.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmCreateAccount.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDAdd.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEAdd.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDeparment.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEmployee.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoDepartment.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoProject.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmLogin.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmMainMenu.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmPAdd.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmProject.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoEmployee.resources
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmTableSalary.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.AssemblyReference.cache
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAccount.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmChangePassword.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmCreateAccount.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDAdd.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEAdd.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDeparment.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmEmployee.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoDepartment.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoProject.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmLogin.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmMainMenu.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmPAdd.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmProject.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmInfoEmployee.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmTableSalary.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.Properties.Resources.resources
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.GenerateResource.cache
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.csproj.CoreCompileInputs.cache
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.exe
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee_Project.resources
+D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee_Depart.resources
