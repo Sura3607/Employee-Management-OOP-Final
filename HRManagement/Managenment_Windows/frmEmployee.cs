@@ -19,6 +19,7 @@ namespace Managenment_Windows
             this.Hide();
             frmEAdd frmEAdd = new frmEAdd();
             frmEAdd.ShowDialog();
+            dtgEmployees.DataSource = null;
             LoadEmployees(Run.Instance.Management.EmployeesList);
             this.Show();
         }
@@ -95,6 +96,7 @@ namespace Managenment_Windows
                     this.Hide();
                     frmInfoEmployee frmInfoEmployee = new frmInfoEmployee(selectedEmployee);
                     frmInfoEmployee.ShowDialog();
+                    dtgEmployees.DataSource = null;
                     LoadEmployees(Run.Instance.Management.EmployeesList);
                     this.Show();
                 }

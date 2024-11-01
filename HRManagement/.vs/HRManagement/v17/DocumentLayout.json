@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Project_Management\\HR_Management\\HRManagement\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|d:\\project_management\\hr_management\\hrmanagement\\managementlogic\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|d:\\project_management\\hr_management\\hrmanagement\\managementlogic\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|d:\\project_management\\hr_management\\hrmanagement\\managementlogic\\fulltimeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF6642D7-1EAC-45DB-992B-AD2589F6D2BB}|ManagementLogic\\ManagementLogic.csproj|solutionrelative:managementlogic\\fulltimeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +35,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Project.cs",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Project.cs",
+              "RelativeDocumentMoniker": "ManagementLogic\\Project.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Project.cs",
+              "RelativeToolTip": "ManagementLogic\\Project.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAywGwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:21:07.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FulltimeEmployee.cs",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\FulltimeEmployee.cs",
+              "RelativeDocumentMoniker": "ManagementLogic\\FulltimeEmployee.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\FulltimeEmployee.cs",
+              "RelativeToolTip": "ManagementLogic\\FulltimeEmployee.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:20:34.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Department.cs",
+              "RelativeDocumentMoniker": "ManagementLogic\\Department.cs",
+              "ToolTip": "D:\\Project_Management\\HR_Management\\HRManagement\\ManagementLogic\\Department.cs",
+              "RelativeToolTip": "ManagementLogic\\Department.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAcwHgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:18:18.074Z",
+              "EditorCaption": ""
             }
           ]
         },
