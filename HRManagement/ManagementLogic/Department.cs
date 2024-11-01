@@ -94,9 +94,8 @@ namespace ManagementLogic
         }
         public bool Find(string keyword)
         {
-            if (Name.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
-                return true;
-            throw new ArgumentException($"Khong tim thay {keyword}");
+            return Id.IndexOf(keyword) >= 0 ||
+                   Name.IndexOf(keyword) >= 0;
         }
         //public string GetInfo()
         //{

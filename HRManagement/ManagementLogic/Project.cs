@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using System.Xml.Linq;
 
 namespace ManagementLogic
 {
@@ -104,9 +105,8 @@ namespace ManagementLogic
         }
         public bool Find(string keyword)
         {
-            if (ProjectName.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0) // keyword ko phan biet in hoa hay thuong
-                return true;
-            throw new ArgumentException($"Khong tim thay {keyword} trong project");
+            return Id.IndexOf(keyword) >= 0 ||
+                   ProjectName.IndexOf(keyword) >= 0;
         }
         //public string GetInfo()
         //{

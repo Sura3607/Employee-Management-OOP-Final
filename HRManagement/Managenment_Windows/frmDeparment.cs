@@ -82,6 +82,7 @@ namespace Managenment_Windows
             this.Hide();
             frmDAdd frmDAdd = new frmDAdd();
             frmDAdd.ShowDialog();
+            dtgMain.DataSource = null;
             LoadDepartments(Run.Instance.Management.DepartmentList);
             this.Show();
         }

@@ -78,6 +78,7 @@ namespace Managenment_Windows
             this.Hide();
             frmPAdd frmPAdd = new frmPAdd();
             frmPAdd.ShowDialog();
+            dtgMain.DataSource = null;
             LoadProjects(Run.Instance.Management.ProjectList);
             this.Show();
         }
