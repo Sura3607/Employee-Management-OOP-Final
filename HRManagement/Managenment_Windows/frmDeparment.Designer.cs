@@ -143,6 +143,7 @@
             this.Controls.Add(this.dtgMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDeparment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách phòng ban";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDeparment_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dtgMain)).EndInit();

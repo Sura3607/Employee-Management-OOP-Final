@@ -21,7 +21,7 @@ namespace ManagementLogic
             set
             {
                 if (string.IsNullOrWhiteSpace(value)) // Ktra xem Id co null ko
-                    throw new ArgumentException("Id khong duoc de trong");
+                    throw new ArgumentException("Id không được để trống");
                 id = value;
             }
         }
@@ -31,7 +31,7 @@ namespace ManagementLogic
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Ten project khong duoc de trong");
+                    throw new ArgumentException("Tên project không được để trống");
                 projectName = value;
             } 
         }
@@ -41,7 +41,7 @@ namespace ManagementLogic
             set
             {
                 if (value.Length > 250)
-                    throw new ArgumentException("Khong duoc qua 250 ky tu");
+                    throw new ArgumentException("Không được quá 250 ký tự");
                 description = value;
             }
         }
@@ -84,9 +84,9 @@ namespace ManagementLogic
         public void AddEmployee(Employee e)
         {
             if (e == null)
-                throw new ArgumentException("Them nhan vien that bai");
+                throw new ArgumentException("Thêm nhân viên thành công");
             if (EmployeesId.Contains(e.Id))
-                throw new ArgumentException("Nhan vien da ton tai");
+                throw new ArgumentException("Nhân viên đã tồn tại");
             EmployeesId.Add(e.Id);
             e.AddProject(this);
 
@@ -95,7 +95,7 @@ namespace ManagementLogic
         {
 
             if (!EmployeesId.Contains(employee.Id))
-                throw new ArgumentException("Khong tim thay nhan vien nay");
+                throw new ArgumentException("Không tìm thấy nhân viên này");
 
             if (leaderId == employee.Id)
                 leaderId = null;
