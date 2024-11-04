@@ -30,20 +30,20 @@ namespace Managenment_Windows
             dtgEmployees.AutoGenerateColumns = false;
 
             dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "ID", DataPropertyName = "Id" });
-            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Name", DataPropertyName = "Name" });
+            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Tên", DataPropertyName = "Name" });
             DataGridViewTextBoxColumn genderColumn = new DataGridViewTextBoxColumn();
             genderColumn.Name = "Gender";
             genderColumn.HeaderText = "Gender";
             genderColumn.DataPropertyName = "Gender";
             dtgEmployees.Columns.Add(genderColumn);
-            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Beginwork", DataPropertyName = "Beginwork" });
-            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Salary", DataPropertyName = "Salary" });
+            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Ngày vào làm", DataPropertyName = "Beginwork" });
+            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Lương", DataPropertyName = "Salary" });
             dtgEmployees.DataSource = list;
         }
 
         private void dtgEmployees_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (dtgEmployees.Columns[e.ColumnIndex].Name == "Gender" && e.Value is bool)
+            if (dtgEmployees.Columns[e.ColumnIndex].Name == "Giới tính" && e.Value is bool)
             {
                 e.Value = (bool)e.Value ? "Nam" : "Nữ";
                 e.FormattingApplied = true;
