@@ -18,10 +18,27 @@ namespace Managenment_Windows
         private void LoadDepartments(List<Department> departments)
         {
             dtgMain.Columns.Clear();
-            dtgMain.AutoGenerateColumns = true;
+            dtgMain.AutoGenerateColumns = false;
+
+            string[,] columns = {
+                { "ID", "Id" },
+                { "Tên", "Name" },
+                {"ID trưởng phòng","leaderId" },
+                { "ID nhân viên", "employeeId" }
+            };
+
+            for (int i = 0; i < columns.GetLength(0); i++)
+            {
+                dtgMain.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = columns[i, 0],
+                    DataPropertyName = columns[i, 1]
+                });
+            }
+
             dtgMain.DataSource = departments;
         }
-        
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string keyword = txtTuKhoa.Text;

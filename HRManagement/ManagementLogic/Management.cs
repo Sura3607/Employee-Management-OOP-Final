@@ -311,10 +311,22 @@ namespace ManagementLogic
         private void CreateAdmin(string username, string password)
         {
             List<Account> accounts = Data.LoadAccounts();
-            if (accounts.Exists(a => a.IsValidUsername(username)))
+            bool exists = false;
+
+            foreach (Account a in accounts)
+            {
+                if (a.IsValidUsername(username))
+                {
+                    exists = true;
+                    break;
+                }
+            }
+
+            if (exists)
             {
                 throw new Exception("Tên tài khoản đã tồn tại.");
             }
+
             accounts.Add(new Account(username, password));
             Data.SaveAccounts(accounts);
         }
@@ -350,11 +362,22 @@ namespace ManagementLogic
 
             if (!string.IsNullOrEmpty(newLeaderId))
             {
-                Employee newLeader = EmployeesList.Find(e => e.Id == newLeaderId);
+                Employee newLeader = null;
+
+                foreach (Employee e in EmployeesList)
+                {
+                    if (e.Id == newLeaderId)
+                    {
+                        newLeader = e;
+                        break;
+                    }
+                }
+
                 if (newLeader == null || newLeader is ParttimeEmployee)
                 {
-                    throw new ArgumentException("Leader không hợp lệ ");
+                    throw new ArgumentException("Leader không hợp lệ");
                 }
+
                 project.LeaderId = newLeader.Id;
             }
             if (remove != null)
@@ -387,14 +410,25 @@ namespace ManagementLogic
 
             if (!string.IsNullOrEmpty(newLeaderId))
             {
-                Employee newLeader = EmployeesList.Find(e => e.Id == newLeaderId);
+                Employee newLeader = null;
+
+                foreach (Employee e in EmployeesList)
+                {
+                    if (e.Id == newLeaderId)
+                    {
+                        newLeader = e;
+                        break;
+                    }
+                }
+
                 if (newLeader == null || newLeader is ParttimeEmployee)
                 {
                     throw new ArgumentException("Leader không hợp lệ hoặc là nhân viên part-time.");
                 }
-                department.LeaderId = newLeader.Id; 
+
+                department.LeaderId = newLeader.Id;
             }
-            if(remove != null)
+            if (remove != null)
             {
                 foreach (Employee e in remove)
                 {

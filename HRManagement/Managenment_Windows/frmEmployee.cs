@@ -26,18 +26,26 @@ namespace Managenment_Windows
 
         private void LoadEmployees(List<Employee> list)
         {
-            dtgEmployees.Columns.Clear();  
+            dtgEmployees.Columns.Clear();
             dtgEmployees.AutoGenerateColumns = false;
 
-            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "ID", DataPropertyName = "Id" });
-            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Tên", DataPropertyName = "Name" });
-            DataGridViewTextBoxColumn genderColumn = new DataGridViewTextBoxColumn();
-            genderColumn.Name = "Gender";
-            genderColumn.HeaderText = "Gender";
-            genderColumn.DataPropertyName = "Gender";
-            dtgEmployees.Columns.Add(genderColumn);
-            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Ngày vào làm", DataPropertyName = "Beginwork" });
-            dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn { Name = "Lương", DataPropertyName = "Salary" });
+            string[,] columns = {
+                { "ID", "Id" },
+                { "Tên", "Name" },
+                { "Giới tính", "Gender" },
+                { "Ngày vào làm", "Beginwork" },
+                { "Lương", "Salary" }
+            };
+
+            for (int i = 0; i < columns.GetLength(0); i++)
+            {
+                dtgEmployees.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = columns[i, 0],
+                    DataPropertyName = columns[i, 1]
+                });
+            }
+
             dtgEmployees.DataSource = list;
         }
 
