@@ -110,15 +110,5 @@ namespace Managenment_Windows
                 }
             }
         }
-
-        private void dtgEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

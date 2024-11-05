@@ -80,10 +80,5 @@ namespace Managenment_Windows
                 MessageBox.Show(ex.Message, "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

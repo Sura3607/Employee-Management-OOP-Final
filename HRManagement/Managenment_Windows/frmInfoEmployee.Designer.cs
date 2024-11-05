@@ -257,7 +257,6 @@
             this.label5.Size = new System.Drawing.Size(118, 25);
             this.label5.TabIndex = 44;
             this.label5.Text = "Ngày sinh:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // cbGender
             // 
