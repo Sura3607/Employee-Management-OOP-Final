@@ -156,7 +156,6 @@ D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\M
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmPAdd.resources
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmTableSalary.resources
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAccount.resources
-C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee.resources
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmChangePassword.resources
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmCreateAccount.resources
 C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmDAdd.resources
@@ -202,3 +201,5 @@ C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManageme
 C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.pdb
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee_Project.resources
 D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee_Depart.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee_Project.resources
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\Managenment_Windows\obj\Debug\Managenment_Windows.frmAddRemoveEmployee_Depart.resources

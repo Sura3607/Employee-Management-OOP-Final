@@ -38,7 +38,7 @@ namespace ManagementLogic
             {
                 //Kiểm tra xem có rỗng hoặc null không?
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Ten khong duoc de trong");
+                    throw new ArgumentException("Tên không được để trống");
                 name = value;
             }
         }

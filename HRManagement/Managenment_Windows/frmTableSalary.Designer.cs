@@ -62,7 +62,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(777, 259);
+            this.dataGridView1.Size = new System.Drawing.Size(957, 286);
             this.dataGridView1.TabIndex = 0;
             // 
             // EmployeeID
@@ -117,7 +117,7 @@
             // 
             this.btnTroLai.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnTroLai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTroLai.Location = new System.Drawing.Point(617, 365);
+            this.btnTroLai.Location = new System.Drawing.Point(535, 365);
             this.btnTroLai.Name = "btnTroLai";
             this.btnTroLai.Size = new System.Drawing.Size(157, 40);
             this.btnTroLai.TabIndex = 1;
@@ -129,7 +129,7 @@
             // 
             this.btnLoadData.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLoadData.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadData.Location = new System.Drawing.Point(417, 365);
+            this.btnLoadData.Location = new System.Drawing.Point(308, 365);
             this.btnLoadData.Name = "btnLoadData";
             this.btnLoadData.Size = new System.Drawing.Size(166, 40);
             this.btnLoadData.TabIndex = 2;
@@ -172,7 +172,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(981, 553);
             this.Controls.Add(this.txtboxSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.cbboxLoaiNv);
@@ -181,6 +181,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTableSalary";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bảng lương";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

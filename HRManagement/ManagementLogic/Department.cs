@@ -19,7 +19,7 @@ namespace ManagementLogic
             set
             {
                 if (string.IsNullOrWhiteSpace(value)) // Ktra xem Id co null ko
-                    throw new ArgumentException("Id khong duoc de trong");
+                    throw new ArgumentException("Id không được để trống");
                 id = value;
             }
         }
@@ -29,7 +29,7 @@ namespace ManagementLogic
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Ten phong ban khong duoc de trong");
+                    throw new ArgumentException("Tên phòng ban không được để trống");
                 name = value;
             }
         }
@@ -74,9 +74,9 @@ namespace ManagementLogic
         public void AddEmployee(Employee e)
         {
             if (e == null)
-                throw new ArgumentException("Them nhan vien that bai");
+                throw new ArgumentException("Thêm nhân viên thất bại");
             if (EmployeesId.Contains(e.Id))
-                throw new ArgumentException("Nhan vien da ton tai");
+                throw new ArgumentException("Nhân viên đã tồn tại");
 
             employeesId.Add(e.Id);
             e.Department = this;
@@ -84,7 +84,7 @@ namespace ManagementLogic
         public void RemoveEmployee(Employee employee)
         {
             if (!EmployeesId.Contains(employee.Id))
-                throw new ArgumentException("Khong tim thay nhan vien nay");
+                throw new ArgumentException("Không tìm thấy nhân viên này");
 
             if (leaderId == employee.Id)            
                 leaderId = null;                

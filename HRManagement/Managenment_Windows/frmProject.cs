@@ -19,7 +19,25 @@ namespace Managenment_Windows
         private void LoadProjects(List<Project> projects)
         {
             dtgMain.Columns.Clear();
-            dtgMain.AutoGenerateColumns = true;
+            dtgMain.AutoGenerateColumns = false;
+
+            string[,] columns = {
+                { "ID", "Id" },
+                { "Tên", "Name" },
+                {"Mô tả","Description" },
+                {"ID trưởng phòng","leaderId" },
+                { "ID nhân viên", "employeeId" }
+            };
+
+            for (int i = 0; i < columns.GetLength(0); i++)
+            {
+                dtgMain.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = columns[i, 0],
+                    DataPropertyName = columns[i, 1]
+                });
+            }
+
             dtgMain.DataSource = projects;
         }
 
