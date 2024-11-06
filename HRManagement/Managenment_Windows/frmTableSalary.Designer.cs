@@ -37,10 +37,6 @@
             this.BaseSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CalculatedSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTroLai = new System.Windows.Forms.Button();
-            this.btnLoadData = new System.Windows.Forms.Button();
-            this.cbboxLoaiNv = new System.Windows.Forms.ComboBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.txtboxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +53,14 @@
             this.BaseSalary,
             this.CalculatedSalary});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(957, 286);
+            this.dataGridView1.Size = new System.Drawing.Size(957, 458);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // EmployeeID
             // 
@@ -117,7 +114,7 @@
             // 
             this.btnTroLai.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnTroLai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTroLai.Location = new System.Drawing.Point(535, 365);
+            this.btnTroLai.Location = new System.Drawing.Point(796, 488);
             this.btnTroLai.Name = "btnTroLai";
             this.btnTroLai.Size = new System.Drawing.Size(157, 40);
             this.btnTroLai.TabIndex = 1;
@@ -125,58 +122,12 @@
             this.btnTroLai.UseVisualStyleBackColor = false;
             this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
-            // btnLoadData
-            // 
-            this.btnLoadData.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLoadData.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadData.Location = new System.Drawing.Point(308, 365);
-            this.btnLoadData.Name = "btnLoadData";
-            this.btnLoadData.Size = new System.Drawing.Size(166, 40);
-            this.btnLoadData.TabIndex = 2;
-            this.btnLoadData.Text = "Tải dữ liệu";
-            this.btnLoadData.UseVisualStyleBackColor = false;
-            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
-            // 
-            // cbboxLoaiNv
-            // 
-            this.cbboxLoaiNv.AllowDrop = true;
-            this.cbboxLoaiNv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbboxLoaiNv.FormattingEnabled = true;
-            this.cbboxLoaiNv.Items.AddRange(new object[] {
-            "Full time ",
-            "Part time",
-            "All"});
-            this.cbboxLoaiNv.Location = new System.Drawing.Point(385, 33);
-            this.cbboxLoaiNv.Name = "cbboxLoaiNv";
-            this.cbboxLoaiNv.Size = new System.Drawing.Size(121, 24);
-            this.cbboxLoaiNv.TabIndex = 4;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(12, 36);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(56, 16);
-            this.lblSearch.TabIndex = 5;
-            this.lblSearch.Text = "Từ khóa";
-            // 
-            // txtboxSearch
-            // 
-            this.txtboxSearch.Location = new System.Drawing.Point(91, 33);
-            this.txtboxSearch.Name = "txtboxSearch";
-            this.txtboxSearch.Size = new System.Drawing.Size(271, 22);
-            this.txtboxSearch.TabIndex = 6;
-            // 
             // frmTableSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(981, 553);
-            this.Controls.Add(this.txtboxSearch);
-            this.Controls.Add(this.lblSearch);
-            this.Controls.Add(this.cbboxLoaiNv);
-            this.Controls.Add(this.btnLoadData);
             this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -185,7 +136,6 @@
             this.Text = "Bảng lương";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -199,9 +149,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Worktime;
         private System.Windows.Forms.DataGridViewTextBoxColumn BaseSalary;
         private System.Windows.Forms.DataGridViewTextBoxColumn CalculatedSalary;
-        private System.Windows.Forms.Button btnLoadData;
-        private System.Windows.Forms.ComboBox cbboxLoaiNv;
-        private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.TextBox txtboxSearch;
     }
 }

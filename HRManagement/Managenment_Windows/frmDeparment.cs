@@ -23,8 +23,7 @@ namespace Managenment_Windows
             string[,] columns = {
                 { "ID", "Id" },
                 { "Tên", "Name" },
-                {"ID trưởng phòng","leaderId" },
-                { "ID nhân viên", "employeeId" }
+                {"ID trưởng phòng","leaderId" }
             };
 
             for (int i = 0; i < columns.GetLength(0); i++)
@@ -35,7 +34,7 @@ namespace Managenment_Windows
                     DataPropertyName = columns[i, 1]
                 });
             }
-
+            dtgMain.Columns["Tên"].Width = 150;
             dtgMain.DataSource = departments;
         }
 
@@ -141,5 +140,9 @@ namespace Managenment_Windows
             }
         }
 
+        private void dtgMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

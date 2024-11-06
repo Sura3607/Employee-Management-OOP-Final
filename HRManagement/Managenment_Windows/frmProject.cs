@@ -23,10 +23,9 @@ namespace Managenment_Windows
 
             string[,] columns = {
                 { "ID", "Id" },
-                { "Tên", "Name" },
+                { "Tên", "ProjectName" },
                 {"Mô tả","Description" },
                 {"ID trưởng phòng","leaderId" },
-                { "ID nhân viên", "employeeId" }
             };
 
             for (int i = 0; i < columns.GetLength(0); i++)
@@ -37,7 +36,8 @@ namespace Managenment_Windows
                     DataPropertyName = columns[i, 1]
                 });
             }
-
+            dtgMain.Columns["Tên"].Width = 150;
+            dtgMain.Columns["Mô tả"].Width = 250;
             dtgMain.DataSource = projects;
         }
 

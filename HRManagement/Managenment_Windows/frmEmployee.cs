@@ -45,7 +45,7 @@ namespace Managenment_Windows
                     DataPropertyName = columns[i, 1]
                 });
             }
-
+            dtgEmployees.Columns["Tên"].Width = 300;
             dtgEmployees.DataSource = list;
         }
 
@@ -109,6 +109,11 @@ namespace Managenment_Windows
                     this.Show();
                 }
             }
+        }
+
+        private void dtgEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -88,6 +88,7 @@
             // 
             // dtgEmployees
             // 
+            this.dtgEmployees.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dtgEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEmployees.Location = new System.Drawing.Point(36, 156);
             this.dtgEmployees.Name = "dtgEmployees";
