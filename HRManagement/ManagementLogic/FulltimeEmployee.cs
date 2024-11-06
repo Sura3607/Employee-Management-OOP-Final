@@ -29,7 +29,7 @@ namespace ManagementLogic
         }
         public override double CalculateSalary()
         {
-            return Salary + (senority / 5) * Salary;
+            return Salary + ((double)senority / 5) * Salary;
         }
         public override bool Find(string keyword)
         {
