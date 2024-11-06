@@ -39,6 +39,7 @@ namespace Managenment_Windows
             dtgMain.Columns["Tên"].Width = 150;
             dtgMain.Columns["Mô tả"].Width = 250;
             dtgMain.DataSource = projects;
+            UpdateTotal();
         }
 
         private void frmProject_FormClosed(object sender, FormClosedEventArgs e)
@@ -143,5 +144,11 @@ namespace Managenment_Windows
                 }
             }
         }
+        private void UpdateTotal()
+        {
+            int total = dtgMain.Rows.Count;
+            lblTongSo.Text = $"Tổng số: {total} bản ghi";
+        }
+
     }
 }
