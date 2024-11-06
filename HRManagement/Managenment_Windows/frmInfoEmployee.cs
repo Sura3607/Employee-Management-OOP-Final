@@ -42,8 +42,16 @@ namespace Managenment_Windows
             if (Run.Instance.Management.DepartmentList != null && Run.Instance.Management.DepartmentList.Count > 0)
             {
                 cbDepart.DataSource = Run.Instance.Management.DepartmentList;
-                int pos = cbDepart.Items.IndexOf(_employee.Department);
-                cbDepart.SelectedIndex = pos >= 0 ? pos : -1; 
+                int selectedIndex = -1;
+                for (int i = 0; i < Run.Instance.Management.DepartmentList.Count; i++)
+                {
+                    if (Run.Instance.Management.DepartmentList[i].Find(_employee.Department.Id))
+                    {
+                        selectedIndex = i;
+                        break;
+                    }
+                }
+                cbDepart.SelectedIndex = selectedIndex; 
             }
 
             // Load Gender
