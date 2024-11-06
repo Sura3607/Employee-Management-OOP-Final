@@ -33,17 +33,11 @@ namespace ManagementLogic
         }
         public override bool Find(string keyword)
         {
-            return Id.IndexOf(keyword) >= 0 ||
-                   Name.IndexOf(keyword) >= 0 ||
-                   Email.IndexOf(keyword) >= 0 ||
-                   Phone.IndexOf(keyword) == 10;
+            return Id.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   Name.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   Email.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   Phone.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) == 10;
         }
-        public override string GetInfo()
-        {
-            return $"ID:{Id}] \n Tên nhân viên:{Name} \n Email: {Email} \n Số điện thoại: {Phone}";
-        }
-
-        //Thêm vào listProject một project mới
         public override void AddProject(Project project)
         {
             foreach (Project p in Projects)

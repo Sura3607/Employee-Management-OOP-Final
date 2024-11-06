@@ -245,18 +245,6 @@ namespace ManagementLogic
                 throw new Exception("Nhân viên không tồn tại.");
             }
         }
-        //public string GetInfo(Employee e)
-        //{
-        //    return e.GetInfo();
-        //}
-        //public string GetInfo(Department d)
-        //{
-        //    return d.GetInfo();
-        //}
-        //public string GetInfo(Project p)
-        //{
-        //    return p.GetInfo();
-        //}
         public void SalaryIncrease(Employee e)
         {
             if (e is FulltimeEmployee fulltimeEmployee)

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Xml.Linq;
 
 namespace ManagementLogic
 {
@@ -14,7 +13,6 @@ namespace ManagementLogic
         private string leaderId;
         private List<string> employeesId;
 
-        //Tạo các logic cho viêccj set của các property dưới đây , ví dụ description ko đuocwj quá 250 kí tự 
         public string Id
         {
             get => id;
@@ -105,29 +103,8 @@ namespace ManagementLogic
         }
         public bool Find(string keyword)
         {
-            return Id.IndexOf(keyword) >= 0 ||
-                   ProjectName.IndexOf(keyword) >= 0;
-        }
-        //public string GetInfo()
-        //{
-        //    string employeeNames = "Không có nhân viên";
-        //    string leaderName = "";
-        //    if (EmployeesId.Count > 0)
-        //    {
-        //        employeeNames = "";
-        //        foreach (Employee employee in EmployeesId)
-        //        {
-        //            employeeNames += employee.Name + ", ";
-        //        }
-        //        // Xóa dấu phẩy và khoảng trắng cuối cùng
-        //        employeeNames = employeeNames.TrimEnd(',', ' ');
-        //    }
-        //    if (leaderId != null)
-        //    {
-        //        leaderName = leaderId.Name;
-        //    }
-
-        //    return $"\n Ten project: {ProjectName} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} \n Description: {Description} ";
-        //}
+            return Id.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   ProjectName.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0;
+        }        
     }
 }

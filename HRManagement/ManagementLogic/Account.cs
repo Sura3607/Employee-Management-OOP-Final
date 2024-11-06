@@ -99,11 +99,11 @@ namespace ManagementLogic
         {
             if (!IsValidPassword(currentPassword))
             {
-                throw new Exception();
+                throw new Exception("Mật khẩu không đúng");
             }
             if (!IsValidPasswordCreate(newPassword))
             {
-                throw new Exception();
+                throw new Exception("Mật khẩu phải có ít nhất 1 kí tự đặt biệt và 1 chữ cái in hoa");
             }
             this.password = newPassword;
         }

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Text.Json.Serialization;
 
 namespace ManagementLogic
 {
@@ -94,29 +92,9 @@ namespace ManagementLogic
         }
         public bool Find(string keyword)
         {
-            return Id.IndexOf(keyword) >= 0 ||
-                   Name.IndexOf(keyword) >= 0;
+            return Id.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   Name.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0;
         }
-        //public string GetInfo()
-        //{
-        //    string employeeNames = "Không có nhân viên";
-        //    string leaderName = "Không có leader";
-        //    if (EmployeesId.Count > 0)
-        //    {
-        //        employeeNames = "";
-        //        foreach (string Id in EmployeesId)
-        //        {
-        //            employeeNames += employee.Name + ", ";
-        //        }
-        //        employeeNames = employeeNames.TrimEnd(',', ' ');
-        //    }
-        //    if (leaderId != null)
-        //    {
-        //        leaderName = leaderId;
-        //    }
-        //    return $"\n Ten phong bam: {Name} \n Id: {id} \n Leader: {leaderName} \n Thanh vien: {employeeNames} ";
-        //}
-
         public override string ToString()
         {
             return name;

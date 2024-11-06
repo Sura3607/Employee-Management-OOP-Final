@@ -32,18 +32,30 @@ namespace Managenment_Windows
         {
             lblID.Text += $" {_employee.Id}";
             txtName.Text = _employee.Name;
-            txtPhone.Text = _employee.Phone ;
-            txtAddress.Text = _employee.Address ;
-            txtEmail.Text = _employee.Email ;
+            txtPhone.Text = _employee.Phone;
+            txtAddress.Text = _employee.Address;
+            txtEmail.Text = _employee.Email;
+            txtSalary.Text = $"{_employee.Salary}" ;
+            dtBirthday.Value = _employee.Birthday;
 
+            //Load Depart
             if (Run.Instance.Management.DepartmentList != null && Run.Instance.Management.DepartmentList.Count > 0)
             {
                 cbDepart.DataSource = Run.Instance.Management.DepartmentList;
                 int pos = cbDepart.Items.IndexOf(_employee.Department);
-                cbDepart.SelectedIndex = pos >= 0 ? pos : -1; // Đặt chỉ mục mặc định nếu không tìm thấy
+                cbDepart.SelectedIndex = pos >= 0 ? pos : -1; 
             }
+
+            // Load Gender
+            cbGender.Items.Clear();
+            cbGender.Items.Add("Nam");
+            cbGender.Items.Add("Nữ");
+            cbGender.SelectedIndex = _employee.Gender ? 0 : 1; // 0 là Nam, 1 là Nữ
+
+            
             LoadProject();
         }
+
         private void LoadProject()
         {
             dtgProjects.Columns.Clear();
@@ -68,12 +80,17 @@ namespace Managenment_Windows
             string newEmail = txtEmail.Text != _employee.Email ? txtEmail.Text : null;
             string newAddress = txtAddress.Text != _employee.Address ? txtAddress.Text : null;
             Department newDepartment = (Department)cbDepart.SelectedItem != _employee.Department ? (Department)cbDepart.SelectedItem : null;
+            bool selectedGender = cbGender.SelectedIndex == 0; 
+            bool? newGender = selectedGender != _employee.Gender ? (bool?)selectedGender : null;
+            uint newSalary = uint.Parse(txtSalary.Text) != _employee.Salary ? uint.Parse(txtSalary.Text) : uint.Parse(null);
+            DateTime? newBirthday = dtBirthday.Value != _employee.Birthday ? dtBirthday.Value : (DateTime?)null;
 
             try
             {
                 Run.Instance.EditEmployee(_employee, newName, newPhone, newEmail, 
-                                        newAddress, null, null, null, newDepartment);
+                                        newAddress, newGender, newBirthday, newSalary, newDepartment);
                 MessageBox.Show("Lưu thay đổi");
+                LoadInfo();
             }
             catch(Exception ex)
             {

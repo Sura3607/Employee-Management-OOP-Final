@@ -19,12 +19,10 @@ namespace ManagementLogic
             string debugPath = Path.Combine(Directory.GetParent(AppContext.BaseDirectory)?.FullName ?? string.Empty,
                                             @"HRManagement\Managenment_Windows\bin\Debug\accounts.json");
 
-            // Kiểm tra nếu file tồn tại tại localPath
             if (File.Exists(localPath))
             {
                 return localPath;
             }
-            // Nếu không tìm thấy ở localPath, kiểm tra debugPath
             else if (File.Exists(debugPath))
             {
                 return debugPath;

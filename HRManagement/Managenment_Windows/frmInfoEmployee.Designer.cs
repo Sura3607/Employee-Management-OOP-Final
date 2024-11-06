@@ -46,13 +46,11 @@
             this.btnXnhEmployee = new System.Windows.Forms.Button();
             this.cbDepart = new System.Windows.Forms.ComboBox();
             this.lblGender = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
-            this.txtBeginWork = new System.Windows.Forms.TextBox();
-            this.txtBirthday = new System.Windows.Forms.TextBox();
+            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProjects)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,16 +226,6 @@
             this.lblGender.TabIndex = 41;
             this.lblGender.Text = "Giới tính:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(379, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 25);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Ngày vào làm:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -252,7 +240,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(379, 63);
+            this.label5.Location = new System.Drawing.Point(379, 51);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 25);
             this.label5.TabIndex = 44;
@@ -275,21 +263,12 @@
             this.txtSalary.Size = new System.Drawing.Size(169, 34);
             this.txtSalary.TabIndex = 45;
             // 
-            // txtBeginWork
+            // dtBirthday
             // 
-            this.txtBeginWork.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBeginWork.Location = new System.Drawing.Point(533, 12);
-            this.txtBeginWork.Name = "txtBeginWork";
-            this.txtBeginWork.Size = new System.Drawing.Size(169, 34);
-            this.txtBeginWork.TabIndex = 45;
-            // 
-            // txtBirthday
-            // 
-            this.txtBirthday.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBirthday.Location = new System.Drawing.Point(533, 60);
-            this.txtBirthday.Name = "txtBirthday";
-            this.txtBirthday.Size = new System.Drawing.Size(169, 34);
-            this.txtBirthday.TabIndex = 45;
+            this.dtBirthday.Location = new System.Drawing.Point(522, 53);
+            this.dtBirthday.Name = "dtBirthday";
+            this.dtBirthday.Size = new System.Drawing.Size(186, 22);
+            this.dtBirthday.TabIndex = 47;
             // 
             // frmInfoEmployee
             // 
@@ -297,12 +276,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(732, 453);
-            this.Controls.Add(this.txtBirthday);
-            this.Controls.Add(this.txtBeginWork);
+            this.Controls.Add(this.dtBirthday);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblGender);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbGender);
@@ -349,12 +326,10 @@
         private System.Windows.Forms.Button btnXnhEmployee;
         private System.Windows.Forms.ComboBox cbDepart;
         private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.TextBox txtSalary;
-        private System.Windows.Forms.TextBox txtBeginWork;
-        private System.Windows.Forms.TextBox txtBirthday;
+        private System.Windows.Forms.DateTimePicker dtBirthday;
     }
 }
