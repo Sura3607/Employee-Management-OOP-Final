@@ -951,7 +951,7 @@
   ],
   "EmployeesList_PartTime": [
     {
-      "Worktime": 0,
+      "Worktime": 12,
       "Id": "E0002",
       "Name": "Nguy\u1EC5n Qu\u1EF3nh Anh",
       "Phone": "0795418635",
@@ -975,7 +975,7 @@
       "Projects": []
     },
     {
-      "Worktime": 0,
+      "Worktime": 18,
       "Id": "E0004",
       "Name": "Hu\u1EF3nh Thi\u00EAn L\u1ED9c",
       "Phone": "0781452368",
@@ -1011,7 +1011,7 @@
       ]
     },
     {
-      "Worktime": 0,
+      "Worktime": 5,
       "Id": "E0006",
       "Name": "L\u00EA Ph\u01B0\u01A1ng Uy\u00EAn",
       "Phone": "0335417896",
@@ -1047,7 +1047,7 @@
       ]
     },
     {
-      "Worktime": 0,
+      "Worktime": 25,
       "Id": "E0007",
       "Name": "Hu\u1EF3nh Thanh T\u00E2m",
       "Phone": "0774521892",
@@ -1071,7 +1071,7 @@
       "Projects": []
     },
     {
-      "Worktime": 0,
+      "Worktime": 3,
       "Id": "E0012",
       "Name": "L\u00EA Minh Trang",
       "Phone": "0745125569",
@@ -1117,7 +1117,7 @@
       "Projects": []
     },
     {
-      "Worktime": 0,
+      "Worktime": 7,
       "Id": "E0016",
       "Name": "V\u00F5 Lan Anh",
       "Phone": "0785146522",

@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ManagementLogic
 {
     [Serializable]
-    public class FulltimeEmployee : Employee, ICalSalary,ISerializable
+    public class FulltimeEmployee : Employee, ISerializable
     {
         private int senority;
         public int Senority { get => senority; set => senority = value; }
@@ -27,9 +27,9 @@ namespace ManagementLogic
             base.GetObjectData(info, context);
             info.AddValue("Senority",Senority);
         }
-        public double CalculateSalary()
+        public override double CalculateSalary()
         {
-            return Salary + (senority / 5) * 0.2;
+            return Salary + (senority / 5) * Salary;
         }
         public override bool Find(string keyword)
         {

@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 namespace ManagementLogic
 {
     [Serializable]
-    public abstract class Employee : ISerializable
+    public abstract class Employee : ISerializable, ICalSalary
     {
         private string id;
         private string name;
@@ -158,5 +158,7 @@ namespace ManagementLogic
         {
             return $"{Id} - {Name}";
         }
+
+        public abstract double CalculateSalary();
     }
 }

@@ -114,6 +114,7 @@
             this.dtgMain.Size = new System.Drawing.Size(922, 370);
             this.dtgMain.TabIndex = 22;
             this.dtgMain.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellClick);
+            this.dtgMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellContentClick);
             this.dtgMain.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMain_CellDoubleClick);
             // 
             // btnXphDepartment

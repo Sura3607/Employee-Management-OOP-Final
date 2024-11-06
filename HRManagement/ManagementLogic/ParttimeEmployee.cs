@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace ManagementLogic
 {
-    public class ParttimeEmployee : Employee, ICalSalary
+    public class ParttimeEmployee : Employee
     {
         private int worktime;
         public int Worktime { get => worktime; set => worktime = value; }
@@ -23,7 +23,7 @@ namespace ManagementLogic
             info.AddValue("Worktime",Worktime);
         }
         //Tính lương theo giờ làm việc, lấy lương của đối tượng tính với giờ làm 
-        public double CalculateSalary()
+        public override double CalculateSalary()
         {
             return Salary*worktime;
         }
