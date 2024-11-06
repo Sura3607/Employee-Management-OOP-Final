@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
@@ -13,61 +10,101 @@ namespace ManagementLogic
         private string id;
         private string projectName;
         private string description;
-        List<Employee> employees;
-        Employee leader;
+        private string leaderId;
+        private List<string> employeesId;
 
-        //Tạo các logic cho viêccj set của các property dưới đây , ví dụ description ko đuocwj quá 250 kí tự 
-        public string Id { get => id; set => id = value; }
-        public string ProjectName { get => projectName; set => projectName = value; }
-        public string Description { get => description; set => description = value; }
+        public string Id
+        {
+            get => id;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value)) // Ktra xem Id co null ko
+                    throw new ArgumentException("Id không được để trống");
+                id = value;
+            }
+        }
+        public string ProjectName 
+        {
+            get => projectName;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Tên project không được để trống");
+                projectName = value;
+            } 
+        }
+        public string Description 
+        {
+            get => description;
+            set
+            {
+                if (value.Length > 250)
+                    throw new ArgumentException("Không được quá 250 ký tự");
+                description = value;
+            }
+        }
+        
+        public List<string> EmployeesId { get => employeesId; set => employeesId = value; }
+        
+        public string LeaderId { get => leaderId; set => leaderId = value; }
 
-
-        //Khi khởi tạo ko bắt buộc phải có desciption 
-        public Project(string id, string projectName, Employee leader = null, List<Employee> employees= default, string description = "")
+        public Project() { }
+        public Project(string id, string projectName, Employee leader, List<Employee> employees = null,string description = "")
         {
             Id = id;
             ProjectName = projectName;
             Description = description;
-            this.employees = employees;
-            this.leader = leader;
+            LeaderId = leader.Id;
+
+            EmployeesId = new List<string>();
+            if(employees != null)
+            {
+                foreach(Employee employee in employees)
+                    EmployeesId.Add(employee.Id);
+            }
         }
         public Project(SerializationInfo info, StreamingContext context)
         {
             Id = info.GetString("Id");
             ProjectName = info.GetString("ProjectName");
             Description = info.GetString("Description");
-            employees = (List<Employee>)info.GetValue("Employees",typeof(List<Employee>));
-            leader = (Employee)info.GetValue("Leader", typeof(Employee));
+            leaderId = info.GetString("Leader");
+            EmployeesId = (List<string>)info.GetValue("Employees", typeof(List<string>));
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("Id", Id);
             info.AddValue("ProjectName", ProjectName);
             info.AddValue("Description", Description);
-            info.AddValue("Employees", employees);
-            info.AddValue("Leader",leader);
+            info.AddValue("Leader",leaderId);
+            info.AddValue("Employees",EmployeesId);
         }
-        //Thêm logic chỉ khi leader lf null mới được addd nếu ko sẽ trả về ngoại lệ 
-        public void AddLeader(Employee leader)
+        public void AddEmployee(Employee e)
         {
-            this.leader = leader;
-        }
+            if (e == null)
+                throw new ArgumentException("Thêm nhân viên thành công");
+            if (EmployeesId.Contains(e.Id))
+                throw new ArgumentException("Nhân viên đã tồn tại");
+            EmployeesId.Add(e.Id);
+            e.AddProject(this);
 
-        public void AddEmployee(Employee employee)
-        {
-            employees.Add(employee);
         }
         public void RemoveEmployee(Employee employee)
         {
+
+            if (!EmployeesId.Contains(employee.Id))
+                throw new ArgumentException("Không tìm thấy nhân viên này");
+
+            if (leaderId == employee.Id)
+                leaderId = null;
+
+            EmployeesId.Remove(employee.Id);
+            employee.Projects.Remove(this);
         }
-        //Xử lí việc tìm nếu có tồn tại keyword trong tên project
         public bool Find(string keyword)
         {
-            return true;
-        }
-        public string GetInfo()
-        {
-            return "";
-        }
+            return Id.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   ProjectName.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0;
+        }        
     }
 }

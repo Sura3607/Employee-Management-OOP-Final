@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
-using System.IO;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace ManagementLogic
 {
     [Serializable]
-    public abstract class Employee : ISerializable
+    public abstract class Employee : ISerializable, ICalSalary
     {
         private string id;
         private string name;
@@ -25,32 +20,107 @@ namespace ManagementLogic
         private uint salary;
 
         //Them điều kiện cho việc set, của các thuộc tính -Email-Phone-Năm sinh phải đủ tuổi lao động-Salary ko được thấp hơn lương cơ bản.
-        public string Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
-        public string Phone { get => phone; set => phone = value; }
-        public string Email { get => email; set => email = value; }
+        public string Id
+        {
+            get => id;
+            set
+            {
+                //Kiểm tra xem có rỗng hoặc null không?
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Id không được để trống");
+                this.id = value; 
+            } 
+        }
+        public string Name
+        {
+            get => name;
+            set
+            {
+                //Kiểm tra xem có rỗng hoặc null không?
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Tên không được để trống");
+                name = value;
+            }
+        }
+        public string Phone 
+        {
+            get => phone;
+            set
+            {
+                // Kiểm tra chuỗi rỗng hoặc null
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Số điện thoại không hợp lệ: không được để trống.");
+
+                // Kiểm tra độ dài của chuỗi phải là 10
+                if (value.Length != 10)
+                    throw new ArgumentException("Số điện thoại phải có đúng 10 chữ số.");
+
+                // Kiểm tra tất cả các ký tự phải là số
+                foreach (char ch in value)
+                {
+                    if (!char.IsDigit(ch))
+                    {
+                        throw new ArgumentException("Số điện thoại chỉ được chứa các chữ số.");
+                    }
+                }
+
+                phone = value;
+            }
+        }
+        public string Email
+        {
+            get => email;
+            set
+            {
+                // Kiểm tra chuỗi không rỗng hoặc không chứa chỉ khoảng trắng
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Email không được để trống.");
+
+                // Kiểm tra email có định dạng @gmail.com
+                if (!value.EndsWith("@gmail.com"))
+                    throw new ArgumentException("Email phải có dạng @gmail.com.");
+
+                email = value;
+            }
+        }
         public string Address { get => address; set => address = value; }
         public bool Gender { get => gender; set => gender = value; }
-        public DateTime Birthday { get => birthday; set => birthday = value; }
+        public DateTime Birthday
+        {
+            get => birthday;
+            set
+            {
+                //Kiểm tra xem có đủ tuỏi lao động hay không?
+                if (DateTime.Now.Year - value.Year < 18)
+                    throw new ArgumentException("Chưa đủ tuỏi lao động");
+                else if (DateTime.Now.Year - value.Year==18 && DateTime.Now.Month <value.Month)
+                    throw new ArgumentException("Chưa đủ tuỏi lao động");
+                else if (DateTime.Now.Year - value.Year == 18 && DateTime.Now.Month == value.Month && DateTime.Now.Day<value.Day)
+                    throw new ArgumentException("Chưa đủ tuỏi lao động");
+                birthday = value;
+            }
+        }
         public DateTime BeginWork { get => beginWork; set => beginWork = value; }
         public Department Department { get => department; set => department = value; }
+        
         public uint Salary { get => salary; set => salary = value; }
+        
         public List<Project> Projects { get => projects; set => projects = value; }
 
-        //Khi tạoh đối tượng mới sẽ mặch định projects của đối tượng là rỗng 
-        protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary)
+        protected Employee() { }
+        protected Employee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department department, uint salary, List<Project> projects = null)
         {
             this.id = id;
-            this.name = name;
-            this.phone = phone;
-            this.email = email;
+            Name = name;
+            Phone = phone;
+            Email = email;
             this.address = address;
             this.gender = gender;
-            this.birthday = birthday;
-            this.beginWork = beginWork;
-            this.department = department;
-            this.projects = new List<Project>();
-            this.salary = salary;
+            Birthday = birthday;
+            BeginWork = beginWork;
+            Department = department;
+            this.projects = projects ?? new List<Project>();
+            Salary = salary;
         }
         protected Employee(SerializationInfo info, StreamingContext context)
         {
@@ -63,7 +133,7 @@ namespace ManagementLogic
             birthday = info.GetDateTime("Birthday");
             beginWork = info.GetDateTime("BeginWork");
             department = (Department)info.GetValue("Department",typeof(Department));
-            projects = (List<Project>)info.GetValue("Project",typeof (List<Project>));
+            projects = (List<Project>)info.GetValue("Projects",typeof (List<Project>));
             salary = info.GetUInt32("Salary");
         }
         public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
@@ -74,13 +144,18 @@ namespace ManagementLogic
             info.AddValue("Email",Email);
             info.AddValue("Gender",Gender);
             info.AddValue("Birthday", Birthday);
-            info.AddValue("BeginWord",BeginWork);
+            info.AddValue("BeginWork",BeginWork);
             info.AddValue("Department", Department);
             info.AddValue("Projects", Projects);
             info.AddValue("Salary",Salary);
         }
         public abstract void AddProject(Project project);
+        //tạo abstract void RemoveProject
         public abstract bool Find(string keyword);
-        public abstract string GetInfo();
+        public override string ToString()
+        {
+            return $"{Id} - {Name}";
+        }
+        public abstract double CalculateSalary();
     }
 }

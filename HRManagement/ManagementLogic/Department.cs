@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace ManagementLogic
 {
@@ -11,59 +9,95 @@ namespace ManagementLogic
     {
         private string id;
         private string name;
-        private Employee leader ;
-        private List<Employee> employees ;
-        //Thêm điều kiện khi set cho các thuộc tính -Leader ko phải parttime-
-        public string Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
-        public Employee Leader { get => leader; set => leader = value; }
-        public List<Employee> Employees
+        private string leaderId;
+        private List<string> employeesId;
+        public string Id 
         {
-            get => employees;
+            get => id;
             set
             {
-                if (value == null)
-                    throw new ArgumentNullException();
+                if (string.IsNullOrWhiteSpace(value)) // Ktra xem Id co null ko
+                    throw new ArgumentException("Id không được để trống");
+                id = value;
             }
         }
-        public Department(string id, string name, Employee leader, List<Employee> employees = default)
+        public string Name 
         {
+            get => name;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Tên phòng ban không được để trống");
+                name = value;
+            }
+        }
+        public string LeaderId { get => leaderId; set => leaderId = value; }
+        
+        public List<string> EmployeesId { get => employeesId; set => employeesId = value; }
+      
+        public Department() { }
+
+        public Department(string id, string name, Employee leader, List<Employee> employees = null) 
+        {
+            if (leader is ParttimeEmployee)
+                throw new Exception("Leader không được là nhân viên partime");
             Id = id;
             Name = name;
-            Leader = leader;
-            Employees = employees;
+            LeaderId = leader.Id;
+
+            EmployeesId = new List<string>();
+            if(employees != null)
+            {
+                foreach (Employee e in employees)
+                {
+                    EmployeesId.Add(e.Id);
+                }
+            }              
         }
         public Department(SerializationInfo info, StreamingContext context)
         {
-            Id = info.GetString("id");
-            Name = info.GetString("name");
-            Leader = (Employee)info.GetValue("Leader",typeof(Employee));
-            Employees = (List<Employee>)info.GetValue("Employees",typeof (List<Employee>));
+            Id = info.GetString("Id");
+            Name = info.GetString("Name");
+            LeaderId = info.GetString("Leader");
+            EmployeesId = (List<string>)info.GetValue("Employees", typeof(List<string>));
+            
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("Id", Id);
             info.AddValue("Name", Name);
-            info.AddValue("Leader",Leader);
-            info.AddValue("Employees", Employees);
+            info.AddValue("Leader",LeaderId);
+            info.AddValue("Employees",EmployeesId);
         }
-        //Sử bắt ngoiaj lệ nếu ko thnhf cocng
-        public void AddEmployee(Employee employee)
+        public void AddEmployee(Employee e)
         {
-        
+            if (e == null)
+                throw new ArgumentException("Thêm nhân viên thất bại");
+            if (EmployeesId.Contains(e.Id))
+                throw new ArgumentException("Nhân viên đã tồn tại");
+
+            employeesId.Add(e.Id);
+            e.Department = this;
         }
         public void RemoveEmployee(Employee employee)
         {
-            
-        }
-        public bool Find(string keywork)
-        {
-            return true;
-        }
-        public string GetInfo()
-        {
-            return "";
-        }
+            if (!EmployeesId.Contains(employee.Id))
+                throw new ArgumentException("Không tìm thấy nhân viên này");
 
+            if (leaderId == employee.Id)            
+                leaderId = null;                
+
+            EmployeesId.Remove(employee.Id);
+            employee.Department = null;
+        }
+        public bool Find(string keyword)
+        {
+            return Id.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   Name.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0;
+        }
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

@@ -1,57 +1,162 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
-    public class Run // main thuc thi hanh dong ow day, tien xu li
+    public class Run
     {
         private Management management = null;
-        public Run() { }
+        private static Run instance;
+        private uint nextId_E;
+        private uint nextId_D;
+        private uint nextId_P;
+        private Run() { }
+        public Management Management { get => management; }
+
+        //singleton design patten
+        public static Run Instance 
+        {
+            get
+            {
+                if(instance == null)
+                    instance = new Run();
+                return instance;
+            }
+        }
         public void Login(string username, string password)
         {
             List<Account> accounts = Data.LoadAccounts();
 
-            Account account = accounts.Find(a => a.IsValidUsername(username));
-            if (account == null)
+            Account account = null;
+            foreach(Account a in accounts)
             {
-                throw new Exception("Username does not exist.");
+                if(a.UserName == username)
+                {
+                    account = a;
+                    break;
+                }
             }
-            if (!account.IsValidPassword(password))
+            if (account == null || !account.IsValidPassword(password))
             {
-                throw new Exception("Login failed: Incorrect password.");
+                throw new Exception("Tài khoản hoặc mật khẩu sai");
             }
             
             management = Data.LoadData(account.GetFilePath());
             management.SetFilePath(account.GetFilePath());
             management.SetCurrentAccount(account);
+            nextId_E = (uint)management.EmployeesList.Count + 1;
+            nextId_D = (uint)management.DepartmentList.Count + 1;
+            nextId_P = (uint)management.ProjectList.Count + 1;
+
         }
-        public void addADMIN(string username, string password)
+        public string GenerateId(int who = 1)
         {
-            try
+            char c;
+            uint id;
+            if (who == 1)
             {
-                management.AddADMIN(username, password);
+                c = 'E';
+                id = nextId_E++;
             }
-            catch (Exception e) { }
+            else if (who == 0)
+            {
+                c = 'D';
+                id = nextId_D++;
+            }
+            else
+            {
+                c = 'P';
+                id = nextId_P++;
+            }         
+            string s = $"{c}{id.ToString("D4")}";
+            return s;
+        }
+        public void CreateEmployee(string name, string phone, string email, 
+                                   string address, bool gender, DateTime birthday, 
+                                   DateTime beginWork, Department deparment, uint salary, 
+                                   bool isFullTime = true)
+        {
+            if(isFullTime)
+            {
+                FulltimeEmployee fulltimeEmployee = new FulltimeEmployee(GenerateId(1),name,phone,email,address,gender,
+                                                                 birthday,beginWork,deparment,salary);
+                management.Add(fulltimeEmployee);
+                return;
+            }
+            ParttimeEmployee parttimeEmployee = new ParttimeEmployee(GenerateId(1), name, phone, email, address, gender,
+                                                                birthday, beginWork, deparment, salary);
+            management.Add(parttimeEmployee);
+        }
+        public void CreateDepart(string name, Employee leader, List<Employee> employees = null)
+        {
+            if(string.IsNullOrEmpty(name))
+                throw new Exception("Tên không được để trống");
+            if (leader == null)
+                throw new Exception("Leader không được để trống");
+
+
+            Department department = new Department(GenerateId(0), name, leader,employees);
+            management.Add(department,employees);
+        }
+        public void CreateProject(string name, Employee leader, List<Employee> employees = null, string description = "")
+        {
+            if (leader == null)
+                throw new Exception("Leader không được để trống");
+
+            Project project = new Project(GenerateId(-1), name, leader,employees, description);
+            management.Add(project,employees);
+        }
+        public void RemoveEmployee(Employee employee)
+        {
+            management.Remove(employee);
+        }
+        public void RemoveDepart(Department department)
+        {
+            management.Remove(department);
+        }
+        public void RemoveProject(Project project)
+        {
+            management.Remove(project);
+        }
+        public void EditEmployee(Employee employee, string name = null, string phone = null,
+                                 string email = null, string address = null,
+                                 bool? gender = null, DateTime? birthday = null,
+                                 uint? salary = null,Department department = null)
+        {
+            management.EditEmployee(employee, name, phone, email, address, gender, birthday, salary,department);
+        }
+
+        public void AddADMIN(string username, string password)
+        {
+            management.AddADMIN(username, password);
         }
         public void ChangePass(string password, string newPassword)
         {
-            try
-            {
-                management.ChangePasssword(password, newPassword);
-            }
-            catch (Exception e) { }
+            management.ChangePasssword(password, newPassword);
         }
-        public List<Employee> FindEmployees(string keyword = "")
+        public void EditProject(Project project, string newName, string newDescription, string newLeader, List<Employee> remove, List<Employee> add)
         {
-            return new List<Employee>();
+            management.EditInfoProject(project, newName, newDescription, newLeader, remove, add);
+        }
+        public void EditDepartment(Department department, string newName, string newLeader, List<Employee> remove, List<Employee> add)
+        {
+            management.EditInfoDepartment(department, newName, newLeader,remove,add);
+        }
+        public void IncreaseEmployeeSalary(Employee e)
+        {
+            management.SalaryIncrease(e);
+        }
+        public List<Employee> FindEmployee(string keyword = "")
+        {
+            return management.FindEmployee(keyword);
         }
         public List<Department> FindIDeparment(string keyword = "")
         {
-            return new List<Department>();
+            return management.FindDepartment(keyword);
         }
-        
+        public List<Project> FindProject(string keyword = "")
+        {
+            return management.FindProject(keyword);
+        }
     }
 }

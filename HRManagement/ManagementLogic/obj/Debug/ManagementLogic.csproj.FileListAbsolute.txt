@@ -5,3 +5,100 @@ D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\Manag
 D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CoreCompileInputs.cache
 D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.dll
 D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.pdb
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.dll
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.dll
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.dll
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.dll
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.dll
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.dll
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.xml
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.xml
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.xml
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.xml
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.xml
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.xml
+D:\Project_Management\HR_Management\HRManagement\ManagementLogic\obj\Debug\Manageme.E116C90F.Up2Date
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll.config
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.pdb
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.xml
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CopyComplete
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.dll
+C:\Users\Admin\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.pdb
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll.config
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.pdb
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.xml
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CopyComplete
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.dll
+C:\Users\HP\Documents\Visual Studio 2022\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.pdb
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll.config
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\ManagementLogic.pdb
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Buffers.xml
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Memory.xml
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Text.Json.xml
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\bin\Debug\System.ValueTuple.xml
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.AssemblyReference.cache
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CoreCompileInputs.cache
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.csproj.CopyComplete
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.dll
+C:\Users\Fuji_Camera\Documents\Hướng đối tượng\HR_Management\HRManagement\ManagementLogic\obj\Debug\ManagementLogic.pdb

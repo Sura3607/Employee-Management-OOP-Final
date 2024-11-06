@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagementLogic
 {
     [Serializable]
-    public class FulltimeEmployee : Employee, ICalSalary,ISerializable
+    public class FulltimeEmployee : Employee, ISerializable
     {
         private int senority;
-        public int Senority { get => senority; }
-        public FulltimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department deparment, uint salary) 
+        public int Senority { get => senority; set => senority = value; }
+        public FulltimeEmployee() : base() { }
+        public FulltimeEmployee(string id, string name, string phone, string email, string address, bool gender, DateTime birthday, DateTime beginWork, Department deparment, uint salary = 5000000) 
             : base(id, name, phone, email, address, gender, birthday, beginWork, deparment, salary)
         {
             senority = (DateTime.Now.Year - BeginWork.Year);
@@ -29,28 +25,30 @@ namespace ManagementLogic
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             base.GetObjectData(info, context);
-            info.AddValue("Senority",senority);
+            info.AddValue("Senority",Senority);
         }
-        //Tính lương dựa theo thâm niên tự tạo hợp lí là được
-        public double CalculateSalary()
+        public override double CalculateSalary()
         {
-            throw new NotImplementedException();
+            return Salary + (senority / 5) * Salary;
         }
-        //Tìm theo tên, email, phone,id
         public override bool Find(string keyword)
         {
-            throw new NotImplementedException();
+            return Id.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   Name.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   Email.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                   Phone.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) == 10;
         }
-        //Trả về một chuỗi, lầm sao đẹp nhất có thể 
-        public override string GetInfo()
-        {
-            throw new NotImplementedException();
-        }
-
-        //Thêm vào listProject một project mới
         public override void AddProject(Project project)
         {
-            throw new NotImplementedException();
+            foreach (Project p in Projects)
+            {
+                if (p.Id == project.Id)
+                {
+                    throw new Exception("Project đã tồn tại trong danh sách.");
+                }
+            }
+
+            Projects.Add(project);
         }
     }
 }

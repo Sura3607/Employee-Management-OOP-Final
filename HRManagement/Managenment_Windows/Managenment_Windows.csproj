@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -47,6 +47,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Managemet.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,16 +70,160 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Project.Designer.cs">
+      <DependentUpon>frmAddRemoveEmployee_Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Depart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRemoveEmployee_Depart.Designer.cs">
+      <DependentUpon>frmAddRemoveEmployee_Depart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateAccount.Designer.cs">
+      <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDAdd.Designer.cs">
+      <DependentUpon>frmDAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEAdd.Designer.cs">
+      <DependentUpon>frmEAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeparment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeparment.Designer.cs">
+      <DependentUpon>frmDeparment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoDepartment.Designer.cs">
+      <DependentUpon>frmInfoDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoProject.Designer.cs">
+      <DependentUpon>frmInfoProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPAdd.Designer.cs">
+      <DependentUpon>frmPAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProject.Designer.cs">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoEmployee.Designer.cs">
+      <DependentUpon>frmInfoEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTableSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTableSalary.Designer.cs">
+      <DependentUpon>frmTableSalary.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRemoveEmployee_Project.resx">
+      <DependentUpon>frmAddRemoveEmployee_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRemoveEmployee_Depart.resx">
+      <DependentUpon>frmAddRemoveEmployee_Depart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateAccount.resx">
+      <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDAdd.resx">
+      <DependentUpon>frmDAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEAdd.resx">
+      <DependentUpon>frmEAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeparment.resx">
+      <DependentUpon>frmDeparment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoDepartment.resx">
+      <DependentUpon>frmInfoDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoProject.resx">
+      <DependentUpon>frmInfoProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPAdd.resx">
+      <DependentUpon>frmPAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProject.resx">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoEmployee.resx">
+      <DependentUpon>frmInfoEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTableSalary.resx">
+      <DependentUpon>frmTableSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,6 +233,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -111,6 +265,10 @@
       <Project>{cf6642d7-1eac-45db-992b-ad2589f6d2bb}</Project>
       <Name>ManagementLogic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="loginscreen.png" />
+    <Content Include="Managemet.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

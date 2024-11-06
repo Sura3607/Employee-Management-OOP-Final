@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace ManagementLogic
 {
@@ -12,7 +10,12 @@ namespace ManagementLogic
     {
         private string username;
         private string password;
-        private const string FilePath = "Data.json";
+        private const string FileName = "Data.json";
+        public string UserName { get => username; }
+        public string Password { get => password; }
+
+        //Do ko thể set qua property json cần có 1 contructor để làm việc đó
+        [JsonConstructor]
         public Account(string username, string password)
         {
             if (!IsValidPasswordCreate(password))
@@ -22,11 +25,14 @@ namespace ManagementLogic
             this.username = username;
             this.password = password;
         }
+        public Account() { }
+
         public Account(SerializationInfo info, StreamingContext context)
         {
             username = info.GetString("username");
             password = info.GetString("password");
         }
+
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("username", username);
@@ -34,17 +40,56 @@ namespace ManagementLogic
         }
         public string GetFilePath()
         {
-            return FilePath;
+            string localPath = Path.Combine(AppContext.BaseDirectory, FileName);
+            string debugPath = Path.Combine(Directory.GetParent(AppContext.BaseDirectory)?.FullName ?? string.Empty,
+                                            @"HRManagement\Managenment_Windows\bin\Debug\", FileName);
+
+            // Kiểm tra nếu file tồn tại ở đường dẫn hiện tại hoặc đường dẫn debug
+            if (File.Exists(localPath))
+            {
+                return localPath;
+            }
+            else if (File.Exists(debugPath))
+            {
+                return debugPath;
+            }
+
+            return localPath;
         }
+
         public bool IsValidUsername(string username)
         {
             return this.username == username;
         }
         private bool IsValidPasswordCreate(string password)
         {
-            return !string.IsNullOrEmpty(password) &&
-                   password.Any(char.IsUpper) &&
-                   password.Any(ch => !char.IsLetterOrDigit(ch));
+            if (!string.IsNullOrEmpty(password))
+            {
+                bool hasUpperCase = false;
+                bool hasSpecialCharacter = false;
+
+                foreach (char ch in password)
+                {
+                    if (char.IsUpper(ch))
+                    {
+                        hasUpperCase = true;
+                    }
+                    if (!char.IsLetterOrDigit(ch))
+                    {
+                        hasSpecialCharacter = true;
+                    }
+
+                    // Nếu đã thỏa mãn cả 2 điều kiện, có thể dừng vòng lặp
+                    if (hasUpperCase && hasSpecialCharacter)
+                    {
+                        break;
+                    }
+                }
+
+                return hasUpperCase && hasSpecialCharacter;
+            }
+
+            return false;
         }
         public bool IsValidPassword(string password)
         {
@@ -54,11 +99,11 @@ namespace ManagementLogic
         {
             if (!IsValidPassword(currentPassword))
             {
-                throw new Exception();
+                throw new Exception("Mật khẩu không đúng");
             }
             if (!IsValidPasswordCreate(newPassword))
             {
-                throw new Exception();
+                throw new Exception("Mật khẩu phải có ít nhất 1 kí tự đặt biệt và 1 chữ cái in hoa");
             }
             this.password = newPassword;
         }
