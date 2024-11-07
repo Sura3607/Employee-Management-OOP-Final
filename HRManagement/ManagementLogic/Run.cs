@@ -7,9 +7,6 @@ namespace ManagementLogic
     {
         private Management management = null;
         private static Run instance;
-        private uint nextId_E;
-        private uint nextId_D;
-        private uint nextId_P;
         private Run() { }
         public Management Management { get => management; }
 
@@ -44,31 +41,63 @@ namespace ManagementLogic
             management = Data.LoadData(account.GetFilePath());
             management.SetFilePath(account.GetFilePath());
             management.SetCurrentAccount(account);
-            nextId_E = (uint)management.EmployeesList.Count + 1;
-            nextId_D = (uint)management.DepartmentList.Count + 1;
-            nextId_P = (uint)management.ProjectList.Count + 1;
 
         }
         public string GenerateId(int who = 1)
         {
             char c;
-            uint id;
+            Random random = new Random();
             if (who == 1)
             {
                 c = 'E';
-                id = nextId_E++;
+                
             }
             else if (who == 0)
             {
                 c = 'D';
-                id = nextId_D++;
             }
             else
             {
                 c = 'P';
-                id = nextId_P++;
-            }         
-            string s = $"{c}{id.ToString("D4")}";
+            }
+            bool isUnique;
+            string s;
+            do
+            {
+                uint id = (uint)random.Next(0, 10000); // Giới hạn trong 4 chữ số
+                s = $"{c}{id.ToString("D4")}";
+                isUnique = true;
+
+                if (who == 1)
+                {
+                    List<Employee> list = FindEmployee(s);
+                    if(list.Count > 0)
+                    {
+                        isUnique = false;
+                        break;
+                    }
+
+                }
+                else if (who == 0)
+                {
+                    List<Department> list = FindIDeparment(s);
+                    if (list.Count > 0)
+                    {
+                        isUnique = false;
+                        break;
+                    }
+                }
+                else
+                {
+                    List<Project> list = FindProject(s);
+                    if (list.Count > 0)
+                    {
+                        isUnique = false;
+                        break;
+                    }
+                }
+            }
+            while (!isUnique);
             return s;
         }
         public void CreateEmployee(string name, string phone, string email, 

@@ -10,13 +10,12 @@
       "Birthday": "1995-07-26T10:16:16",
       "BeginWork": "2021-07-22T10:16:16",
       "Department": {
-        "Id": "D0002",
-        "Name": "Technology",
+        "Id": "D9259",
+        "Name": "Design",
         "LeaderId": "E0001",
         "EmployeesId": [
           "E0001",
-          "E0008",
-          "E0010"
+          "E0007"
         ]
       },
       "Salary": 2300000,
@@ -419,13 +418,11 @@
       "Birthday": "2004-07-20T17:43:03",
       "BeginWork": "2023-10-17T17:43:03",
       "Department": {
-        "Id": "D0001",
-        "Name": "Sales",
-        "LeaderId": "E0003",
+        "Id": "D9259",
+        "Name": "Design",
+        "LeaderId": "E0001",
         "EmployeesId": [
-          "E0003",
-          "E0002",
-          "E0004",
+          "E0001",
           "E0007"
         ]
       },
@@ -442,13 +439,13 @@
       "Birthday": "2005-07-22T17:55:55",
       "BeginWork": "2023-06-15T17:55:55",
       "Department": {
-        "Id": "D0007",
-        "Name": "Finance",
-        "LeaderId": "E0014",
+        "Id": "D0002",
+        "Name": "Technology",
+        "LeaderId": "E0008",
         "EmployeesId": [
-          "E0014",
-          "E0012",
-          "E0015"
+          "E0008",
+          "E0010",
+          "E0012"
         ]
       },
       "Salary": 25000,
@@ -530,18 +527,17 @@
       "EmployeesId": [
         "E0003",
         "E0002",
-        "E0004",
-        "E0007"
+        "E0004"
       ]
     },
     {
       "Id": "D0002",
       "Name": "Technology",
-      "LeaderId": "E0001",
+      "LeaderId": "E0008",
       "EmployeesId": [
-        "E0001",
         "E0008",
-        "E0010"
+        "E0010",
+        "E0012"
       ]
     },
     {
@@ -569,7 +565,6 @@
       "LeaderId": "E0014",
       "EmployeesId": [
         "E0014",
-        "E0012",
         "E0015"
       ]
     },
@@ -581,6 +576,15 @@
         "E0017",
         "E0018",
         "E0016"
+      ]
+    },
+    {
+      "Id": "D9259",
+      "Name": "Design",
+      "LeaderId": "E0001",
+      "EmployeesId": [
+        "E0001",
+        "E0007"
       ]
     }
   ],
@@ -632,13 +636,12 @@
       "Birthday": "1995-07-26T10:16:16",
       "BeginWork": "2021-07-22T10:16:16",
       "Department": {
-        "Id": "D0002",
-        "Name": "Technology",
+        "Id": "D9259",
+        "Name": "Design",
         "LeaderId": "E0001",
         "EmployeesId": [
           "E0001",
-          "E0008",
-          "E0010"
+          "E0007"
         ]
       },
       "Salary": 2300000,
@@ -1057,13 +1060,11 @@
       "Birthday": "2004-07-20T17:43:03",
       "BeginWork": "2023-10-17T17:43:03",
       "Department": {
-        "Id": "D0001",
-        "Name": "Sales",
-        "LeaderId": "E0003",
+        "Id": "D9259",
+        "Name": "Design",
+        "LeaderId": "E0001",
         "EmployeesId": [
-          "E0003",
-          "E0002",
-          "E0004",
+          "E0001",
           "E0007"
         ]
       },
@@ -1081,13 +1082,13 @@
       "Birthday": "2005-07-22T17:55:55",
       "BeginWork": "2023-06-15T17:55:55",
       "Department": {
-        "Id": "D0007",
-        "Name": "Finance",
-        "LeaderId": "E0014",
+        "Id": "D0002",
+        "Name": "Technology",
+        "LeaderId": "E0008",
         "EmployeesId": [
-          "E0014",
-          "E0012",
-          "E0015"
+          "E0008",
+          "E0010",
+          "E0012"
         ]
       },
       "Salary": 25000,
