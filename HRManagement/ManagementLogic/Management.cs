@@ -15,6 +15,9 @@ namespace ManagementLogic
         private string filePath;
         private Account account;
 
+        public delegate void SaveDataDelegate();
+        public event SaveDataDelegate OnDataChanged;
+
         public List<Employee> EmployeesList
         {
             get
@@ -30,7 +33,10 @@ namespace ManagementLogic
         public List<FulltimeEmployee> EmployeesList_FullTime { get => employeesList_FullTime; set => employeesList_FullTime = value; }
         public List<ParttimeEmployee> EmployeesList_PartTime { get => employeesList_PartTime; set => employeesList_PartTime = value; }
 
-        public Management() { }
+        public Management()
+        {
+            OnDataChanged += SaveData;
+        }
         public Management(SerializationInfo info, StreamingContext context)
         {
             employeesList_FullTime = (List<FulltimeEmployee>)info.GetValue("Employees_FullTime", typeof(List<FulltimeEmployee>));
@@ -44,6 +50,8 @@ namespace ManagementLogic
             this.employeesList_PartTime = employeesList_PartTime;
             this.departmentList = departmentList;
             this.projectList = projectList;
+
+            OnDataChanged += SaveData;
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
@@ -105,12 +113,12 @@ namespace ManagementLogic
             if (EmployeesList.Contains(e))
                 throw new Exception($"Nhân viên {e.Name} đã tồn tại"); 
 
-            if (e is FulltimeEmployee fullTimeEmployee)
-                EmployeesList_FullTime.Add(fullTimeEmployee);
-            else if(e is ParttimeEmployee parttime)
-                EmployeesList_PartTime.Add(parttime);
+            if (e is FulltimeEmployee)
+                EmployeesList_FullTime.Add((FulltimeEmployee)e);
+            else
+                EmployeesList_PartTime.Add((ParttimeEmployee)e);
 
-            SaveData();
+            OnDataChanged?.Invoke();
         }
         public void Add(Department d,List<Employee> employees)
         {
@@ -124,7 +132,7 @@ namespace ManagementLogic
             }
            
             departmentList.Add(d);
-            SaveData();
+            OnDataChanged?.Invoke();
         }
         public void Add(Project p, List<Employee> employees)
         {
@@ -135,7 +143,7 @@ namespace ManagementLogic
                 e.AddProject(p);
 
             projectList.Add(p);
-            SaveData();
+            OnDataChanged?.Invoke();
         }
         public void Remove(Employee e)
         {
@@ -157,7 +165,7 @@ namespace ManagementLogic
             else if (e is ParttimeEmployee parttime)
                 EmployeesList_PartTime.Remove(parttime);
 
-            SaveData();
+            OnDataChanged?.Invoke();
         }
         public void Remove(Department d)
         {
@@ -173,7 +181,7 @@ namespace ManagementLogic
                 }
             }
             departmentList.Remove(d);
-            SaveData();
+            OnDataChanged?.Invoke();
         }
         public void Remove(Project p)
         {
@@ -190,7 +198,7 @@ namespace ManagementLogic
                 }
             }
             projectList.Remove(p);
-            SaveData();
+            OnDataChanged?.Invoke();
         }
 
         public void EditEmployee(Employee employee, string name = null, string phone = null,
@@ -238,7 +246,7 @@ namespace ManagementLogic
                     department.AddEmployee(employee);
                     employee.Department = department;
                 }
-                SaveData();
+                OnDataChanged?.Invoke();
             }
             else
             {
@@ -258,7 +266,7 @@ namespace ManagementLogic
                     if (newSalary >= baseSalary)
                     {
                         fulltimeEmployee.Salary = newSalary;
-                        SaveData();
+                        OnDataChanged?.Invoke();
                     }
                     else
                     {
@@ -279,7 +287,7 @@ namespace ManagementLogic
                     if (newSalary >= 25000)
                     {
                         parttimeEmployee.Salary = newSalary;
-                        SaveData();
+                        OnDataChanged?.Invoke();
                     }
                     else
                     {
@@ -382,7 +390,7 @@ namespace ManagementLogic
                     project.AddEmployee(e);
                 }
             }
-            SaveData();
+            OnDataChanged?.Invoke();
         }
         public void EditInfoDepartment(Department department, string newName = null, string newLeaderId = null,List<Employee> remove = null, List<Employee> add = null)
         {
@@ -430,9 +438,7 @@ namespace ManagementLogic
                     department.AddEmployee(e);
                 }
             }
-            SaveData();
+            OnDataChanged?.Invoke();
         }
-
-
     }
 }
