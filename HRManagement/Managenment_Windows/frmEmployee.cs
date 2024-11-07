@@ -47,6 +47,7 @@ namespace Managenment_Windows
             }
             dtgEmployees.Columns["Tên"].Width = 300;
             dtgEmployees.DataSource = list;
+            UpdateTotal();
         }
 
         private void dtgEmployees_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -115,5 +116,12 @@ namespace Managenment_Windows
         {
 
         }
+
+        private void UpdateTotal()
+        {
+            int total = dtgEmployees.Rows.Count;
+            lblTongSo.Text = $"Tổng số: {total} bản ghi";
+        }
+
     }
 }

@@ -36,6 +36,8 @@ namespace Managenment_Windows
             }
             dtgMain.Columns["Tên"].Width = 150;
             dtgMain.DataSource = departments;
+
+            UpdateTotal();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -140,9 +142,11 @@ namespace Managenment_Windows
             }
         }
 
-        private void dtgMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void UpdateTotal()
         {
-
+            int total = dtgMain.Rows.Count;
+            lblTongSo.Text = $"Tổng số: {total} bản ghi";
         }
+
     }
 }
