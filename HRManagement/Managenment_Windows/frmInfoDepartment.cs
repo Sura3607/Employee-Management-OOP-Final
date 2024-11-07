@@ -97,6 +97,7 @@ namespace Managenment_Windows
             try
             {
                 Run.Instance.EditDepartment(_department, newName, newLeader, null, null);
+                MessageBox.Show("Đã chỉnh sửa thành công");
             }
             catch(Exception ex)
             {

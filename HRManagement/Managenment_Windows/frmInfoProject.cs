@@ -71,6 +71,7 @@ namespace Managenment_Windows
             try
             {
                 Run.Instance.EditProject(_project, newName,newDescription ,newLeader, null, null);
+                MessageBox.Show("Đã chỉnh sửa thành công");
             }
             catch (Exception ex)
             {
