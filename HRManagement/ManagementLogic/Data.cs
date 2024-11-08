@@ -37,7 +37,7 @@ namespace ManagementLogic
             string json = JsonSerializer.Serialize(management, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(FilePath, json);
         }
-        //LoadData from D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug
+        //LoadData từ D:\Project_Management\HR_Management\HRManagement\Managenment_Windows\bin\Debug
         static public Management LoadData(string FilePath)
         {
             if (File.Exists(FilePath))

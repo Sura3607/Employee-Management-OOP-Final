@@ -129,7 +129,7 @@ namespace Managenment_Windows
         {
             List<Employee> listSelected = new List<Employee>();
 
-            foreach (object item in chklstList.CheckedItems)
+            foreach (object item in chklstSelect.CheckedItems)
             {
                 if (item is Employee employee)
                 {
@@ -154,7 +154,7 @@ namespace Managenment_Windows
         {
             List<Employee> listSelected = new List<Employee>();
 
-            foreach (object item in chklstList.Items)
+            foreach (object item in chklstSelect.Items)
             {
                 if (item is Employee employee)
                 {

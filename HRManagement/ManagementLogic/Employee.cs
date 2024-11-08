@@ -18,8 +18,6 @@ namespace ManagementLogic
         private Department department;
         private List<Project> projects;
         private uint salary;
-
-        //Them điều kiện cho việc set, của các thuộc tính -Email-Phone-Năm sinh phải đủ tuổi lao động-Salary ko được thấp hơn lương cơ bản.
         public string Id
         {
             get => id;
@@ -36,7 +34,6 @@ namespace ManagementLogic
             get => name;
             set
             {
-                //Kiểm tra xem có rỗng hoặc null không?
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Tên không được để trống");
                 name = value;
@@ -47,11 +44,10 @@ namespace ManagementLogic
             get => phone;
             set
             {
-                // Kiểm tra chuỗi rỗng hoặc null
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Số điện thoại không hợp lệ: không được để trống.");
 
-                // Kiểm tra độ dài của chuỗi phải là 10
+                
                 if (value.Length != 10)
                     throw new ArgumentException("Số điện thoại phải có đúng 10 chữ số.");
 
@@ -72,7 +68,6 @@ namespace ManagementLogic
             get => email;
             set
             {
-                // Kiểm tra chuỗi không rỗng hoặc không chứa chỉ khoảng trắng
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Email không được để trống.");
 
@@ -150,7 +145,6 @@ namespace ManagementLogic
             info.AddValue("Salary",Salary);
         }
         public abstract void AddProject(Project project);
-        //tạo abstract void RemoveProject
         public abstract bool Find(string keyword);
         public override string ToString()
         {
