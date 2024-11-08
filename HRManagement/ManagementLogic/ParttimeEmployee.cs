@@ -3,7 +3,8 @@ using System.Runtime.Serialization;
 
 namespace ManagementLogic
 {
-    public class ParttimeEmployee : Employee
+    [Serializable]
+    public class ParttimeEmployee : Employee,ISerializable, ICalSalary
     {
         private int worktime;
         public int Worktime { get => worktime; set => worktime = value; }
@@ -22,7 +23,7 @@ namespace ManagementLogic
             base.GetObjectData(info, context);
             info.AddValue("Worktime",Worktime);
         }
-        public override double CalculateSalary()
+        public double CalculateSalary()
         {
             return Salary*worktime;
         }
