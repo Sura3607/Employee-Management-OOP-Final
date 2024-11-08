@@ -9,7 +9,11 @@
   ```
 * Bước 3: Mở Visual Studio lên, nhấn vào *Clone a repository*
 * Bước 4: Dán link trên vào và chọn đường dẫn phù hợp để lưu. Sau đó nhấn Clone.
-* Bước 5: Vào thư mục đã chọn để clone, nhấn mở ```Management.exe``` và chạy chương trình. 
+* Bước 5: Vào thư mục đã chọn để clone, nhấn mở ```Management.exe``` và chạy chương trình.
+  <br>
+### Note: Tài khoản, mật khẩu demo là:
+  * Tài khoản: Admin
+  * Mật khẩu: Admin@123
 ## Thành viên
 | **Tên** | **Github** |
 ----------|-------------
