@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ManagementLogic
 {
     [Serializable]
-    public class FulltimeEmployee : Employee, ISerializable
+    public class FulltimeEmployee : Employee, ISerializable,ICalSalary
     {
         private int senority;
         public int Senority { get => senority; set => senority = value; }
@@ -27,7 +27,7 @@ namespace ManagementLogic
             base.GetObjectData(info, context);
             info.AddValue("Senority",Senority);
         }
-        public override double CalculateSalary()
+        public double CalculateSalary()
         {
             return Salary + ((double)senority / 5) * Salary;
         }
