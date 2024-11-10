@@ -87,16 +87,16 @@ namespace Managenment_Windows
             string newPhone = txtPhone.Text != _employee.Phone ? txtPhone.Text : null;
             string newEmail = txtEmail.Text != _employee.Email ? txtEmail.Text : null;
             string newAddress = txtAddress.Text != _employee.Address ? txtAddress.Text : null;
-            Department newDepartment = (Department)cbDepart.SelectedItem != _employee.Department ? (Department)cbDepart.SelectedItem : null;
+            //Department newDepartment = (Department)cbDepart.SelectedItem != (Department)_employee.Department ? (Department)cbDepart.SelectedItem : null;
             bool selectedGender = cbGender.SelectedIndex == 0; 
             bool? newGender = selectedGender != _employee.Gender ? (bool?)selectedGender : null;
-            uint newSalary = uint.Parse(txtSalary.Text) != _employee.Salary ? uint.Parse(txtSalary.Text) : uint.Parse(null);
+            uint? newSalary = uint.Parse(txtSalary.Text) != _employee.Salary ? (uint?)uint.Parse(txtSalary.Text) : null;
             DateTime? newBirthday = dtBirthday.Value != _employee.Birthday ? dtBirthday.Value : (DateTime?)null;
 
             try
             {
                 Run.Instance.EditEmployee(_employee, newName, newPhone, newEmail, 
-                                        newAddress, newGender, newBirthday, newSalary, newDepartment);
+                                        newAddress, newGender, newBirthday, newSalary, null);
                 MessageBox.Show("Lưu thay đổi");
                 LoadInfo();
             }

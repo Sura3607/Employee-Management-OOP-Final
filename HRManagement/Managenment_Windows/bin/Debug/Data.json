@@ -3,11 +3,11 @@
     {
       "Id": "E0001",
       "Name": "Ph\u1EA1m V\u0103n Tu\u1EA5n",
-      "Phone": "0905471654",
+      "Phone": "0905471456",
       "Email": "tuanpham@gmail.com",
-      "Address": "18 L\u00EA V\u0103n S\u1EF9 P14 Q. T\u00E2n B\u00ECnh",
+      "Address": "18 L\u00EA V\u0103n S\u1EF9 T\u00E2n B\u00ECnh",
       "Gender": true,
-      "Birthday": "1995-07-26T10:16:16",
+      "Birthday": "1995-07-25T10:16:16",
       "BeginWork": "2021-07-22T10:16:16",
       "Department": {
         "Id": "D9259",
@@ -522,7 +522,7 @@
   "DepartmentList": [
     {
       "Id": "D0001",
-      "Name": "Sales",
+      "Name": "Sale",
       "LeaderId": "E0003",
       "EmployeesId": [
         "E0003",
@@ -591,7 +591,7 @@
   "ProjectList": [
     {
       "Id": "P0001",
-      "ProjectName": "Ph\u00E1t tri\u1EC3n web",
+      "ProjectName": "Ph\u00E1t tri\u1EC3n Web",
       "Description": "Ph\u00E1t tri\u1EC3n website v\u00E0 c\u00E1c \u1EE9ng d\u1EE5ng web",
       "EmployeesId": [
         "E0001",
@@ -629,11 +629,11 @@
       "Senority": 3,
       "Id": "E0001",
       "Name": "Ph\u1EA1m V\u0103n Tu\u1EA5n",
-      "Phone": "0905471654",
+      "Phone": "0905471456",
       "Email": "tuanpham@gmail.com",
-      "Address": "18 L\u00EA V\u0103n S\u1EF9 P14 Q. T\u00E2n B\u00ECnh",
+      "Address": "18 L\u00EA V\u0103n S\u1EF9 T\u00E2n B\u00ECnh",
       "Gender": true,
-      "Birthday": "1995-07-26T10:16:16",
+      "Birthday": "1995-07-25T10:16:16",
       "BeginWork": "2021-07-22T10:16:16",
       "Department": {
         "Id": "D9259",
